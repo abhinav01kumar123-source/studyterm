@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduPulse | Ultimate AI Study & Learning Super-App</title>
+  <meta name="description" content="All-in-one distraction-free study platform with topic video lessons, smart URL video & PDF extractor, universal study file converter, AI flashcards, and focus room.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- External Libraries for PDF, Confetti, Markdown -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-bg glow-1"></div>
+  <div class="glow-bg glow-2"></div>
+  <div class="glow-bg glow-3"></div>
+
+  <!-- App Wrapper -->
+  <div class="app-layout" id="appLayout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="brand-text">
+            <h2>Edu<span>Pulse</span></h2>
+            <span class="tagline">Only Study • Zero Distraction</span>
+          </div>
+        </div>
+        <button class="icon-btn mobile-close" id="sidebarCloseBtn" aria-label="Close sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Live Study Status Widget in Sidebar -->
+      <div class="study-stats-pill">
+        <div class="stat-item">
+          <i class="fa-solid fa-fire flame-icon"></i>
+          <div>
+            <span class="stat-val" id="streakDays">3 Days</span>
+            <span class="stat-lbl">Streak</span>
+          </div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <div>
+            <span class="stat-val" id="todayStudyMins">45m</span>
+            <span class="stat-lbl">Today</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">STUDY MODULES</div>
+        <button class="nav-link active" data-tab="lessons">
+          <i class="fa-solid fa-book-open-reader"></i>
+          <span>Topic Lessons & Videos</span>
+          <span class="badge">Hot</span>
+        </button>
+        <button class="nav-link" data-tab="url-hub">
+          <i class="fa-solid fa-link"></i>
+          <span>Smart URL Importer</span>
+          <span class="badge glow-badge">AI</span>
+        </button>
+        <button class="nav-link" data-tab="converter">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          <span>Universal File Converter</span>
+          <span class="badge">Any File</span>
+        </button>
+        <button class="nav-link" data-tab="focus-room">
+          <i class="fa-solid fa-headphones-simple"></i>
+          <span>Focus Room & Audio</span>
+        </button>
+        <button class="nav-link" data-tab="flashcards">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Smart Flashcards</span>
+        </button>
+        <button class="nav-link" data-tab="notes">
+          <i class="fa-solid fa-file-pen"></i>
+          <span>PDF Notes & Cheatsheets</span>
+        </button>
+
+        <div class="nav-section-label">QUICK ACTIONS</div>
+        <button class="nav-link quick-action" id="openPomodoroQuick">
+          <i class="fa-solid fa-stopwatch"></i>
+          <span>Pomodoro Timer</span>
+        </button>
+        <button class="nav-link quick-action" id="triggerConfetti">
+          <i class="fa-solid fa-award"></i>
+          <span>Celebrate Progress</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <div class="user-study-mode">
+          <span class="pulse-dot"></span>
+          <span>Study Mode Active</span>
+        </div>
+        <button class="theme-toggle-btn" id="themeToggle" title="Toggle Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeText">Dark View</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div class="nav-left">
+          <button class="icon-btn mobile-menu-toggle" id="sidebarOpenBtn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="greeting-box">
+            <h1 id="pageHeading">Topic Lessons & Video Lectures</h1>
+            <p id="pageSubheading">Distraction-free comprehensive curriculum with instant PDF cheatsheets</p>
+          </div>
+        </div>
+
+        <div class="nav-right">
+          <!-- Global Search -->
+          <div class="search-bar-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="globalSearchInput" placeholder="Search any topic, subject, or formula..." autocomplete="off">
+            <button class="clear-search-btn" id="clearSearchBtn" style="display: none;">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Quick Pomodoro pill in navbar -->
+          <button class="nav-action-pill" id="navbarPomodoroBtn" title="Focus Timer">
+            <i class="fa-solid fa-clock"></i>
+            <span id="navPomoTimer">25:00</span>
+          </button>
+
+          <!-- User Guide Manual Button -->
+          <button class="nav-action-pill guide-pill" id="openUserGuideBtn" onclick="if(window.UserGuide) UserGuide.open();" title="How to use this app (गाइड)">
+            <i class="fa-solid fa-book-open"></i>
+            <span>User Guide (गाइड)</span>
+          </button>
+
+          <!-- Zen Mode Fullscreen Button -->
+          <button class="nav-action-pill zen-pill" id="zenModeBtn" onclick="if(window.App) App.toggleZenMode();" title="Zen Fullscreen Mode">
+            <i class="fa-solid fa-expand"></i>
+            <span>Zen Mode</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Tabs Container -->
+      <div class="content-container">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: TOPIC LESSONS & VIDEO LECTURES -->
+        <!-- ========================================== -->
+        <section class="tab-pane active" id="tab-lessons">
+          <!-- Live YouTube Multi-Video Search Engine -->
+          <div class="yt-search-hub-card">
+            <div class="yt-search-input-row">
+              <div class="yt-search-field">
+                <i class="fa-brands fa-youtube yt-brand-icon"></i>
+                <input type="text" id="ytGlobalSearchInput" onkeydown="if(event.key==='Enter' && window.YoutubeSearch) YoutubeSearch.performSearch(this.value.trim());" placeholder="Search ANY topic, chapter, or lecture on YouTube (e.g. Physics Class 12, Python Loop, Organic Chemistry)..." autocomplete="off">
+              </div>
+              <button class="btn-primary-glow" id="ytGlobalSearchBtn" onclick="if(window.YoutubeSearch) YoutubeSearch.performSearch(document.getElementById('ytGlobalSearchInput').value.trim());">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search Videos</span>
+              </button>
+            </div>
+            
+            <!-- Quick Popular Search Chips -->
+            <div class="yt-quick-chips">
+              <span class="chips-label">Popular Searches:</span>
+              <button class="yt-search-chip" data-query="Calculus Derivatives" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Calculus Derivatives'; YoutubeSearch.performSearch('Calculus Derivatives'); }">📐 Calculus</button>
+              <button class="yt-search-chip" data-query="Quantum Physics" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Quantum Physics'; YoutubeSearch.performSearch('Quantum Physics'); }">⚛️ Quantum Physics</button>
+              <button class="yt-search-chip" data-query="Newton Laws of Motion" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Newton Laws of Motion'; YoutubeSearch.performSearch('Newton Laws of Motion'); }">🚀 Newton's Laws</button>
+              <button class="yt-search-chip" data-query="Python for Beginners" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Python for Beginners'; YoutubeSearch.performSearch('Python for Beginners'); }">💻 Python Coding</button>
+              <button class="yt-search-chip" data-query="Organic Chemistry Reactions" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Organic Chemistry Reactions'; YoutubeSearch.performSearch('Organic Chemistry Reactions'); }">🧪 Organic Chemistry</button>
+              <button class="yt-search-chip" data-query="DNA Replication" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='DNA Replication'; YoutubeSearch.performSearch('DNA Replication'); }">🧬 DNA & Genetics</button>
+              <button class="yt-search-chip" data-query="World War II Timeline" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='World War II Timeline'; YoutubeSearch.performSearch('World War II Timeline'); }">🌍 World War 2</button>
+              <button class="yt-search-chip" data-query="Trigonometry Full Course" onclick="if(window.YoutubeSearch) { document.getElementById('ytGlobalSearchInput').value='Trigonometry Full Course'; YoutubeSearch.performSearch('Trigonometry Full Course'); }">📏 Trigonometry</button>
+            </div>
+
+            <!-- Multi-Video Choices Results Section (Shown when searched) -->
+            <div class="yt-search-results-section" id="ytSearchResultsSection" style="display: none;">
+              <div class="yt-results-header">
+                <div>
+                  <h3 id="ytResultsQueryLabel">YouTube Video Choices:</h3>
+                  <span class="subtext">Click any video below to load it into the player with AI notes & PDF export</span>
+                </div>
+                <span class="yt-results-badge" id="ytResultsCountBadge">0 Videos</span>
+              </div>
+              <div class="yt-results-grid" id="ytSearchResultsGrid">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Subject Filter Pills -->
+          <div class="subject-filter-bar" id="subjectFilterBar">
+            <button class="filter-pill active" data-subject="all">
+              <i class="fa-solid fa-border-all"></i> All Subjects
+            </button>
+            <button class="filter-pill" data-subject="math">
+              <i class="fa-solid fa-square-root-variable"></i> Mathematics
+            </button>
+            <button class="filter-pill" data-subject="physics">
+              <i class="fa-solid fa-atom"></i> Physics
+            </button>
+            <button class="filter-pill" data-subject="cs">
+              <i class="fa-solid fa-code"></i> Computer Science
+            </button>
+            <button class="filter-pill" data-subject="chemistry">
+              <i class="fa-solid fa-flask-vial"></i> Chemistry
+            </button>
+            <button class="filter-pill" data-subject="biology">
+              <i class="fa-solid fa-dna"></i> Biology
+            </button>
+            <button class="filter-pill" data-subject="history">
+              <i class="fa-solid fa-landmark"></i> History & GK
+            </button>
+          </div>
+
+          <!-- Main Lessons Workspace Split (Topic Browser + Active Lesson Player) -->
+          <div class="lessons-grid">
+            <!-- Left: Topic Selection List -->
+            <div class="topics-sidebar-panel" id="topicsSidebarPanel">
+              <div class="panel-header">
+                <h3><i class="fa-solid fa-list-check"></i> Curriculum Topics</h3>
+                <span class="topic-count-badge" id="topicCountBadge">6 Topics</span>
+              </div>
+              <div class="topics-list" id="topicsList">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <!-- Right: Active Lesson Showcase (Video Player, Notes, PDF exporter, Quiz) -->
+            <div class="lesson-viewer-panel" id="lessonViewerPanel">
+              <div class="active-lesson-card" id="activeLessonCard">
+                <!-- Top Lesson Header -->
+                <div class="lesson-header-flex">
+                  <div class="lesson-meta-info">
+                    <span class="subject-badge" id="activeSubjectBadge">Mathematics</span>
+                    <h2 class="active-lesson-title" id="activeLessonTitle">Calculus: Derivatives & Rates of Change</h2>
+                    <div class="lesson-submeta">
+                      <span><i class="fa-regular fa-clock"></i> <span id="activeLessonDuration">18 mins</span></span>
+                      <span><i class="fa-solid fa-signal"></i> <span id="activeLessonLevel">Beginner to Advanced</span></span>
+                      <span><i class="fa-solid fa-star gold-star"></i> <span id="activeLessonRating">4.9/5</span></span>
+                    </div>
+                  </div>
+                  <!-- Actions & Direct YouTube Buttons -->
+                  <div class="lesson-header-actions">
+                    <a id="directYoutubeLinkBtn" href="https://www.youtube.com/watch?v=WUvTyaaNkzM" target="_blank" rel="noopener noreferrer" class="btn-youtube-glow" title="Open this lecture directly on YouTube">
+                      <i class="fa-brands fa-youtube"></i>
+                      <span>Watch on YouTube</span>
+                    </a>
+                    <button class="btn-secondary" id="theaterModeToggleBtn" onclick="if(window.App) App.toggleTheaterMode();" title="Toggle Theater / Full Width View">
+                      <i class="fa-solid fa-expand"></i>
+                      <span id="theaterModeText">Theater Mode</span>
+                    </button>
+                    <button class="btn-primary-glow" id="exportCurrentTopicPdfBtn" onclick="if(window.App) App.exportCurrentLessonPdf();">
+                      <i class="fa-solid fa-file-pdf"></i>
+                      <span>Export Topic to PDF</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Video Player Container (Distraction-free curated embed) -->
+                <div class="video-container-frame">
+                  <div class="video-responsive" id="videoResponsiveBox">
+                    <iframe id="lessonVideoIframe" src="https://www.youtube.com/embed/WUvTyaaNkzM?enablejsapi=1&rel=0" title="Educational Lecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  <!-- Video Chapter Shortcuts -->
+                  <div class="video-chapters-bar" id="videoChaptersBar">
+                    <!-- Chapters injected dynamically -->
+                  </div>
+                </div>
+
+                <!-- Quick Direct YouTube Link Input & Controls Bar -->
+                <div class="video-toolbar-bar">
+                  <div class="vt-left">
+                    <span class="vt-label"><i class="fa-brands fa-youtube text-red"></i> Play Any YouTube Video:</span>
+                    <div class="vt-input-group">
+                      <input type="text" id="quickYoutubeInput" onkeydown="if(event.key==='Enter' && window.App) App.handleQuickVideo();" placeholder="Paste any YouTube URL or Video ID (e.g. https://youtu.be/...)" class="quick-yt-input">
+                      <button id="quickPlayYoutubeBtn" onclick="if(window.App) App.handleQuickVideo();" class="btn-sm btn-primary-glow"><i class="fa-solid fa-play"></i> Load Video</button>
+                    </div>
+                  </div>
+                  <div class="vt-right">
+                    <button id="copyVideoLinkBtn" onclick="if(window.App) App.copyCurrentVideoLink();" class="btn-sm btn-ghost" title="Copy YouTube Link"><i class="fa-regular fa-copy"></i> Copy Link</button>
+                    <button id="reloadPlayerBtn" onclick="if(window.App) App.reloadCurrentVideo();" class="btn-sm btn-ghost" title="Reload Video Player"><i class="fa-solid fa-rotate-right"></i> Reload</button>
+                  </div>
+                </div>
+
+                <!-- Interactive Lesson Tabs (Notes / Key Formulas / Practice Quiz) -->
+                <div class="lesson-subnav">
+                  <button class="subnav-btn active" data-subtab="notes">
+                    <i class="fa-solid fa-book-bookmark"></i> Study Notes & Summary
+                  </button>
+                  <button class="subnav-btn" data-subtab="formulas">
+                    <i class="fa-solid fa-square-root-variable"></i> Key Formulas & Cheatsheet
+                  </button>
+                  <button class="subnav-btn" data-subtab="quiz">
+                    <i class="fa-solid fa-circle-question"></i> Instant Practice Quiz
+                  </button>
+                </div>
+
+                <!-- Printable Lesson Content (used by PDF engine) -->
+                <div class="lesson-content-body" id="printableLessonArea">
+                  <!-- Subtab: Notes -->
+                  <div class="subtab-content active" id="subtab-notes">
+                    <div class="study-prose" id="activeLessonNotes">
+                      <!-- Rendered notes -->
+                    </div>
+                  </div>
+
+                  <!-- Subtab: Formulas / Key Takeaways -->
+                  <div class="subtab-content" id="subtab-formulas">
+                    <div class="formulas-grid" id="activeLessonFormulas">
+                      <!-- Formulas grid -->
+                    </div>
+                  </div>
+
+                  <!-- Subtab: Interactive Quiz -->
+                  <div class="subtab-content" id="subtab-quiz">
+                    <div class="quiz-container" id="activeLessonQuiz">
+                      <!-- Interactive questions -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom PDF Export Bar -->
+                <div class="bottom-export-bar" style="margin: 20px 0 10px 0; display: flex; justify-content: flex-end; gap: 12px;">
+                  <button class="btn-primary-glow" id="bottomExportPdfBtn" onclick="if(window.App) App.exportCurrentLessonPdf();">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Download Complete Lesson as PDF</span>
+                  </button>
+                </div>
+
+                <!-- Topic Navigation Stepper (Prev / Next Topic) -->
+                <div class="topic-stepper-bar">
+                  <button class="btn-secondary" id="prevTopicBtn" onclick="if(window.App) App.prevTopic();">
+                    <i class="fa-solid fa-arrow-left"></i> Previous Topic
+                  </button>
+                  <div class="topic-stepper-indicator">
+                    <span class="stepper-label">CURRENT TOPIC</span>
+                    <strong id="stepperTopicName">Calculus: Derivatives & Rates of Change</strong>
+                  </div>
+                  <button class="btn-primary-glow" id="nextTopicBtn" onclick="if(window.App) App.nextTopic();">
+                    <span>Next Topic</span> <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: SMART URL IMPORTER (URL TO VIDEO & PDF) -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-url-hub">
+          <div class="section-hero-card">
+            <div class="hero-text">
+              <span class="hero-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Study Link Engine</span>
+              <h2>Paste Any Educational Link & Learn Instantly</h2>
+              <p>Paste any YouTube lecture URL, educational article, or research link. We'll load the video, auto-generate structured revision notes, key concepts, and allow instant 1-Click PDF export!</p>
+            </div>
+            <div class="sample-links-bar">
+              <span>Quick Test Examples:</span>
+              <button class="sample-btn" data-url="https://www.youtube.com/watch?v=WUvTyaaNkzM">3Blue1Brown: Essence of Calculus</button>
+              <button class="sample-btn" data-url="https://www.youtube.com/watch?v=_uQrJ0TkZlc">Python Tutorial for Beginners</button>
+              <button class="sample-btn" data-url="https://www.youtube.com/watch?v=bHIhgxav9LY">Quantum Physics Explained Simply</button>
+            </div>
+          </div>
+
+          <!-- URL Input Box -->
+          <div class="url-input-card">
+            <div class="url-input-row">
+              <div class="url-input-field">
+                <i class="fa-solid fa-link url-icon"></i>
+                <input type="url" id="customUrlInput" placeholder="Paste YouTube video or educational link here (e.g. https://www.youtube.com/watch?v=...)" required>
+              </div>
+              <button class="btn-primary-glow" id="processUrlBtn">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Fetch & Generate PDF</span>
+              </button>
+            </div>
+            <div class="url-hint">
+              <i class="fa-solid fa-shield-halved"></i> Supports YouTube URLs, Short links, Playlists, and Educational Web URLs.
+            </div>
+          </div>
+
+          <!-- Processed URL Result Container (Hidden until fetched) -->
+          <div class="url-result-container" id="urlResultContainer" style="display: none;">
+            <div class="url-result-header">
+              <div class="result-title-group">
+                <span class="status-indicator"><i class="fa-solid fa-check"></i> Lecture Loaded</span>
+                <h3 id="urlLectureTitle">Extracted Educational Lecture</h3>
+                <span class="source-url-text" id="urlSourceDisplay"></span>
+              </div>
+              <div class="result-actions">
+                <a id="urlDirectYoutubeBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-youtube-glow" title="Watch on YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>Watch on YouTube</span>
+                </a>
+                <button class="btn-primary-glow" id="exportUrlToPdfBtn">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>Download Lecture PDF</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="url-result-grid">
+              <!-- Video Preview Column -->
+              <div class="url-video-col">
+                <div class="video-responsive">
+                  <iframe id="urlVideoIframe" src="" title="Extracted Lecture Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-stats-card">
+                  <div class="vstat">
+                    <span class="vstat-num" id="urlVideoQuality">1080p HD</span>
+                    <span class="vstat-label">Stream</span>
+                  </div>
+                  <div class="vstat">
+                    <span class="vstat-num" id="urlVideoSubject">Auto-Detected</span>
+                    <span class="vstat-label">Subject Category</span>
+                  </div>
+                  <div class="vstat">
+                    <span class="vstat-num"><i class="fa-solid fa-check-double text-success"></i></span>
+                    <span class="vstat-label">Study Verified</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI Generated Notes & Takeaways Column -->
+              <div class="url-notes-col" id="printableUrlNoteArea">
+                <div class="ai-notes-header">
+                  <h4><i class="fa-solid fa-robot"></i> Structured Study Notes & Summary</h4>
+                  <span class="timestamp" id="urlGeneratedTime">Generated Just Now</span>
+                </div>
+                
+                <div class="url-notes-content" id="urlNotesContent">
+                  <!-- Dynamically generated lecture notes -->
+                </div>
+
+                <!-- Printable Key Concepts Section -->
+                <div class="url-key-concepts" id="urlKeyConcepts">
+                  <!-- Key takeaways -->
+                </div>
+
+                <!-- Printable Quick Quiz Section -->
+                <div class="url-quick-quiz" id="urlQuickQuiz">
+                  <!-- Quick quiz based on URL topic -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: UNIVERSAL FILE CONVERTER -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-converter">
+          <div class="section-hero-card converter-hero">
+            <div class="hero-text">
+              <span class="hero-chip"><i class="fa-solid fa-arrows-rotate"></i> 100% Client-Side & Private</span>
+              <h2>Universal Study File Converter</h2>
+              <p>Convert any study material from any format to another! Convert Images to PDF, Notes/Text to PDF, PDF to Images/Text, cross-convert Images (PNG/JPG/WEBP), or CSV to formatted PDF tables — instantly and securely.</p>
+            </div>
+          </div>
+
+          <!-- Converter Mode Selector -->
+          <div class="converter-tabs-bar">
+            <button class="conv-tab-btn active" data-conv-mode="img-to-pdf">
+              <i class="fa-solid fa-images"></i> Images → PDF
+            </button>
+            <button class="conv-tab-btn" data-conv-mode="txt-to-pdf">
+              <i class="fa-solid fa-file-lines"></i> Text/Notes → PDF
+            </button>
+            <button class="conv-tab-btn" data-conv-mode="img-cross">
+              <i class="fa-solid fa-image"></i> Image Format (PNG/JPG/WEBP)
+            </button>
+            <button class="conv-tab-btn" data-conv-mode="csv-to-pdf">
+              <i class="fa-solid fa-table"></i> CSV/Data → PDF & JSON
+            </button>
+          </div>
+
+          <!-- Converter Panels -->
+          <div class="converter-box">
+            
+            <!-- Sub-panel 1: Images to PDF -->
+            <div class="conv-panel active" id="conv-img-to-pdf">
+              <div class="drag-drop-zone" id="imgPdfDropZone">
+                <input type="file" id="imgPdfInput" multiple accept="image/png, image/jpeg, image/jpg, image/webp" style="display: none;">
+                <div class="drop-content">
+                  <div class="drop-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                  <h3>Drag & Drop Study Photos / Diagrams here</h3>
+                  <p>or click to browse from your device (Supports PNG, JPG, JPEG, WEBP)</p>
+                  <button class="btn-secondary" onclick="document.getElementById('imgPdfInput').click()">Select Images</button>
+                </div>
+              </div>
+
+              <!-- Uploaded Images Thumbnails preview -->
+              <div class="image-previews-container" id="imgPdfPreviews" style="display: none;">
+                <div class="preview-header">
+                  <h4>Selected Pages (<span id="imgPdfCount">0</span>)</h4>
+                  <div class="preview-actions">
+                    <button class="btn-sm btn-ghost" id="clearImgPdfBtn"><i class="fa-solid fa-trash"></i> Clear All</button>
+                    <button class="btn-primary-glow" id="generateImgPdfBtn">
+                      <i class="fa-solid fa-file-pdf"></i> Convert & Download PDF
+                    </button>
+                  </div>
+                </div>
+                <div class="preview-thumbnails-grid" id="imgThumbnailsGrid"></div>
+              </div>
+            </div>
+
+            <!-- Sub-panel 2: Text / Markdown to PDF -->
+            <div class="conv-panel" id="conv-txt-to-pdf">
+              <div class="txt-converter-layout">
+                <div class="txt-input-box">
+                  <div class="txt-tools">
+                    <label>Document Title:</label>
+                    <input type="text" id="txtDocTitle" placeholder="My Revision Notes / Important Questions" class="styled-input">
+                    <div class="file-load-btn-group">
+                      <input type="file" id="loadTxtFileInput" accept=".txt, .md, .html, .py, .java, .cpp" style="display: none;">
+                      <button class="btn-sm btn-secondary" onclick="document.getElementById('loadTxtFileInput').click()">
+                        <i class="fa-solid fa-folder-open"></i> Upload .txt / .md
+                      </button>
+                    </div>
+                  </div>
+                  <textarea id="txtEditorArea" placeholder="Type or paste your notes, questions, answers, or code here...
+You can format with markdown:
+# Big Heading
+## Subheading
+- Point 1
+- Point 2
+* Important formula or concept"></textarea>
+                  <div class="txt-footer-actions">
+                    <div class="pdf-style-options">
+                      <label><input type="checkbox" id="txtIncludeDate" checked> Include Timestamp</label>
+                      <label><input type="checkbox" id="txtPageNumbers" checked> Page Numbers</label>
+                    </div>
+                    <button class="btn-primary-glow" id="convertTxtToPdfBtn">
+                      <i class="fa-solid fa-file-pdf"></i> Download as Styled PDF
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-panel 3: Image Cross Converter -->
+            <div class="conv-panel" id="conv-img-cross">
+              <div class="drag-drop-zone" id="imgCrossDropZone">
+                <input type="file" id="imgCrossInput" accept="image/*" style="display: none;">
+                <div class="drop-content">
+                  <div class="drop-icon"><i class="fa-solid fa-file-image"></i></div>
+                  <h3>Select an Image to Convert</h3>
+                  <p>Convert diagram/screenshot between PNG, JPG, and WEBP formats</p>
+                  <button class="btn-secondary" onclick="document.getElementById('imgCrossInput').click()">Choose Image</button>
+                </div>
+              </div>
+
+              <div class="img-cross-controls" id="imgCrossControls" style="display: none;">
+                <div class="image-preview-card">
+                  <img id="crossImgPreview" src="" alt="Preview">
+                  <div class="cross-meta" id="crossImgMeta">PNG • 1920x1080 • 420 KB</div>
+                </div>
+                <div class="cross-options-card">
+                  <h4>Target Format</h4>
+                  <div class="format-radios">
+                    <label class="radio-card"><input type="radio" name="targetFormat" value="image/png" checked> <span>PNG (Lossless)</span></label>
+                    <label class="radio-card"><input type="radio" name="targetFormat" value="image/jpeg"> <span>JPEG / JPG (Compressed)</span></label>
+                    <label class="radio-card"><input type="radio" name="targetFormat" value="image/webp"> <span>WEBP (Modern Web)</span></label>
+                  </div>
+                  <div class="quality-slider-group">
+                    <label>Quality: <span id="qualityVal">90%</span></label>
+                    <input type="range" id="crossQualitySlider" min="10" max="100" value="90">
+                  </div>
+                  <button class="btn-primary-glow" id="downloadCrossImgBtn">
+                    <i class="fa-solid fa-download"></i> Convert & Download Image
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sub-panel 4: CSV / Table Data to PDF -->
+            <div class="conv-panel" id="conv-csv-to-pdf">
+              <div class="csv-upload-box">
+                <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
+                <div class="csv-top-bar">
+                  <button class="btn-secondary" onclick="document.getElementById('csvFileInput').click()">
+                    <i class="fa-solid fa-upload"></i> Upload CSV File
+                  </button>
+                  <button class="btn-ghost" id="loadSampleCsvBtn">
+                    <i class="fa-solid fa-vial"></i> Load Sample Exam Schedule CSV
+                  </button>
+                </div>
+                <div class="csv-table-preview-wrapper" id="csvTableWrapper">
+                  <div class="empty-state">
+                    <i class="fa-solid fa-table-list"></i>
+                    <p>Upload a CSV file or click "Load Sample Exam Schedule" to preview and convert to PDF</p>
+                  </div>
+                </div>
+                <div class="csv-actions-bar" id="csvActionsBar" style="display: none;">
+                  <button class="btn-primary-glow" id="exportCsvToPdfBtn">
+                    <i class="fa-solid fa-file-pdf"></i> Export Table as PDF
+                  </button>
+                  <button class="btn-secondary" id="exportCsvToJsonBtn">
+                    <i class="fa-solid fa-code"></i> Convert to JSON
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: FOCUS ROOM & AMBIENT AUDIO -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-focus-room">
+          <div class="focus-room-container">
+            <!-- Pomodoro Clock Section -->
+            <div class="pomodoro-card">
+              <div class="pomo-mode-selector">
+                <button class="pomo-mode-btn active" data-time="25" data-mode="study">
+                  <i class="fa-solid fa-brain"></i> Focus Study (25m)
+                </button>
+                <button class="pomo-mode-btn" data-time="5" data-mode="short-break">
+                  <i class="fa-solid fa-mug-hot"></i> Short Break (5m)
+                </button>
+                <button class="pomo-mode-btn" data-time="15" data-mode="long-break">
+                  <i class="fa-solid fa-battery-half"></i> Long Break (15m)
+                </button>
+                <button class="pomo-mode-btn" data-time="50" data-mode="deep-work">
+                  <i class="fa-solid fa-fire"></i> Deep Work (50m)
+                </button>
+              </div>
+
+              <!-- Animated Radial Progress Circle -->
+              <div class="timer-dial-wrapper">
+                <svg class="timer-svg" viewBox="0 0 260 260">
+                  <circle class="timer-bg-circle" cx="130" cy="130" r="115"></circle>
+                  <circle class="timer-progress-circle" id="timerProgressCircle" cx="130" cy="130" r="115"></circle>
+                </svg>
+                <div class="timer-center-text">
+                  <span class="timer-time" id="timerDisplay">25:00</span>
+                  <span class="timer-status-tag" id="timerStatusTag">Ready to Focus</span>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <div class="timer-controls">
+                <button class="btn-timer-primary" id="timerStartBtn">
+                  <i class="fa-solid fa-play"></i> Start Session
+                </button>
+                <button class="btn-timer-secondary" id="timerResetBtn">
+                  <i class="fa-solid fa-rotate-right"></i> Reset
+                </button>
+              </div>
+
+              <div class="focus-quote" id="dailyFocusQuote">
+                "Continuous effort — not strength or intelligence — is the key to unlocking your potential."
+              </div>
+            </div>
+
+            <!-- Ambient Sound Generator (Web Audio API procedural sound - Works Offline!) -->
+            <div class="ambient-audio-card">
+              <div class="ambient-header">
+                <h3><i class="fa-solid fa-music"></i> Ambient Study Soundscape</h3>
+                <span class="subtext">Procedurally synthesized in your browser • Zero internet required</span>
+              </div>
+
+              <div class="ambient-grid">
+                <!-- Sound 1: Gentle Rain -->
+                <div class="sound-card" data-sound="rain">
+                  <div class="sound-top">
+                    <div class="sound-icon-box"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                    <div class="sound-info">
+                      <h4>Soft Rain</h4>
+                      <span>Calming white noise</span>
+                    </div>
+                    <button class="sound-toggle-btn" data-sound="rain"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <div class="sound-vol">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" class="vol-slider" data-sound="rain" min="0" max="100" value="65">
+                  </div>
+                </div>
+
+                <!-- Sound 2: Binaural Alpha Waves (Study Beats) -->
+                <div class="sound-card" data-sound="binaural">
+                  <div class="sound-top">
+                    <div class="sound-icon-box"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="sound-info">
+                      <h4>Alpha 10Hz Beats</h4>
+                      <span>Deep concentration brainwave</span>
+                    </div>
+                    <button class="sound-toggle-btn" data-sound="binaural"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <div class="sound-vol">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" class="vol-slider" data-sound="binaural" min="0" max="100" value="50">
+                  </div>
+                </div>
+
+                <!-- Sound 3: Cozy Cafe White Noise -->
+                <div class="sound-card" data-sound="cafe">
+                  <div class="sound-top">
+                    <div class="sound-icon-box"><i class="fa-solid fa-mug-saucer"></i></div>
+                    <div class="sound-info">
+                      <h4>Library Hum</h4>
+                      <span>Warm ambient buzz</span>
+                    </div>
+                    <button class="sound-toggle-btn" data-sound="cafe"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <div class="sound-vol">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" class="vol-slider" data-sound="cafe" min="0" max="100" value="50">
+                  </div>
+                </div>
+
+                <!-- Sound 4: Campfire Crackle -->
+                <div class="sound-card" data-sound="fire">
+                  <div class="sound-top">
+                    <div class="sound-icon-box"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                    <div class="sound-info">
+                      <h4>Campfire Fire</h4>
+                      <span>Soothing night hearth</span>
+                    </div>
+                    <button class="sound-toggle-btn" data-sound="fire"><i class="fa-solid fa-play"></i></button>
+                  </div>
+                  <div class="sound-vol">
+                    <i class="fa-solid fa-volume-low"></i>
+                    <input type="range" class="vol-slider" data-sound="fire" min="0" max="100" value="50">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Master Audio Control -->
+              <div class="master-sound-bar">
+                <button class="btn-sm btn-ghost" id="muteAllAudioBtn">
+                  <i class="fa-solid fa-volume-xmark"></i> Stop All Ambient Sounds
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 5: SMART FLASHCARDS -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-flashcards">
+          <div class="flashcards-wrapper">
+            <!-- Header bar with deck selector & creation -->
+            <div class="deck-selector-bar">
+              <div class="deck-left">
+                <label>Select Subject Deck:</label>
+                <select id="flashcardDeckSelect" class="styled-select">
+                  <option value="math">Mathematics (Formulas & Theorems)</option>
+                  <option value="physics">Physics (Fundamental Laws)</option>
+                  <option value="cs">Computer Science (Python & DSA)</option>
+                  <option value="chemistry">Chemistry (Reactions & Periodic)</option>
+                  <option value="biology">Biology (Cells & Genetics)</option>
+                  <option value="custom">My Custom Flashcards</option>
+                </select>
+              </div>
+              <div class="deck-right">
+                <button class="btn-secondary" id="addNewCardBtn">
+                  <i class="fa-solid fa-plus"></i> Add New Flashcard
+                </button>
+                <button class="btn-primary-glow" id="exportFlashcardsPdfBtn">
+                  <i class="fa-solid fa-file-pdf"></i> Export Deck to PDF
+                </button>
+              </div>
+            </div>
+
+            <!-- Flashcard Display Stage -->
+            <div class="flashcard-stage">
+              <div class="flashcard-box" id="activeFlashcardBox">
+                <div class="card-inner" id="cardInner">
+                  <!-- Front Side -->
+                  <div class="card-face card-front">
+                    <span class="card-tag" id="cardCategoryTag">Mathematics</span>
+                    <div class="card-content-center">
+                      <p class="card-question-text" id="cardFrontText">What is Euler's Formula?</p>
+                    </div>
+                    <span class="card-flip-prompt"><i class="fa-solid fa-repeat"></i> Click to reveal answer</span>
+                  </div>
+                  <!-- Back Side -->
+                  <div class="card-face card-back">
+                    <span class="card-tag card-tag-answer">Answer & Explanation</span>
+                    <div class="card-content-center">
+                      <p class="card-answer-text" id="cardBackText">e^(i * pi) + 1 = 0</p>
+                      <p class="card-notes-text" id="cardExplanationText">It links exponential functions with trigonometric relations in complex analysis.</p>
+                    </div>
+                    <span class="card-flip-prompt"><i class="fa-solid fa-repeat"></i> Click to flip back</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Navigation & Spaced Repetition Rating -->
+              <div class="card-nav-controls">
+                <button class="card-btn-arrow" id="prevCardBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                
+                <div class="card-progress-counter">
+                  <span id="currentCardNum">1</span> / <span id="totalCardsNum">10</span>
+                </div>
+
+                <button class="card-btn-arrow" id="nextCardBtn"><i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+
+              <!-- Self Rating Buttons -->
+              <div class="spaced-repetition-bar">
+                <span>How well did you know this?</span>
+                <div class="rate-buttons">
+                  <button class="rate-btn rate-hard" id="rateHardBtn"><i class="fa-regular fa-face-frown"></i> Hard (Review Soon)</button>
+                  <button class="rate-btn rate-good" id="rateGoodBtn"><i class="fa-regular fa-face-smile"></i> Good</button>
+                  <button class="rate-btn rate-easy" id="rateEasyBtn"><i class="fa-regular fa-face-laugh-beam"></i> Easy (Mastered)</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 6: SMART PDF NOTES & CHEATSHEET CREATOR -->
+        <!-- ========================================== -->
+        <section class="tab-pane" id="tab-notes">
+          <div class="notes-workspace">
+            <div class="notes-sidebar">
+              <div class="notes-sidebar-header">
+                <h3><i class="fa-solid fa-folder-closed"></i> Saved Notes</h3>
+                <button class="btn-sm btn-primary-glow" id="createNewNoteBtn"><i class="fa-solid fa-plus"></i> New Note</button>
+              </div>
+              <div class="saved-notes-list" id="savedNotesList">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+
+            <!-- Note Editor & PDF Preview -->
+            <div class="note-editor-pane">
+              <div class="editor-header">
+                <input type="text" id="noteTitleInput" placeholder="Untitled Study Note..." class="note-title-field">
+                <div class="editor-actions">
+                  <span class="auto-save-pill" id="noteAutoSavePill"><i class="fa-solid fa-cloud"></i> Saved locally</span>
+                  <button class="btn-secondary" id="insertFormulaBtn"><i class="fa-solid fa-square-root-variable"></i> Quick Formula</button>
+                  <button class="btn-primary-glow" id="exportNotePdfBtn">
+                    <i class="fa-solid fa-file-pdf"></i> Download Note as PDF
+                  </button>
+                </div>
+              </div>
+
+              <!-- Note Formatting Toolbar -->
+              <div class="editor-toolbar">
+                <button class="tool-btn" data-cmd="bold" title="Bold"><i class="fa-solid fa-bold"></i></button>
+                <button class="tool-btn" data-cmd="italic" title="Italic"><i class="fa-solid fa-italic"></i></button>
+                <button class="tool-btn" data-cmd="underline" title="Underline"><i class="fa-solid fa-underline"></i></button>
+                <div class="tool-separator"></div>
+                <button class="tool-btn" data-cmd="h1" title="Heading 1">H1</button>
+                <button class="tool-btn" data-cmd="h2" title="Heading 2">H2</button>
+                <div class="tool-separator"></div>
+                <button class="tool-btn" data-cmd="ul" title="Bullet List"><i class="fa-solid fa-list-ul"></i></button>
+                <button class="tool-btn" data-cmd="ol" title="Numbered List"><i class="fa-solid fa-list-ol"></i></button>
+                <button class="tool-btn" data-cmd="quote" title="Quote Block"><i class="fa-solid fa-quote-left"></i></button>
+                <button class="tool-btn" data-cmd="code" title="Code snippet"><i class="fa-solid fa-code"></i></button>
+                <div class="tool-separator"></div>
+                <button class="tool-btn delete-note-btn" id="deleteCurrentNoteBtn" title="Delete Note"><i class="fa-solid fa-trash"></i></button>
+              </div>
+
+              <!-- Note Printable Canvas / ContentEditable Area -->
+              <div class="note-paper-wrapper">
+                <div class="note-paper" id="notePaperContent" contenteditable="true" spellcheck="true">
+                  <!-- Default note content populated via JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Zen Distraction-Free Overlay Modal -->
+  <div class="zen-modal-overlay" id="zenModalOverlay">
+    <div class="zen-content">
+      <button class="zen-exit-btn" id="zenExitBtn"><i class="fa-solid fa-compress"></i> Exit Zen Mode</button>
+      <div class="zen-center-box">
+        <h2 class="zen-greeting">Deep Focus Mode</h2>
+        <div class="zen-clock" id="zenClock">25:00</div>
+        <p class="zen-subtext">No notifications • No distractions • Just pure learning</p>
+        <div class="zen-quick-controls">
+          <button class="btn-timer-primary" id="zenTimerToggleBtn"><i class="fa-solid fa-play"></i> Start</button>
+          <button class="btn-timer-secondary" id="zenSoundToggleBtn"><i class="fa-solid fa-cloud-showers-heavy"></i> Rain Sound: OFF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Creating New Flashcard -->
+  <div class="custom-modal" id="flashcardModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-plus-circle"></i> Create New Study Flashcard</h3>
+        <button class="modal-close-btn" id="closeFlashcardModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Subject / Category:</label>
+          <input type="text" id="newCardCategory" placeholder="e.g. Physics, Math, Biology" class="styled-input">
+        </div>
+        <div class="form-group">
+          <label>Question or Front Text:</label>
+          <textarea id="newCardFront" placeholder="What is Newton's Second Law?" class="styled-textarea"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Answer / Key Formula:</label>
+          <textarea id="newCardBack" placeholder="F = m * a (Force equals mass times acceleration)" class="styled-textarea"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Explanation / Extra Memory Tip (Optional):</label>
+          <input type="text" id="newCardTip" placeholder="SI unit is Newton (N = kg·m/s²)" class="styled-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="cancelFlashcardBtn">Cancel</button>
+        <button class="btn-primary-glow" id="saveNewFlashcardBtn"><i class="fa-solid fa-check"></i> Save Flashcard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Multilingual User Guide (Hinglish, Hindi, English) -->
+  <div class="custom-modal guide-modal-overlay" id="userGuideModal">
+    <div class="modal-card guide-modal-card">
+      <div class="modal-header">
+        <div class="guide-header-title">
+          <i class="fa-solid fa-book-open guide-icon"></i>
+          <div>
+            <h3 id="guideModalTitle">EduPulse App Control Guide (Hinglish)</h3>
+            <span class="guide-subtitle" id="guideModalSubtitle">App ko kaise chalayein aur padhai ke har feature ko kaise use karein:</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="closeUserGuideBtn" title="Close Guide"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Language Selector Bar -->
+      <div class="guide-lang-bar">
+        <span><i class="fa-solid fa-language"></i> Select Language:</span>
+        <div class="guide-lang-buttons">
+          <button class="guide-lang-btn active" data-lang="hinglish">🇮🇳 Hinglish</button>
+          <button class="guide-lang-btn" data-lang="hindi">🇮🇳 हिंदी (Hindi)</button>
+          <button class="guide-lang-btn" data-lang="english">🇬🇧 English</button>
+        </div>
+      </div>
+
+      <!-- Guide Content Container -->
+      <div class="modal-body guide-modal-body" id="guideContentContainer">
+        <!-- Rendered dynamically via userGuide.js -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-primary-glow" id="exportGuidePdfBtn">
+          <i class="fa-solid fa-file-pdf"></i> Download Guide as PDF
+        </button>
+        <button class="btn-secondary" id="closeGuideFooterBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/pdfExport.js"></script>
+  <script src="js/youtubeSearch.js"></script>
+  <script src="js/userGuide.js"></script>
+  <script src="js/focusAudio.js"></script>
+  <script src="js/flashcards.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/converter.js"></script>
+  <script src="js/urlHub.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
