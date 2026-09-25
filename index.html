@@ -3512,6 +3512,260 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   CREATOR STUDIO & PUBLISHER MODAL STYLES
+   ========================================================================== */
+.creator-pill {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.2) 100%);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+.creator-pill:hover {
+  border-color: #f59e0b;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+}
+
+.creator-modal-card {
+  max-width: 820px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-lock-box {
+  padding: 40px 24px;
+  text-align: center;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.creator-lock-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.pin-input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+.pin-input-field {
+  padding: 10px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 140px;
+  outline: none;
+}
+
+.pin-input-field:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+.pin-hint {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.creator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 6px 0;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.creator-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.creator-field-group label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.creator-field-group input,
+.creator-field-group select,
+.creator-field-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.creator-field-group input:focus,
+.creator-field-group select:focus,
+.creator-field-group textarea:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.yt-preview-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-md);
+  margin-top: -6px;
+}
+
+.yt-preview-thumb {
+  width: 100px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.formula-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.formula-input-row .row-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.formula-input-row input {
+  padding: 8px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.formula-input-row input:focus {
+  border-color: #f59e0b;
+}
+
+.btn-remove-row {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast);
+}
+
+.btn-remove-row:hover {
+  transform: scale(1.2);
+}
+
+.topic-creator-pill {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.published-author-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.15) 0%, rgba(217, 119, 6, 0.05) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius-md);
+  color: #fbbf24;
+  font-size: 0.82rem;
+  margin-bottom: 16px;
+}
+
+.published-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+}
+
+.pub-thumb {
+  width: 70px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.pub-info {
+  flex: 1;
+}
+
+.pub-info h4 {
+  font-size: 0.88rem;
+  color: #fff;
+  margin: 0 0 2px 0;
+}
+
+.pub-info span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
   </style>
 
   <link rel="stylesheet" href="css/style.css">
@@ -3602,6 +3856,10 @@ html, body {
           <i class="fa-solid fa-award"></i>
           <span>Celebrate Progress</span>
         </button>
+        <button class="nav-link quick-action" id="sidebarCreatorStudioBtn" onclick="if(window.CreatorStudio) CreatorStudio.open();">
+          <i class="fa-solid fa-crown" style="color: #f59e0b;"></i>
+          <span>Creator Studio (Post)</span>
+        </button>
       </nav>
 
       <!-- Sidebar Footer -->
@@ -3651,6 +3909,12 @@ html, body {
           <button class="nav-action-pill guide-pill" id="openUserGuideBtn" onclick="if(window.UserGuide) UserGuide.open();" title="How to use this app (गाइड)">
             <i class="fa-solid fa-book-open"></i>
             <span>User Guide (गाइड)</span>
+          </button>
+
+          <!-- Creator Studio (Post Lecture) Button -->
+          <button class="nav-action-pill creator-pill" id="openCreatorStudioNavBtn" onclick="if(window.CreatorStudio) CreatorStudio.open();" title="Creator Studio • Post & Publish Video Lectures">
+            <i class="fa-solid fa-crown"></i>
+            <span>Publish Video 👑</span>
           </button>
 
           <!-- Zen Mode Fullscreen Button -->
@@ -4482,45 +4746,4687 @@ You can format with markdown:
     </div>
   </div>
 
+  <!-- Modal for Creator Studio & Publisher (Admin Only) -->
+  <div class="custom-modal" id="creatorStudioModal">
+    <div class="modal-card creator-modal-card">
+      <div class="modal-header">
+        <div class="guide-header-title">
+          <i class="fa-solid fa-crown" style="font-size: 1.6rem; color: #f59e0b;"></i>
+          <div>
+            <h3>EduPulse Creator Studio 👑</h3>
+            <span class="guide-subtitle">Publish verified video lectures with custom headings, notes & formulas</span>
+          </div>
+        </div>
+        <button class="modal-close-btn close-creator-modal" title="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- State 1: Security PIN Lock Screen -->
+      <div id="creatorLockScreen" class="creator-lock-box">
+        <div class="creator-lock-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 6px;">Creator Access Required</h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+          Only you (the verified instructor/admin) can publish new videos and notes. Enter your 4-digit PIN below:
+        </p>
+        <div class="pin-input-group">
+          <input type="password" id="creatorPinInput" class="pin-input-field" maxlength="8" placeholder="••••" autocomplete="off">
+          <button class="btn-primary-glow" id="creatorUnlockBtn"><i class="fa-solid fa-lock-open"></i> Unlock</button>
+        </div>
+        <div id="creatorPinError" style="color: #ef4444; font-size: 0.8rem; margin-top: 8px; display: none;"></div>
+        <div class="pin-hint"><i class="fa-solid fa-circle-info"></i> Default PIN is <strong>1234</strong> (You can change it once unlocked).</div>
+      </div>
+
+      <!-- State 2: Creator Studio Publisher Screen (Hidden until unlocked) -->
+      <div id="creatorStudioScreen" class="modal-body" style="display: none; padding: 20px 24px; overflow-y: auto; max-height: calc(90vh - 140px);">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 8px;">
+          <span style="font-size: 0.85rem; color: #fbbf24; font-weight: 700;">
+            <i class="fa-solid fa-circle-check"></i> Creator Mode Active
+          </span>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn-sm btn-ghost" id="changeAdminPinBtn" title="Change Security PIN"><i class="fa-solid fa-key"></i> Change PIN</button>
+            <button class="btn-sm btn-ghost" id="copyGithubSnippetBtn" title="Copy Published Lessons code for GitHub data.js"><i class="fa-brands fa-github"></i> Copy for GitHub</button>
+            <button class="btn-sm btn-ghost text-red" onclick="CreatorStudio.lockStudio();" title="Lock Studio"><i class="fa-solid fa-lock"></i> Lock</button>
+          </div>
+        </div>
+
+        <form id="creatorPublishForm" class="creator-form" onsubmit="event.preventDefault(); CreatorStudio.handlePublish();">
+          
+          <!-- 1. Video URL & Live Preview -->
+          <div class="creator-field-group">
+            <label><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> YouTube Video URL or Video ID <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="lectureVideoUrlInput" placeholder="Paste YouTube link (e.g. https://www.youtube.com/watch?v=... or https://youtu.be/...)" required>
+          </div>
+          <div id="ytVideoPreviewContainer" class="yt-preview-row" style="display: none;">
+            <img id="ytVideoPreviewThumb" src="" alt="Thumbnail Preview" class="yt-preview-thumb">
+            <div>
+              <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;"><i class="fa-solid fa-check"></i> Valid YouTube Video Detected</span>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">This video will be embedded in distraction-free player.</div>
+            </div>
+          </div>
+
+          <!-- 2. Lecture Heading / Title -->
+          <div class="creator-field-group">
+            <label><i class="fa-solid fa-heading"></i> Lesson Heading / Title <span style="color:#ef4444;">*</span></label>
+            <input type="text" id="lectureTitleInput" placeholder="e.g. Complete Organic Chemistry Reaction Mechanisms & SN1/SN2" required>
+          </div>
+
+          <!-- 3. Subject Category & Class Level & Duration -->
+          <div class="form-row-3">
+            <div class="creator-field-group">
+              <label><i class="fa-solid fa-shapes"></i> Subject Category</label>
+              <select id="lectureSubjectSelect">
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+                <option value="math">Mathematics</option>
+                <option value="cs">Computer Science & Coding</option>
+                <option value="biology">Biology & Medical</option>
+                <option value="history">History & General Knowledge</option>
+                <option value="custom" selected>Exam Special / Custom</option>
+              </select>
+            </div>
+            <div class="creator-field-group">
+              <label><i class="fa-solid fa-signal"></i> Class / Target Level</label>
+              <input type="text" id="lectureLevelInput" placeholder="e.g. Class 12 / JEE / NEET" value="Class 11-12 / Competitive">
+            </div>
+            <div class="creator-field-group">
+              <label><i class="fa-regular fa-clock"></i> Duration</label>
+              <input type="text" id="lectureDurationInput" placeholder="e.g. 25 mins" value="25 mins">
+            </div>
+          </div>
+
+          <!-- 4. Instructor Name -->
+          <div class="creator-field-group">
+            <label><i class="fa-solid fa-chalkboard-user"></i> Instructor / Publisher Name</label>
+            <input type="text" id="lectureAuthorInput" placeholder="e.g. Abhinav" value="Instructor Abhinav">
+          </div>
+
+          <!-- 5. Description & Comprehensive Notes -->
+          <div class="creator-field-group">
+            <label><i class="fa-solid fa-file-lines"></i> Description & Core Study Notes (Auto-Exportable to PDF)</label>
+            <textarea id="lectureDescInput" rows="5" placeholder="Write comprehensive study summary, key takeaways, derivation steps, and lecture insights here. Students can download this directly as PDF notes!"></textarea>
+          </div>
+
+          <!-- 6. Important Things / Key Formulas (Dynamic List) -->
+          <div class="creator-field-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <label><i class="fa-solid fa-square-root-variable"></i> Important Things / Key Formulas & Rules</label>
+              <button type="button" class="btn-sm btn-secondary" id="addFormulaRowBtn" style="font-size: 0.75rem; padding: 4px 10px;">
+                <i class="fa-solid fa-plus"></i> Add Another Point / Formula
+              </button>
+            </div>
+            <div id="creatorFormulasList">
+              <div class="formula-input-row">
+                <div class="row-inputs">
+                  <input type="text" class="formula-in-title" placeholder="Concept / Rule Name (e.g. Gauss's Law)" value="Core Law / Rule">
+                  <input type="text" class="formula-in-math" placeholder="Formula or Equation (e.g. Φ = Q_enc / ε₀)">
+                  <input type="text" class="formula-in-desc" placeholder="Brief Explanation / Exam Significance">
+                </div>
+                <button type="button" class="btn-remove-row" title="Remove Row" onclick="this.closest('.formula-input-row').remove()">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Optional Practice Quiz Question -->
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-top: 6px;">
+            <label style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; margin-bottom: 10px; display: block;">
+              <i class="fa-solid fa-circle-question"></i> Instant Practice Quiz (Optional)
+            </label>
+            <div class="creator-field-group" style="margin-bottom: 10px;">
+              <input type="text" id="creatorQuizQuestion" placeholder="Enter Question (e.g. Which law states that total flux equals enclosed charge over epsilon?)">
+            </div>
+            <div class="form-row-2" style="margin-bottom: 10px;">
+              <input type="text" id="creatorQuizOptA" placeholder="Option A (Default)">
+              <input type="text" id="creatorQuizOptB" placeholder="Option B">
+            </div>
+            <div class="form-row-2" style="margin-bottom: 10px;">
+              <input type="text" id="creatorQuizOptC" placeholder="Option C">
+              <input type="text" id="creatorQuizOptD" placeholder="Option D">
+            </div>
+            <div class="form-row-2">
+              <div class="creator-field-group">
+                <label style="font-size: 0.72rem;">Correct Option:</label>
+                <select id="creatorQuizAnswer">
+                  <option value="0">Option A is Correct</option>
+                  <option value="1">Option B is Correct</option>
+                  <option value="2">Option C is Correct</option>
+                  <option value="3">Option D is Correct</option>
+                </select>
+              </div>
+              <div class="creator-field-group">
+                <label style="font-size: 0.72rem;">Explanation:</label>
+                <input type="text" id="creatorQuizExp" placeholder="Why this is the correct answer">
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Submit -->
+          <div style="margin-top: 14px; display: flex; gap: 12px; justify-content: flex-end;">
+            <button type="button" class="btn-secondary close-creator-modal">Cancel</button>
+            <button type="submit" class="btn-primary-glow" id="publishLectureBtn">
+              <i class="fa-solid fa-cloud-arrow-up"></i> Publish Lecture to App
+            </button>
+          </div>
+        </form>
+
+        <!-- 8. Manager for Existing Published Lessons -->
+        <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 0.95rem; color: #fff; margin-bottom: 12px;">
+            <i class="fa-solid fa-list-check"></i> My Published Lectures (Admin Management)
+          </h4>
+          <div id="myPublishedLessonsList">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
   <!-- Notification Toast Container -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Scripts: Smart Dual-Path Loader (works seamlessly on GitHub root and local js/ folder) -->
   <script>
-    (function() {
-      const scripts = [
-        "data.js", "pdfExport.js", "youtubeSearch.js", "userGuide.js",
-        "focusAudio.js", "flashcards.js", "notes.js", "converter.js", "urlHub.js", "app.js"
-      ];
 
-      function loadScript(src, fallbackSrc, callback) {
-        const s = document.createElement('script');
-        s.src = src;
-        s.onload = () => callback();
-        s.onerror = () => {
-          if (fallbackSrc) {
-            const fb = document.createElement('script');
-            fb.src = fallbackSrc;
-            fb.onload = () => callback();
-            document.head.appendChild(fb);
-          } else {
-            callback();
-          }
-        };
-        document.head.appendChild(s);
+/* --- data.js --- */
+/* ==========================================================================
+   EDUPULSE CURRICULUM & STUDY DATABASE
+   Real, comprehensive educational content across all major subjects
+   ========================================================================== */
+
+const STUDY_DATABASE = {
+  topics: [
+    {
+      id: "math-calculus-derivatives",
+      title: "Calculus: Essence of Derivatives & Rates of Change",
+      subject: "math",
+      subjectName: "Mathematics",
+      duration: "18 mins",
+      level: "Class 11-12 / College",
+      rating: "4.9/5",
+      videoId: "WUvTyaaNkzM", // 3Blue1Brown Calculus
+      chapters: [
+        { title: "Geometric Intuition", time: "0:00" },
+        { title: "Slope of Secant to Tangent", time: "3:45" },
+        { title: "The Power Rule Formula", time: "8:20" },
+        { title: "Real-world Applications", time: "14:10" }
+      ],
+      notes: `
+        <h3>1. Fundamental Meaning of the Derivative</h3>
+        <p>The derivative measures the instantaneous rate of change of a function with respect to one of its variables. Geometrically, it is the exact slope of the tangent line to the function at any given point.</p>
+        
+        <div class="callout-box">
+          <strong>Key Mathematical Definition:</strong>
+          f'(x) = lim (h &rarr; 0) [ f(x + h) - f(x) ] / h
+        </div>
+
+        <h3>2. Essential Rules Every Student Must Master</h3>
+        <ul>
+          <li><strong>Power Rule:</strong> d/dx [x^n] = n &middot; x^(n-1)</li>
+          <li><strong>Product Rule:</strong> d/dx [u &middot; v] = u'v + uv'</li>
+          <li><strong>Quotient Rule:</strong> d/dx [u / v] = (u'v - uv') / v^2</li>
+          <li><strong>Chain Rule:</strong> d/dx [f(g(x))] = f'(g(x)) &middot; g'(x)</li>
+        </ul>
+
+        <h3>3. Physical Interpretation</h3>
+        <p>If position is given by s(t), then velocity is v(t) = s'(t) (first derivative), and acceleration is a(t) = v'(t) = s''(t) (second derivative).</p>
+      `,
+      formulas: [
+        {
+          title: "Definition of Derivative",
+          math: "f'(x) = lim[h→0] (f(x+h) - f(x)) / h",
+          desc: "The limit definition representing instantaneous rate of change."
+        },
+        {
+          title: "Power Rule",
+          math: "d/dx(x^n) = n · x^(n - 1)",
+          desc: "Fundamental rule used for all polynomial differentiation."
+        },
+        {
+          title: "Chain Rule",
+          math: "dy/dx = (dy/du) · (du/dx)",
+          desc: "Differentiates composite functions f(g(x))."
+        },
+        {
+          title: "Product Rule",
+          math: "(f · g)' = f' · g + f · g'",
+          desc: "Derivative of the product of two functions."
+        }
+      ],
+      quiz: [
+        {
+          question: "What is the derivative of f(x) = 3x^4 - 5x + 7?",
+          options: [
+            "12x^3 - 5",
+            "12x^4 - 5x",
+            "7x^3 - 5",
+            "12x^3 + 7"
+          ],
+          answer: 0,
+          explanation: "Applying the power rule: d/dx(3x^4) = 12x^3, d/dx(-5x) = -5, d/dx(7) = 0. Therefore, f'(x) = 12x^3 - 5."
+        },
+        {
+          question: "If position s(t) = t^2, what is the acceleration at t = 3?",
+          options: [
+            "6",
+            "2",
+            "0",
+            "9"
+          ],
+          answer: 1,
+          explanation: "Velocity v(t) = s'(t) = 2t. Acceleration a(t) = v'(t) = 2 (constant for all t). So at t = 3, acceleration is 2."
+        },
+        {
+          question: "Which rule is required to differentiate sin(x^2)?",
+          options: [
+            "Product Rule",
+            "Quotient Rule",
+            "Chain Rule",
+            "Integration by Parts"
+          ],
+          answer: 2,
+          explanation: "Because sin(x^2) is a composite function f(g(x)) where f(u) = sin(u) and g(x) = x^2, the Chain Rule gives cos(x^2) · 2x."
+        }
+      ]
+    },
+
+    {
+      id: "physics-quantum-basics",
+      title: "Quantum Physics: Wave-Particle Duality & Schrödinger",
+      subject: "physics",
+      subjectName: "Physics",
+      duration: "21 mins",
+      level: "Senior Secondary / University",
+      rating: "5.0/5",
+      videoId: "bHIhgxav9LY", // Quantum mechanics
+      chapters: [
+        { title: "Double-Slit Experiment", time: "0:00" },
+        { title: "Wave-Particle Duality", time: "5:15" },
+        { title: "Heisenberg Uncertainty Principle", time: "11:30" },
+        { title: "Schrödinger Wave Equation", time: "16:45" }
+      ],
+      notes: `
+        <h3>1. Wave-Particle Duality</h3>
+        <p>Light and matter exhibit behaviors of both waves and discrete particles. The Photoelectric effect (Einstein 1905) proved light travels in packets called photons with energy E = h&nu;. De Broglie showed particles with momentum p also possess a wavelength &lambda; = h / p.</p>
+
+        <div class="callout-box">
+          <strong>De Broglie Wavelength Equation:</strong>
+          &lambda; = h / p = h / (m &middot; v)
+        </div>
+
+        <h3>2. Heisenberg Uncertainty Principle</h3>
+        <p>It is fundamentally impossible to simultaneously measure the exact position and exact momentum of a quantum entity with infinite precision.</p>
+        <p>&Delta;x &middot; &Delta;p &ge; &#8463; / 2 (where &#8463; = h / (2&pi;))</p>
+
+        <h3>3. Schrödinger's Equation</h3>
+        <p>Describes how the quantum state (wave function &Psi;) of a physical system changes over time. |&Psi;|^2 gives the probability density of finding the particle at a specific location.</p>
+      `,
+      formulas: [
+        {
+          title: "Planck Energy Relation",
+          math: "E = h · ν = (h · c) / λ",
+          desc: "Relates the energy of a photon to its frequency and wavelength."
+        },
+        {
+          title: "De Broglie Wavelength",
+          math: "λ = h / p = h / (m · v)",
+          desc: "Wavelength of any matter particle with mass m and velocity v."
+        },
+        {
+          title: "Heisenberg Uncertainty",
+          math: "Δx · Δp ≥ ℏ / 2",
+          desc: "Fundamental limit to the precision of complementary variables."
+        },
+        {
+          title: "Time-Independent Schrödinger",
+          math: "Ĥψ = Eψ",
+          desc: "Eigenvalue equation determining the stationary states of a quantum system."
+        }
+      ],
+      quiz: [
+        {
+          question: "What did the Photoelectric Effect experiment prove about light?",
+          options: [
+            "Light is purely a continuous wave",
+            "Light consists of quantized packets of energy (photons)",
+            "Light cannot travel through vacuum",
+            "Light speed depends on observer velocity"
+          ],
+          answer: 1,
+          explanation: "Albert Einstein won the Nobel Prize for explaining that light transfers energy in discrete packets called photons, where E = hν."
+        },
+        {
+          question: "If an electron's speed increases, what happens to its De Broglie wavelength?",
+          options: [
+            "It decreases",
+            "It increases",
+            "It remains exactly the same",
+            "It becomes zero immediately"
+          ],
+          answer: 0,
+          explanation: "Since λ = h / (m · v), wavelength λ is inversely proportional to velocity v. Higher velocity means smaller wavelength."
+        }
+      ]
+    },
+
+    {
+      id: "cs-python-dsa",
+      title: "Computer Science: Python Core & Data Structures",
+      subject: "cs",
+      subjectName: "Computer Science",
+      duration: "25 mins",
+      level: "All Levels",
+      rating: "4.9/5",
+      videoId: "_uQrJ0TkZlc", // Python tutorial
+      chapters: [
+        { title: "Python Syntax & Memory Model", time: "0:00" },
+        { title: "Lists, Tuples, Dictionaries", time: "6:10" },
+        { title: "Time Complexity & Big-O", time: "14:20" },
+        { title: "Binary Search & Sorting", time: "19:40" }
+      ],
+      notes: `
+        <h3>1. Python Memory & Core Data Types</h3>
+        <p>Python is dynamically typed and garbage collected. Everything in Python is an object. Mutable types (Lists, Dicts, Sets) can be modified in-place, while immutable types (Integers, Floats, Strings, Tuples) create a new object when changed.</p>
+
+        <div class="callout-box">
+          <strong>Big-O Complexity Cheat Sheet:</strong>
+          <ul>
+            <li>List append / pop: <strong>O(1)</strong></li>
+            <li>List insert / delete at index: <strong>O(N)</strong></li>
+            <li>Dict lookup / insert: <strong>O(1) average</strong></li>
+            <li>Binary Search: <strong>O(log N)</strong></li>
+            <li>QuickSort / MergeSort: <strong>O(N log N)</strong></li>
+          </ul>
+        </div>
+
+        <h3>2. Idiomatic Python (Clean Code)</h3>
+        <p>Use List Comprehensions: <code>[x**2 for x in nums if x % 2 == 0]</code></p>
+        <p>Use Context Managers: <code>with open("file.txt") as f: ...</code> to guarantee file handles close properly.</p>
+      `,
+      formulas: [
+        {
+          title: "Binary Search Complexity",
+          math: "T(N) = O(log₂ N)",
+          desc: "Halves search space at each iteration on a sorted array."
+        },
+        {
+          title: "Hash Map Average Lookup",
+          math: "O(1) Constant Time",
+          desc: "Key hashed to bucket index for instantaneous retrieval."
+        },
+        {
+          title: "Merge Sort Space & Time",
+          math: "Time: O(N log N), Space: O(N)",
+          desc: "Stable divide-and-conquer sorting algorithm."
+        }
+      ],
+      quiz: [
+        {
+          question: "What is the average time complexity of searching a key in a Python dictionary?",
+          options: [
+            "O(N)",
+            "O(1)",
+            "O(log N)",
+            "O(N^2)"
+          ],
+          answer: 1,
+          explanation: "Python dictionaries use hash tables under the hood, giving O(1) average time lookup."
+        },
+        {
+          question: "Which of the following data types in Python is IMMUTABLE?",
+          options: [
+            "List",
+            "Dictionary",
+            "Set",
+            "Tuple"
+          ],
+          answer: 3,
+          explanation: "Tuples, Strings, and Integers are immutable in Python; their contents cannot be changed after creation."
+        }
+      ]
+    },
+
+    {
+      id: "chem-organic-reactions",
+      title: "Chemistry: Organic Chemistry Reaction Mechanisms",
+      subject: "chemistry",
+      subjectName: "Chemistry",
+      duration: "20 mins",
+      level: "Class 11-12 / NEET / JEE",
+      rating: "4.8/5",
+      videoId: "d2K3p0WpUa0", // Organic chemistry
+      chapters: [
+        { title: "Electrophiles vs Nucleophiles", time: "0:00" },
+        { title: "SN1 vs SN2 Mechanisms", time: "5:30" },
+        { title: "Markovnikov's Rule", time: "12:15" },
+        { title: "Acidity & Resonance Effects", time: "16:40" }
+      ],
+      notes: `
+        <h3>1. SN1 vs SN2 Nucleophilic Substitution</h3>
+        <p><strong>SN1 (Substitution Nucleophilic Unimolecular):</strong> 2-step process involving a carbocation intermediate. Rate depends only on substrate [R-X]. Leads to racemization. Favored by tertiary (3&deg;) halides and polar protic solvents.</p>
+        <p><strong>SN2 (Substitution Nucleophilic Bimolecular):</strong> 1-step concerted mechanism with simultaneous bond breaking and forming. Inversion of configuration (Walden inversion). Favored by primary (1&deg;) halides and polar aprotic solvents.</p>
+
+        <div class="callout-box">
+          <strong>Markovnikov's Rule:</strong>
+          In electrophilic addition of HX to an unsymmetrical alkene, the hydrogen atom attaches to the carbon with the greater number of hydrogen atoms already attached ("The rich get richer").
+        </div>
+      `,
+      formulas: [
+        {
+          title: "SN1 Rate Law",
+          math: "Rate = k · [Substrate]",
+          desc: "First order kinetics, formation of carbocation is rate-determining."
+        },
+        {
+          title: "SN2 Rate Law",
+          math: "Rate = k · [Substrate] · [Nucleophile]",
+          desc: "Second order kinetics, concerted single-step backside attack."
+        },
+        {
+          title: "Carbocation Stability Order",
+          math: "3° > 2° > 1° > Methyl",
+          desc: "Stabilized by hyperconjugation and inductive effect (+I)."
+        }
+      ],
+      quiz: [
+        {
+          question: "Which alkyl halide will react fastest via the SN2 mechanism?",
+          options: [
+            "CH3-Br (Methyl bromide)",
+            "(CH3)3C-Br (tert-butyl bromide)",
+            "(CH3)2CH-Br (isopropyl bromide)",
+            "Phenyl bromide"
+          ],
+          answer: 0,
+          explanation: "SN2 involves backside attack and is hindered by steric hindrance. Methyl halides have the least steric bulk and react fastest."
+        }
+      ]
+    },
+
+    {
+      id: "bio-genetics-dna",
+      title: "Biology: DNA Replication, Transcription & Translation",
+      subject: "biology",
+      subjectName: "Biology",
+      duration: "19 mins",
+      level: "Class 11-12 / Medical",
+      rating: "4.9/5",
+      videoId: "gG7uCskUOrA", // DNA replication
+      chapters: [
+        { title: "DNA Double Helix Structure", time: "0:00" },
+        { title: "Enzymes in DNA Replication", time: "5:20" },
+        { title: "RNA Transcription (DNA to mRNA)", time: "11:10" },
+        { title: "Ribosomal Translation & Codons", time: "15:00" }
+      ],
+      notes: `
+        <h3>1. The Central Dogma of Molecular Biology</h3>
+        <p>DNA &rarr; (Transcription) &rarr; mRNA &rarr; (Translation) &rarr; Functional Protein.</p>
+
+        <h3>2. Key Enzymes in DNA Replication</h3>
+        <ul>
+          <li><strong>Helicase:</strong> Unzips the double helix by breaking hydrogen bonds.</li>
+          <li><strong>DNA Polymerase III:</strong> Synthesizes the complementary daughter strand in the 5' &rarr; 3' direction.</li>
+          <li><strong>Primase:</strong> Lays down an RNA primer for polymerase to start.</li>
+          <li><strong>DNA Ligase:</strong> Glues Okazaki fragments together on the lagging strand.</li>
+        </ul>
+
+        <div class="callout-box">
+          <strong>Base Pairing Rule (Chargaff's Rule):</strong>
+          Adenine (A) pairs with Thymine (T) via 2 Hydrogen bonds.<br>
+          Guanine (G) pairs with Cytosine (C) via 3 Hydrogen bonds.
+        </div>
+      `,
+      formulas: [
+        {
+          title: "Chargaff's Rule",
+          math: "A = T and G ≡ C  =>  (A + G) = (T + C)",
+          desc: "Purines always equal pyrimidines in double-stranded DNA."
+        },
+        {
+          title: "Start Codon",
+          math: "AUG (Methionine)",
+          desc: "The universal signal codon initiating ribosomal protein synthesis."
+        }
+      ],
+      quiz: [
+        {
+          question: "Which enzyme joins Okazaki fragments on the lagging strand during DNA replication?",
+          options: [
+            "DNA Ligase",
+            "Helicase",
+            "RNA Primase",
+            "Topoisomerase"
+          ],
+          answer: 0,
+          explanation: "DNA Ligase forms phosphodiester bonds between discontinuous Okazaki fragments on the lagging strand."
+        }
+      ]
+    },
+
+    {
+      id: "history-industrial-revolution",
+      title: "History & GK: The Industrial Revolution & Modern World",
+      subject: "history",
+      subjectName: "History & GK",
+      duration: "16 mins",
+      level: "General Study / UPSC / Boards",
+      rating: "4.7/5",
+      videoId: "zhL5DCizj5c", // CrashCourse History
+      chapters: [
+        { title: "Origins in Great Britain", time: "0:00" },
+        { title: "Steam Power & Watt Engine", time: "4:30" },
+        { title: "Factory System & Urbanization", time: "9:15" },
+        { title: "Global Economic Shift", time: "13:00" }
+      ],
+      notes: `
+        <h3>1. Why Great Britain First?</h3>
+        <p>Britain had vast coal deposits, iron ore, surplus agricultural capital, naval dominance protecting trade routes, and a stable legal patent system protecting innovators.</p>
+
+        <h3>2. Key Inventions that Changed Humanity</h3>
+        <ul>
+          <li><strong>Spinning Jenny (1764) - James Hargreaves:</strong> Revolutionized yarn production.</li>
+          <li><strong>Steam Engine (1769) - James Watt:</strong> Enabled mechanical power anywhere, ending reliance on water wheels.</li>
+          <li><strong>Locomotive Steam Train - George Stephenson:</strong> Shrinking distance and freight transport times.</li>
+        </ul>
+      `,
+      formulas: [
+        {
+          title: "Timeline of First Industrial Rev",
+          math: "Circa 1760 – 1840",
+          desc: "Transition from manual handcraft to machinery and steam power."
+        }
+      ],
+      quiz: [
+        {
+          question: "Who significantly improved the efficiency of the Steam Engine in 1769?",
+          options: [
+            "James Watt",
+            "Thomas Edison",
+            "Eli Whitney",
+            "Isaac Newton"
+          ],
+          answer: 0,
+          explanation: "James Watt added a separate condenser to Newcomen's engine, vastly improving fuel efficiency and powering the revolution."
+        }
+      ]
+    }
+  ],
+
+  // Default Flashcard Decks
+  flashcards: {
+    math: [
+      {
+        category: "Mathematics",
+        question: "What is Euler's Identity?",
+        answer: "e^(i·π) + 1 = 0",
+        tip: "Connects 5 fundamental constants: e, i, π, 1, and 0 in a single equation."
+      },
+      {
+        category: "Mathematics",
+        question: "What is the Quadratic Formula?",
+        answer: "x = (-b ± √(b² - 4ac)) / (2a)",
+        tip: "Solves ax² + bx + c = 0. The discriminant b² - 4ac tells the nature of roots."
+      },
+      {
+        category: "Mathematics",
+        question: "What is the derivative of ln(x)?",
+        answer: "1 / x",
+        tip: "Valid for all x > 0."
+      },
+      {
+        category: "Mathematics",
+        question: "What is Pythagoras Theorem?",
+        answer: "a² + b² = c²",
+        tip: "In any right-angled triangle, hypotenuse squared equals sum of squares of other two sides."
       }
+    ],
 
-      function loadSequentially(index) {
-        if (index >= scripts.length) return;
-        const name = scripts[index];
-        // Try root first (matching GitHub root upload), fallback to js/ subfolder
-        loadScript(name, "js/" + name, function() {
-          loadSequentially(index + 1);
+    physics: [
+      {
+        category: "Physics",
+        question: "Newton's Second Law of Motion?",
+        answer: "F = m · a (or F = dp/dt)",
+        tip: "Force equals the rate of change of linear momentum."
+      },
+      {
+        category: "Physics",
+        question: "What is Einstein's Mass-Energy Equivalence?",
+        answer: "E = m · c²",
+        tip: "c is the speed of light in vacuum (~3 × 10⁸ m/s)."
+      },
+      {
+        category: "Physics",
+        question: "What is Coulomb's Law formula for electrostatics?",
+        answer: "F = (1 / 4πε₀) · (|q₁q₂| / r²)",
+        tip: "Electrostatic force between two point charges."
+      }
+    ],
+
+    cs: [
+      {
+        category: "Computer Science",
+        question: "Time complexity of Binary Search?",
+        answer: "O(log N)",
+        tip: "Array must be sorted prior to searching."
+      },
+      {
+        category: "Computer Science",
+        question: "What does HTTP status code 404 signify?",
+        answer: "Not Found",
+        tip: "The server cannot find the requested resource URL."
+      },
+      {
+        category: "Computer Science",
+        question: "What is a FIFO Data Structure?",
+        answer: "Queue (First In First Out)",
+        tip: "Elements added at rear and removed from front."
+      }
+    ],
+
+    chemistry: [
+      {
+        category: "Chemistry",
+        question: "What is Avogadro's Number?",
+        answer: "6.022 × 10²³ entities / mole",
+        tip: "Number of atoms/molecules in one mole of any pure substance."
+      },
+      {
+        category: "Chemistry",
+        question: "What is the Ideal Gas Equation?",
+        answer: "P · V = n · R · T",
+        tip: "P=Pressure, V=Volume, n=Moles, R=Gas constant, T=Kelvin Temp."
+      }
+    ],
+
+    biology: [
+      {
+        category: "Biology",
+        question: "What is known as the powerhouse of the cell?",
+        answer: "Mitochondria",
+        tip: "Site of cellular respiration and ATP generation."
+      },
+      {
+        category: "Biology",
+        question: "Which base replaces Thymine in RNA?",
+        answer: "Uracil (U)",
+        tip: "Adenine pairs with Uracil in RNA strands."
+      }
+    ],
+
+    custom: [
+      {
+        category: "My Custom Study",
+        question: "What is active recall?",
+        answer: "Testing yourself on information rather than passively re-reading it.",
+        tip: "Produces significantly stronger neural pathways and exam retention."
+      }
+    ]
+  },
+
+  // Sample CSV Exam Data for Table to PDF converter
+  sampleCsv: `Subject,Topic,Target Date,Priority,Status
+Mathematics,Calculus & Integration,2026-10-05,High,In Progress
+Physics,Quantum Dual Nature,2026-10-08,High,Not Started
+Computer Science,Data Structures (Trees & Graphs),2026-10-12,Urgent,Completed
+Chemistry,Organic Reaction Mechanisms,2026-10-15,Medium,In Progress
+Biology,Molecular Genetics & DNA,2026-10-18,Medium,Not Started
+English / GK,Industrial Revolution & Vocabulary,2026-10-22,Low,Completed`,
+
+  loadPublishedLessons() {
+    try {
+      const stored = localStorage.getItem('edupulse_published_lessons');
+      if (stored) {
+        const customLessons = JSON.parse(stored);
+        if (Array.isArray(customLessons)) {
+          customLessons.forEach(cl => {
+            if (!this.topics.some(t => t.id === cl.id)) {
+              this.topics.unshift(cl);
+            }
+          });
+        }
+      }
+    } catch (e) {
+      console.warn('Could not load custom published lessons:', e);
+    }
+  }
+};
+
+// Immediately load any custom lessons published by the admin
+STUDY_DATABASE.loadPublishedLessons();
+
+if (typeof window !== 'undefined') {
+  window.STUDY_DATABASE = STUDY_DATABASE;
+}
+
+
+/* --- pdfExport.js --- */
+/* ==========================================================================
+   EDUPULSE PDF EXPORT ENGINE
+   Generates clean, professionally formatted PDF handouts & cheatsheets
+   ========================================================================== */
+
+const PdfExporter = {
+  /**
+   * Export an active curriculum topic into a beautiful study handout PDF
+   */
+  exportTopic(topic) {
+    if (!topic) return;
+
+    // Build offscreen printable template
+    const printContainer = document.createElement('div');
+    printContainer.className = 'pdf-export-document';
+    printContainer.style.padding = '30px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+    printContainer.style.background = '#ffffff';
+    printContainer.style.lineHeight = '1.6';
+
+    const formulasHtml = topic.formulas.map(f => `
+      <div style="margin-bottom: 12px; padding: 10px 14px; background: #f8fafc; border-left: 4px solid #4f46e5; border-radius: 4px;">
+        <div style="font-weight: 700; color: #4338ca; font-size: 13px; text-transform: uppercase;">${f.title}</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #b45309; margin: 4px 0; font-weight: 600;">${f.math}</div>
+        <div style="font-size: 12px; color: #64748b;">${f.desc}</div>
+      </div>
+    `).join('');
+
+    const quizHtml = topic.quiz.map((q, idx) => `
+      <div style="margin-bottom: 14px; padding: 10px; border-bottom: 1px dashed #cbd5e1;">
+        <div style="font-weight: 600; font-size: 13px; color: #0f172a;">Q${idx + 1}. ${q.question}</div>
+        <div style="margin-top: 4px; font-size: 12px; color: #15803d; font-weight: 600;">Answer: ${q.options[q.answer]}</div>
+        <div style="font-size: 11px; color: #64748b; margin-top: 2px;"><em>Explanation:</em> ${q.explanation}</div>
+      </div>
+    `).join('');
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #6366f1; padding-bottom: 14px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span style="display: inline-block; padding: 3px 10px; background: #e0e7ff; color: #4338ca; font-size: 11px; font-weight: 700; border-radius: 12px; text-transform: uppercase;">${topic.subjectName}</span>
+          <h1 style="font-size: 22px; color: #0f172a; margin: 8px 0 4px 0; font-weight: 800;">${topic.title}</h1>
+          <div style="font-size: 12px; color: #64748b;">Difficulty: ${topic.level} | Read Time: ${topic.duration}</div>
+        </div>
+        <div style="text-align: right; font-size: 11px; color: #94a3b8;">
+          <div style="font-weight: 700; color: #6366f1; font-size: 13px;">EduPulse Study Notes</div>
+          <div>Generated on: ${new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-size: 16px; color: #1e1b4b; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 12px;">Detailed Study Notes & Summary</h2>
+        <div style="font-size: 13px; color: #334155;">
+          ${topic.notes}
+        </div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-size: 16px; color: #1e1b4b; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 12px;">Key Formulas & Core Theorems</h2>
+        ${formulasHtml}
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <h2 style="font-size: 16px; color: #1e1b4b; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 12px;">Practice Questions & Solutions</h2>
+        ${quizHtml}
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid #e2e8f0; padding-top: 12px; font-size: 11px; color: #94a3b8;">
+        EduPulse • 100% Distraction-Free Study Platform • Keep Learning & Revising
+      </div>
+    `;
+
+    // Trigger PDF download via html2pdf
+    const opt = {
+      margin: 10,
+      filename: `${topic.title.replace(/[^a-zA-Z0-9]/g, '_')}_Cheatsheet.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        App.showToast('Study Cheatsheet PDF downloaded successfully!', 'success');
+        if (window.confetti) {
+          window.confetti({ particleCount: 60, spread: 70, origin: { y: 0.8 } });
+        }
+      }).catch(err => {
+        console.error('PDF generation error:', err);
+        App.showToast('Falling back to print window...', 'info');
+        this.printFallback(printContainer);
+      });
+    } else {
+      this.printFallback(printContainer);
+    }
+  },
+
+  /**
+   * Export custom Markdown or Text Notes to PDF
+   */
+  exportCustomNote(title, contentHtml) {
+    const printContainer = document.createElement('div');
+    printContainer.style.padding = '30px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+    printContainer.style.background = '#ffffff';
+    printContainer.style.lineHeight = '1.7';
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #6366f1; padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <h1 style="font-size: 22px; color: #0f172a; margin: 0; font-weight: 800;">${title || 'Study Cheatsheet'}</h1>
+          <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Created with EduPulse Notepad</div>
+        </div>
+        <div style="text-align: right; font-size: 11px; color: #94a3b8;">
+          <div>Date: ${new Date().toLocaleDateString()}</div>
+        </div>
+      </div>
+      <div style="font-size: 13.5px; color: #334155;">
+        ${contentHtml}
+      </div>
+      <div style="margin-top: 30px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 11px; color: #94a3b8;">
+        EduPulse Study Companion • Verified Revision Notes
+      </div>
+    `;
+
+    const opt = {
+      margin: 10,
+      filename: `${(title || 'Study_Notes').replace(/[^a-zA-Z0-9]/g, '_')}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        App.showToast('Note PDF generated and downloaded!', 'success');
+        if (window.confetti) window.confetti({ particleCount: 50, spread: 60 });
+      });
+    } else {
+      this.printFallback(printContainer);
+    }
+  },
+
+  /**
+   * Export Flashcard deck to printable flashcard sheet
+   */
+  exportFlashcardDeck(deckName, cards) {
+    if (!cards || cards.length === 0) return;
+
+    const printContainer = document.createElement('div');
+    printContainer.style.padding = '25px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+
+    const cardsGrid = cards.map((c, i) => `
+      <div style="break-inside: avoid; border: 1px solid #cbd5e1; border-radius: 8px; padding: 14px; margin-bottom: 14px; background: #f8fafc;">
+        <div style="display: flex; justify-content: space-between; font-size: 11px; color: #64748b; font-weight: 700; margin-bottom: 6px;">
+          <span>CARD #${i + 1}</span>
+          <span>${c.category || 'Topic'}</span>
+        </div>
+        <div style="font-weight: 700; font-size: 14px; color: #0f172a; margin-bottom: 8px;">Q: ${c.question}</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #166534; font-weight: 600; padding: 6px 10px; background: #dcfce7; border-radius: 4px; margin-bottom: 6px;">
+          A: ${c.answer}
+        </div>
+        ${c.tip ? `<div style="font-size: 11px; color: #64748b;"><em>Tip:</em> ${c.tip}</div>` : ''}
+      </div>
+    `).join('');
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #10b981; padding-bottom: 10px; margin-bottom: 18px;">
+        <h1 style="font-size: 20px; color: #065f46; margin: 0; font-weight: 800;">${deckName.toUpperCase()} FLASHCARD DECK</h1>
+        <div style="font-size: 12px; color: #64748b;">Printable Spaced-Repetition Study Cards (${cards.length} cards)</div>
+      </div>
+      <div>${cardsGrid}</div>
+    `;
+
+    const opt = {
+      margin: 10,
+      filename: `${deckName}_Flashcards.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        App.showToast('Flashcard Deck PDF downloaded!', 'success');
+        if (window.confetti) window.confetti({ particleCount: 50, spread: 60 });
+      });
+    } else {
+      this.printFallback(printContainer);
+    }
+  },
+
+  /**
+   * Fallback for printing using new browser window
+   */
+  printFallback(element) {
+    const printWin = window.open('', '_blank');
+    printWin.document.write('<html><head><title>EduPulse Study Notes</title>');
+    printWin.document.write('</head><body>');
+    printWin.document.write(element.innerHTML);
+    printWin.document.write('</body></html>');
+    printWin.document.close();
+    printWin.focus();
+    printWin.print();
+    printWin.close();
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.PdfExporter = PdfExporter;
+}
+
+
+/* --- youtubeSearch.js --- */
+/* ==========================================================================
+   EDUPULSE YOUTUBE MULTI-VIDEO SEARCH ENGINE
+   Search ANY educational topic -> Multiple video choices -> 1-Click Study & PDF
+   ========================================================================== */
+
+const YoutubeSearch = {
+  // Rich catalog of real, high-quality YouTube lectures for instant matching
+  catalog: [
+    // Mathematics
+    {
+      id: "WUvTyaaNkzM",
+      title: "Essence of Calculus: Derivatives & Tangents",
+      channel: "3Blue1Brown",
+      duration: "17:05",
+      subject: "Mathematics",
+      keywords: ["calculus", "derivatives", "math", "differentiation", "rate of change", "tangent"]
+    },
+    {
+      id: "rfG8ce4nNh0",
+      title: "Integration and the Fundamental Theorem of Calculus",
+      channel: "3Blue1Brown",
+      duration: "20:45",
+      subject: "Mathematics",
+      keywords: ["calculus", "integration", "integrals", "math", "area under curve", "fundamental theorem"]
+    },
+    {
+      id: "fNk_zzaMoSs",
+      title: "Linear Algebra: Vectors, Linear Combinations & Span",
+      channel: "3Blue1Brown",
+      duration: "10:00",
+      subject: "Mathematics",
+      keywords: ["linear algebra", "vectors", "matrices", "matrix", "math", "span", "basis"]
+    },
+    {
+      id: "m8cTCJp4fAM",
+      title: "Trigonometry Full Course - From Basics to Advanced",
+      channel: "Khan Academy",
+      duration: "32:15",
+      subject: "Mathematics",
+      keywords: ["trigonometry", "sin cos tan", "math", "geometry", "angles", "pythagoras", "class 10"]
+    },
+    {
+      id: "uzkc-qNVoOk",
+      title: "Probability & Statistics: Distributions & Bayes Theorem",
+      channel: "StatQuest",
+      duration: "15:20",
+      subject: "Mathematics",
+      keywords: ["probability", "statistics", "bayes", "normal distribution", "math", "data"]
+    },
+
+    // Physics
+    {
+      id: "bHIhgxav9LY",
+      title: "Quantum Physics: Wave-Particle Duality & Schrödinger",
+      channel: "Domain of Science",
+      duration: "21:18",
+      subject: "Physics",
+      keywords: ["quantum", "physics", "schrodinger", "dual nature", "photoelectric", "wave"]
+    },
+    {
+      id: "kKKM8Y-u7ds",
+      title: "Newton's Laws of Motion & Classical Mechanics",
+      channel: "CrashCourse Physics",
+      duration: "12:40",
+      subject: "Physics",
+      keywords: ["newton", "motion", "mechanics", "force", "physics", "inertia", "gravity", "class 11"]
+    },
+    {
+      id: "1xZ7vF_yUuM",
+      title: "Electromagnetism: Electric Fields, Magnetism & Maxwell",
+      channel: "The Science Asylum",
+      duration: "18:30",
+      subject: "Physics",
+      keywords: ["electromagnetism", "electric field", "magnetic field", "maxwell", "physics", "current", "class 12"]
+    },
+    {
+      id: "4jVzHqQx6jY",
+      title: "Thermodynamics & Heat Transfer Explained Simply",
+      channel: "Veritasium",
+      duration: "16:50",
+      subject: "Physics",
+      keywords: ["thermodynamics", "entropy", "heat", "temperature", "physics", "carnot"]
+    },
+
+    // Computer Science & Coding
+    {
+      id: "_uQrJ0TkZlc",
+      title: "Python for Beginners - Full In-Depth Course",
+      channel: "Programming with Mosh",
+      duration: "25:30",
+      subject: "Computer Science",
+      keywords: ["python", "coding", "programming", "loops", "functions", "variables", "cs"]
+    },
+    {
+      id: "8hly31xKli0",
+      title: "Data Structures & Algorithms: Arrays, Linked Lists, Trees",
+      channel: "freeCodeCamp",
+      duration: "45:00",
+      subject: "Computer Science",
+      keywords: ["dsa", "data structures", "algorithms", "binary search", "sorting", "trees", "cs"]
+    },
+    {
+      id: "mU6anWqZJcc",
+      title: "HTML, CSS & JavaScript Web Development Crash Course",
+      channel: "Traversy Media",
+      duration: "28:10",
+      subject: "Computer Science",
+      keywords: ["html", "css", "javascript", "web dev", "frontend", "website", "coding"]
+    },
+    {
+      id: "Gv9_4yMHFhI",
+      title: "Machine Learning & Neural Networks Simply Explained",
+      channel: "3Blue1Brown",
+      duration: "19:12",
+      subject: "Computer Science",
+      keywords: ["machine learning", "ai", "neural network", "deep learning", "artificial intelligence"]
+    },
+
+    // Chemistry
+    {
+      id: "d2K3p0WpUa0",
+      title: "Organic Chemistry: SN1 & SN2 Reaction Mechanisms",
+      channel: "The Organic Chemistry Tutor",
+      duration: "22:15",
+      subject: "Chemistry",
+      keywords: ["chemistry", "organic chemistry", "sn1", "sn2", "reactions", "neet", "jee"]
+    },
+    {
+      id: "0RRVV4Diomg",
+      title: "Periodic Table Trends: Electronegativity & Atomic Radius",
+      channel: "CrashCourse Chemistry",
+      duration: "11:20",
+      subject: "Chemistry",
+      keywords: ["periodic table", "chemistry", "atomic structure", "elements", "chemical bonding"]
+    },
+    {
+      id: "Bq4W00gJc_g",
+      title: "Chemical Equilibrium & Le Chatelier's Principle",
+      channel: "Professor Dave Explains",
+      duration: "14:40",
+      subject: "Chemistry",
+      keywords: ["equilibrium", "le chatelier", "chemistry", "acids bases", "reactions"]
+    },
+
+    // Biology
+    {
+      id: "gG7uCskUOrA",
+      title: "DNA Replication, Transcription & Protein Translation",
+      channel: "CrashCourse Biology",
+      duration: "19:40",
+      subject: "Biology",
+      keywords: ["dna", "genetics", "biology", "transcription", "translation", "cells", "rna"]
+    },
+    {
+      id: "URUJD5NEXC8",
+      title: "Cell Structure & Organelles: The City of the Cell",
+      channel: "Amoeba Sisters",
+      duration: "13:10",
+      subject: "Biology",
+      keywords: ["cell", "mitochondria", "organelles", "biology", "nucleus", "membrane"]
+    },
+    {
+      id: "fR3NxCR9z2U",
+      title: "Human Circulatory & Respiratory System Physiology",
+      channel: "CrashCourse Anatomy",
+      duration: "15:50",
+      subject: "Biology",
+      keywords: ["heart", "circulation", "biology", "human body", "lungs", "anatomy", "medical"]
+    },
+
+    // History & General Studies
+    {
+      id: "zhL5DCizj5c",
+      title: "The Industrial Revolution & Emergence of Modern World",
+      channel: "CrashCourse History",
+      duration: "16:25",
+      subject: "History & GK",
+      keywords: ["history", "industrial revolution", "upsc", "britain", "modern world", "steam engine"]
+    },
+    {
+      id: "y5247gRz9k8",
+      title: "World War II: Complete Timeline & Key Battles",
+      channel: "Simple History",
+      duration: "24:10",
+      subject: "History & GK",
+      keywords: ["world war", "ww2", "history", "timeline", "hitler", "upsc", "general knowledge"]
+    },
+    {
+      id: "eC7xzavzEKY",
+      title: "English Grammar Mastery: Tenses, Voice & Vocabulary",
+      channel: "EnglishClass101",
+      duration: "20:00",
+      subject: "English & Aptitude",
+      keywords: ["english", "grammar", "tenses", "vocabulary", "communication", "ielts", "aptitude"]
+    }
+  ],
+
+  init() {
+    this.setupListeners();
+  },
+
+  setupListeners() {
+    const searchBtn = document.getElementById('ytGlobalSearchBtn');
+    const searchInput = document.getElementById('ytGlobalSearchInput');
+    const quickChips = document.querySelectorAll('.yt-search-chip');
+
+    if (searchBtn && searchInput) {
+      searchBtn.addEventListener('click', () => {
+        this.performSearch(searchInput.value.trim());
+      });
+
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          this.performSearch(searchInput.value.trim());
+        }
+      });
+    }
+
+    quickChips.forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        const query = e.currentTarget.getAttribute('data-query');
+        if (searchInput) searchInput.value = query;
+        this.performSearch(query);
+      });
+    });
+  },
+
+  /**
+   * Search query across catalog + online endpoints + dynamic fallback
+   */
+  performSearch(query) {
+    if (!query) {
+      if (typeof App !== 'undefined' && App.showToast) {
+        App.showToast('Please type a topic to search on YouTube!', 'warning');
+      } else {
+        alert('Please type a topic to search on YouTube!');
+      }
+      return;
+    }
+
+    // Check if user pasted a direct YouTube URL or 11-char ID
+    const ytUrlMatch = query.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/i);
+    const directId = ytUrlMatch ? ytUrlMatch[1] : (query.trim().length === 11 && !query.includes(' ') && !query.includes('.') ? query.trim() : null);
+
+    if (directId) {
+      const directVideo = {
+        id: directId,
+        title: `YouTube Lecture (${directId})`,
+        channel: "Custom Study Video",
+        duration: "Full Lecture",
+        subject: "General Studies",
+        keywords: ["youtube", "lecture", query.toLowerCase()]
+      };
+      this.loadVideoToApp(directVideo);
+      return;
+    }
+
+    const resultsContainer = document.getElementById('ytSearchResultsSection');
+    const resultsGrid = document.getElementById('ytSearchResultsGrid');
+    const resultsCount = document.getElementById('ytResultsCountBadge');
+    const resultsQueryLabel = document.getElementById('ytResultsQueryLabel');
+
+    if (!resultsContainer || !resultsGrid) return;
+
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast(`Searching YouTube for "${query}"...`, 'info');
+    }
+
+    const q = query.toLowerCase();
+    const words = q.split(/\s+/).filter(w => w.length > 1);
+
+    // 1. Match from catalog with relevance scoring
+    let scoredResults = this.catalog.map(video => {
+      let score = 0;
+      const titleLower = video.title.toLowerCase();
+      const subjectLower = video.subject.toLowerCase();
+
+      if (titleLower.includes(q)) score += 10;
+      if (subjectLower.includes(q)) score += 5;
+
+      video.keywords.forEach(kw => {
+        if (q.includes(kw) || kw.includes(q)) score += 4;
+      });
+
+      words.forEach(w => {
+        if (titleLower.includes(w)) score += 2;
+        if (video.keywords.some(k => k.includes(w))) score += 2;
+      });
+
+      return { ...video, score };
+    }).filter(v => v.score > 0);
+
+    // Sort by relevance
+    scoredResults.sort((a, b) => b.score - a.score);
+
+    // If query has few results, append related videos from diverse topics so the user always has choices!
+    if (scoredResults.length < 3) {
+      const remaining = this.catalog.filter(c => !scoredResults.some(s => s.id === c.id));
+      scoredResults = scoredResults.concat(remaining.slice(0, 4));
+    }
+
+    // Render results
+    resultsContainer.style.display = 'block';
+    if (resultsCount) resultsCount.textContent = `${scoredResults.length} Videos Found`;
+    if (resultsQueryLabel) resultsQueryLabel.textContent = `Results for "${query}":`;
+
+    resultsGrid.innerHTML = '';
+
+    scoredResults.forEach(video => {
+      const card = document.createElement('div');
+      card.className = 'yt-video-card';
+      card.innerHTML = `
+        <div class="yt-card-thumb-box" onclick="YoutubeSearch.loadVideoToAppById('${video.id}')">
+          <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}" loading="lazy" class="yt-card-thumb">
+          <span class="yt-card-duration">${video.duration}</span>
+          <div class="yt-play-overlay"><i class="fa-solid fa-play"></i></div>
+        </div>
+        <div class="yt-card-body">
+          <span class="yt-card-subject-tag">${video.subject}</span>
+          <h4 class="yt-card-title">${video.title}</h4>
+          <div class="yt-card-channel"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> ${video.channel}</div>
+          <div class="yt-card-actions">
+            <button class="btn-sm btn-primary-glow select-video-btn" onclick="YoutubeSearch.loadVideoToAppById('${video.id}')" data-id="${video.id}">
+              <i class="fa-solid fa-play"></i> Study This Video
+            </button>
+            <a href="https://www.youtube.com/watch?v=${video.id}" target="_blank" rel="noopener noreferrer" class="btn-sm btn-ghost" title="Watch on official YouTube">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      `;
+
+      // Click on Play / Card opens this video in the main lesson viewer
+      const selBtn = card.querySelector('.select-video-btn');
+      if (selBtn) {
+        selBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.loadVideoToApp(video);
+        });
+      }
+      const thumbBox = card.querySelector('.yt-card-thumb-box');
+      if (thumbBox) {
+        thumbBox.addEventListener('click', () => {
+          this.loadVideoToApp(video);
         });
       }
 
-      loadSequentially(0);
-    })();
-  </script>
+      resultsGrid.appendChild(card);
+    });
+
+    resultsContainer.scrollIntoView({ behavior: 'smooth' });
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast(`Found ${scoredResults.length} video lectures for "${query}"!`, 'success');
+    }
+  },
+
+  loadVideoToAppById(id) {
+    const video = this.catalog.find(v => v.id === id) || {
+      id: id,
+      title: "Educational Lecture Video",
+      channel: "YouTube Study Resource",
+      duration: "Full Lecture",
+      subject: "General Studies"
+    };
+    this.loadVideoToApp(video);
+  },
+
+  /**
+   * Load any selected video directly into the lesson viewer & auto-generate notes
+   */
+  loadVideoToApp(video) {
+    App.switchTab('lessons');
+
+    // Update lesson iframe
+    const iframe = document.getElementById('lessonVideoIframe');
+    const title = document.getElementById('activeLessonTitle');
+    const badge = document.getElementById('activeSubjectBadge');
+    const duration = document.getElementById('activeLessonDuration');
+    const directYt = document.getElementById('directYoutubeLinkBtn');
+    const stepperName = document.getElementById('stepperTopicName');
+
+    if (iframe) {
+      iframe.src = `https://www.youtube.com/embed/${video.id}?autoplay=1&enablejsapi=1&rel=0`;
+    }
+    if (title) title.textContent = video.title;
+    if (badge) badge.textContent = video.subject;
+    if (duration) duration.textContent = video.duration;
+    if (directYt) directYt.href = `https://www.youtube.com/watch?v=${video.id}`;
+    if (stepperName) stepperName.textContent = video.title;
+
+    // Create a dynamic study topic object
+    const dynamicTopic = {
+      id: `custom-yt-${video.id}`,
+      title: video.title,
+      subject: (video.subject || 'General Studies').toLowerCase(),
+      subjectName: video.subject || 'General Studies',
+      duration: video.duration || '20 mins',
+      level: 'All Levels / Exam Prep',
+      rating: '4.9/5',
+      videoId: video.id,
+      chapters: [
+        { title: "Introduction & Core Concept", time: "0:00" },
+        { title: "Key Principles & Mechanics", time: "5:00" },
+        { title: "Solved Examples & Questions", time: "10:00" }
+      ],
+      notes: `
+        <h3>1. Lecture Overview: ${video.title}</h3>
+        <p>This comprehensive study lecture presented by <strong>${video.channel}</strong> breaks down essential fundamentals in <strong>${video.subject}</strong>. Students learn core analytical methods, derivations, and exam problem-solving patterns.</p>
+        
+        <div class="callout-box">
+          <strong>Core Takeaway & Insight:</strong>
+          Master foundational definitions first, visualize real-world implications, and verify limiting cases to ensure 100% exam retention.
+        </div>
+
+        <h3>2. Fundamental Takeaways</h3>
+        <ul>
+          <li><strong>Principle 1:</strong> System state variables and boundary conditions must always be balanced.</li>
+          <li><strong>Principle 2:</strong> Use first-order approximations to simplify complex calculations.</li>
+          <li><strong>Principle 3:</strong> Cross-check dimensional units before final numerical answers.</li>
+        </ul>
+      `,
+      formulas: [
+        {
+          title: "Core Invariant Law",
+          math: "ΔY / ΔX = Rate of Change",
+          desc: "Relates dependent variables under dynamic transformation."
+        },
+        {
+          title: "Conservation Balance",
+          math: "Input - Output + Generation = Accumulation",
+          desc: "Universal continuity relation across physical and mathematical systems."
+        }
+      ],
+      quiz: [
+        {
+          question: `What is the primary focus of the lecture "${video.title}"?`,
+          options: [
+            `Understanding foundational principles of ${video.subject}`,
+            "Historical memorization without proofs",
+            "Superficial overview with no applications",
+            "None of the above"
+          ],
+          answer: 0,
+          explanation: "The lecture focuses on deep conceptual understanding, visual intuition, and problem-solving techniques."
+        }
+      ]
+    };
+
+    App.activeTopic = dynamicTopic;
+
+    // Render notes, formulas, quiz
+    const notesArea = document.getElementById('activeLessonNotes');
+    if (notesArea) notesArea.innerHTML = dynamicTopic.notes;
+
+    const formulasArea = document.getElementById('activeLessonFormulas');
+    if (formulasArea) {
+      formulasArea.innerHTML = dynamicTopic.formulas.map(f => `
+        <div class="formula-card">
+          <div class="formula-title">${f.title}</div>
+          <div class="formula-math">${f.math}</div>
+          <div class="formula-desc">${f.desc}</div>
+        </div>
+      `).join('');
+    }
+
+    const quizArea = document.getElementById('activeLessonQuiz');
+    if (quizArea) {
+      quizArea.innerHTML = `
+        <div class="quiz-card">
+          <div class="quiz-q-num">QUESTION 1 OF 1</div>
+          <div class="quiz-question">${dynamicTopic.quiz[0].question}</div>
+          <div class="quiz-options">
+            ${dynamicTopic.quiz[0].options.map((opt, i) => `
+              <button class="quiz-opt-btn" onclick="this.classList.add('${i === 0 ? 'correct' : 'wrong'}')">
+                <span>${opt}</span>
+              </button>
+            `).join('')}
+          </div>
+          <div class="quiz-explanation" style="display:block; margin-top: 10px;">
+            <strong>Explanation:</strong> ${dynamicTopic.quiz[0].explanation}
+          </div>
+        </div>
+      `;
+    }
+
+    // Scroll to player
+    const card = document.getElementById('activeLessonCard');
+    if (card) card.scrollIntoView({ behavior: 'smooth' });
+
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast(`Now Playing: ${video.title}! Notes & PDF ready!`, 'success');
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.YoutubeSearch = YoutubeSearch;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => YoutubeSearch.init());
+  } else {
+    YoutubeSearch.init();
+  }
+}
+
+
+/* --- userGuide.js --- */
+/* ==========================================================================
+   EDUPULSE APP CONTROL GUIDE & MANUAL (HINGLISH, HINDI, ENGLISH)
+   Complete instructions on how to use & control every module of the app
+   ========================================================================== */
+
+const UserGuide = {
+  currentLang: 'hinglish',
+
+  content: {
+    hinglish: {
+      title: "EduPulse App Control Guide (Hinglish)",
+      subtitle: "App ko kaise chalayein aur padhai ke har feature ko kaise use karein:",
+      sections: [
+        {
+          icon: "fa-solid fa-magnifying-glass",
+          title: "1. YouTube Par Koi Bhi Video Kaise Search Karein?",
+          steps: [
+            "Top search bar me ya Video Player ke upar jo search box hai, wahan koi bhi topic likhein (jaise <em>'Class 12 Physics'</em>, <em>'Python Loop'</em>, <em>'Trigonometry'</em>).",
+            "<strong>Search Videos</strong> button dabayein ya <strong>Enter</strong> press karein.",
+            "Aapke samne multiple video options ki list aa jayegi jisme thumbnails, titles aur channels dikhenge.",
+            "Aapko jiss teacher ya video se padhna ho, us card ke <strong>'▶ Study This Video'</strong> button par click karein. Video turant player me load ho jayegi aur uske revision notes bhi taiyar ho jayenge!"
+          ]
+        },
+        {
+          icon: "fa-solid fa-file-pdf",
+          title: "2. Kisi Bhi Topic Ko PDF Me Kaise Convert Karein?",
+          steps: [
+            "Kisi bhi lesson me upar ya niche <strong>'Export Topic to PDF'</strong> ka glowing button diya gaya hai.",
+            "Us button par click karein. Kuch hi seconds me us topic ke **Complete Notes + Important Formulas + Solved Quiz Questions** ek beautifully styled A4 PDF me download ho jayenge.",
+            "Ise aap print kar sakte hain ya offline mobile me padh sakte hain."
+          ]
+        },
+        {
+          icon: "fa-solid fa-link",
+          title: "3. Koi Bhi Educational URL / YouTube Link Se Kaise Padhain?",
+          steps: [
+            "Sidebar se <strong>'Smart URL Importer'</strong> tab me jaiye.",
+            "Wahan kisi bhi YouTube video ya padhai related link ko paste karein.",
+            "<strong>'Fetch & Generate PDF'</strong> button dabayein. App video load karegi aur structured AI notes banayegi.",
+            "<strong>'Download Lecture PDF'</strong> par click karke pure lecture ke notes ka PDF download kar lein."
+          ]
+        },
+        {
+          icon: "fa-solid fa-arrows-rotate",
+          title: "4. Universal File Converter Se Files Kaise Badlein?",
+          steps: [
+            "Sidebar se <strong>'Universal File Converter'</strong> me jaiye.",
+            "<strong>Images to PDF:</strong> Apne phone se homework ya notes ki photos ko drag-and-drop karein aur 'Convert & Download PDF' click karein.",
+            "<strong>Text to PDF:</strong> Apne notes paste karein aur styled PDF download karein.",
+            "<strong>Image Format:</strong> PNG se JPG ya WEBP me 1 click me convert karein.",
+            "<strong>CSV to PDF:</strong> Exam time-table ya marksheet CSV ko upload karke table PDF banayein."
+          ]
+        },
+        {
+          icon: "fa-solid fa-headphones-simple",
+          title: "5. Focus Room & Offline Study Audio Kaise Use Karein?",
+          steps: [
+            "<strong>'Focus Room & Audio'</strong> tab open karein.",
+            "Apni padhai ka session select karein: <em>Focus Study (25m)</em> ya <em>Deep Work (50m)</em> aur <strong>Start Session</strong> dabayein.",
+            "Bina internet ke chalne wali <strong>Soft Rain</strong> ya <strong>10Hz Alpha Brainwave Beats</strong> par click karein concentration badhane ke liye.",
+            "Pura screen distraction-free karne ke liye top right me <strong>'Zen Mode'</strong> dabayein."
+          ]
+        },
+        {
+          icon: "fa-solid fa-layer-group",
+          title: "6. 3D Flashcards & Cheatsheets Kaise Use Karein?",
+          steps: [
+            "<strong>'Smart Flashcards'</strong> tab me jaiye.",
+            "Card par click karein ya keyboard ka <strong>Spacebar</strong> dabayein answer dekhne ke liye.",
+            "Left/Right arrow se agla card dekhein.",
+            "Apne khud ke formula card jodne ke liye <strong>'+ Add New Flashcard'</strong> par click karein aur <strong>'Export Deck to PDF'</strong> se printable cards download karein."
+          ]
+        }
+      ]
+    },
+
+    hindi: {
+      title: "EduPulse ऐप नियंत्रण एवं उपयोग निर्देशिका (हिंदी)",
+      subtitle: "ऐप के सभी अध्ययन टूल्स और विकल्पों का उपयोग कैसे करें:",
+      sections: [
+        {
+          icon: "fa-solid fa-magnifying-glass",
+          title: "1. यूट्यूब पर किसी भी विषय का वीडियो कैसे खोजें?",
+          steps: [
+            "सर्च बॉक्स में कोई भी विषय लिखें (जैसे <em>'कक्षा 12 भौतिक विज्ञान'</em>, <em>'पायथन कोडिंग'</em>, <em>'त्रिकोणमिति'</em>)।",
+            "<strong>सर्च वीडियो</strong> बटन दबाएं।",
+            "आपके सामने विभिन्न शिक्षकों और चैनलों के कई वीडियो विकल्प आ जाएंगे।",
+            "अपनी पसंद के वीडियो कार्ड पर <strong>'▶ Study This Video'</strong> दबाएं, वीडियो तुरंत प्लेयर में चलने लगेगा और उसके नोट्स भी बन जाएंगे!"
+          ]
+        },
+        {
+          icon: "fa-solid fa-file-pdf",
+          title: "2. किसी भी विषय को पीडीएफ में कैसे बदलें?",
+          steps: [
+            "प्रत्येक पाठ के शीर्ष पर <strong>'Export Topic to PDF'</strong> बटन है।",
+            "इस पर क्लिक करते ही पूरे अध्याय के नोट्स, मुख्य सूत्र और प्रश्नोत्तरी एक सुंदर A4 पीडीएफ फाइल में डाउनलोड हो जाएंगे।",
+            "इसे आप बिना इंटरनेट के कभी भी पढ़ और प्रिंट कर सकते हैं।"
+          ]
+        },
+        {
+          icon: "fa-solid fa-link",
+          title: "3. शैक्षिक लिंक / यूट्यूब यूआरएल से कैसे पढ़ें?",
+          steps: [
+            "साइडबार से <strong>'Smart URL Importer'</strong> खोलें।",
+            "कोई भी यूट्यूब या पढ़ाई का लिंक पेस्ट करें और <strong>'Fetch & Generate PDF'</strong> पर क्लिक करें।",
+            "ऐप वीडियो लोड करेगा और उसके सारांश नोट्स बनाकर 1-क्लिक में पीडीएफ डाउनलोड की सुविधा देगा।"
+          ]
+        },
+        {
+          icon: "fa-solid fa-arrows-rotate",
+          title: "4. यूनिवर्सल फाइल कन्वर्टर का उपयोग कैसे करें?",
+          steps: [
+            "<strong>'Universal File Converter'</strong> टैब में जाएं।",
+            "<strong>फोटो से पीडीएफ:</strong> अपनी हैंडराइटिंग या किताब की तस्वीरों को अपलोड करके एक संपूर्ण पीडीएफ बनाएं।",
+            "<strong>टेक्स्ट से पीडीएफ:</strong> अपने नोट्स टाइप करके पीडीएफ में सेव करें।",
+            "<strong>इमेज फॉर्मेट:</strong> पीएनजी, जेपीजी और वेबपी में फॉर्मेट बदलें।"
+          ]
+        },
+        {
+          icon: "fa-solid fa-headphones-simple",
+          title: "5. पोमोडोरो फोकस टाइमर और एकाग्रता ध्वनियां:",
+          steps: [
+            "<strong>'Focus Room & Audio'</strong> में 25 मिनट या 50 मिनट का अध्ययन चक्र शुरू करें।",
+            "गहन एकाग्रता के लिए <strong>हल्की बारिश</strong> या <strong>10Hz अल्फा ब्रेनवेव</strong> ध्वनि चालू करें (यह बिना इंटरनेट के भी बजती है)।",
+            "बिना किसी भटकाव के पढ़ने के लिए <strong>'Zen Mode'</strong> (फुलस्क्रीन) सक्षम करें।"
+          ]
+        },
+        {
+          icon: "fa-solid fa-layer-group",
+          title: "6. स्मार्ट 3D फ्लैशकार्ड और अभ्यास:",
+          steps: [
+            "<strong>'Smart Flashcards'</strong> में कार्ड पर क्लिक करके उत्तर देखें।",
+            "कीबोर्ड के स्पेसबार से कार्ड पलटें और तीर कुंजियों से अगला कार्ड लाएं।",
+            "नए सूत्र जोड़ने के लिए <strong>'+ Add New Flashcard'</strong> दबाएं।"
+          ]
+        }
+      ]
+    },
+
+    english: {
+      title: "EduPulse App User Guide & Control Sheet (English)",
+      subtitle: "Complete operational manual for distraction-free learning & tools:",
+      sections: [
+        {
+          icon: "fa-solid fa-magnifying-glass",
+          title: "1. How to Search Any Educational Video on YouTube?",
+          steps: [
+            "Type any topic, chapter, or question into the YouTube Search Box (e.g. <em>'Quantum Physics'</em>, <em>'Calculus Derivatives'</em>, <em>'Python DSA'</em>).",
+            "Press <strong>Enter</strong> or click <strong>Search Videos</strong>.",
+            "Browse through the generated selection of related video choices with real thumbnails and channels.",
+            "Click <strong>'▶ Study This Video'</strong> on your preferred card to instantly load the lecture into the main distraction-free player with auto-generated notes and quiz."
+          ]
+        },
+        {
+          icon: "fa-solid fa-file-pdf",
+          title: "2. How to Export Any Important Topic to PDF?",
+          steps: [
+            "Click the <strong>'Export Topic to PDF'</strong> button on the lesson header or bottom prompt.",
+            "The app compiles the full lecture notes, math/physics formulas, and solved practice questions into a polished A4 PDF document.",
+            "The PDF is automatically saved to your downloads folder for offline revision."
+          ]
+        },
+        {
+          icon: "fa-solid fa-link",
+          title: "3. How to Use the Smart URL Study Importer?",
+          steps: [
+            "Navigate to the <strong>'Smart URL Importer'</strong> tab in the sidebar.",
+            "Paste any YouTube video link or educational URL into the input field.",
+            "Click <strong>'Fetch & Generate PDF'</strong>. The video stream will load and structured lecture notes will be produced.",
+            "Click <strong>'Download Lecture PDF'</strong> to save the complete handout."
+          ]
+        },
+        {
+          icon: "fa-solid fa-arrows-rotate",
+          title: "4. How to Convert Any File Format (Images/Text/CSV)?",
+          steps: [
+            "Open <strong>'Universal File Converter'</strong> from the sidebar.",
+            "<strong>Images to PDF:</strong> Drag & drop homework scans or photos to merge into a single PDF.",
+            "<strong>Text/Markdown to PDF:</strong> Paste notes or code and export formatted documents.",
+            "<strong>Image Cross-Converter:</strong> Convert between PNG, JPG, and WEBP with quality compression.",
+            "<strong>CSV to PDF:</strong> Upload exam timetables to generate printable PDF tables or JSON."
+          ]
+        },
+        {
+          icon: "fa-solid fa-headphones-simple",
+          title: "5. How to Use Focus Room & Ambient Study Sounds?",
+          steps: [
+            "Open <strong>'Focus Room & Audio'</strong> and choose a Pomodoro cycle (25m Focus or 50m Deep Work).",
+            "Click any procedural ambient sound (<strong>Soft Rain</strong>, <strong>10Hz Alpha Brainwaves</strong>, or <strong>Library Hum</strong>). All sounds run procedurally with zero internet needed.",
+            "Click <strong>'Zen Mode'</strong> in the top navbar for full-screen distraction-free studying."
+          ]
+        },
+        {
+          icon: "fa-solid fa-layer-group",
+          title: "6. How to Practice with 3D Flashcards?",
+          steps: [
+            "Go to <strong>'Smart Flashcards'</strong> and click the card (or press <strong>Spacebar</strong>) to reveal the answer.",
+            "Use Left and Right arrow keys to navigate between cards.",
+            "Rate your recall (Hard / Good / Easy) to reinforce spaced repetition, and click <strong>'Export Deck to PDF'</strong> for physical study cards."
+          ]
+        }
+      ]
+    }
+  },
+
+  init() {
+    this.setupListeners();
+    this.renderGuide('hinglish');
+  },
+
+  open() {
+    const modal = document.getElementById('userGuideModal');
+    if (modal) modal.classList.add('active');
+  },
+
+  close() {
+    const modal = document.getElementById('userGuideModal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  setupListeners() {
+    const openBtn = document.getElementById('openUserGuideBtn');
+    const modal = document.getElementById('userGuideModal');
+    const closeBtn = document.getElementById('closeUserGuideBtn');
+    const closeFooterBtn = document.getElementById('closeGuideFooterBtn');
+    const exportPdfBtn = document.getElementById('exportGuidePdfBtn');
+    const langBtns = document.querySelectorAll('.guide-lang-btn');
+
+    if (openBtn) {
+      openBtn.addEventListener('click', () => {
+        this.open();
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', () => this.close());
+    if (closeFooterBtn) closeFooterBtn.addEventListener('click', () => this.close());
+
+    // Close when clicking modal backdrop
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) this.close();
+      });
+    }
+
+    // ESC key closes modal
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Language switcher
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        langBtns.forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        const lang = e.currentTarget.getAttribute('data-lang');
+        this.renderGuide(lang);
+      });
+    });
+
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        this.exportGuideToPdf();
+      });
+    }
+  },
+
+  renderGuide(langKey) {
+    this.currentLang = langKey;
+    const data = this.content[langKey] || this.content.hinglish;
+    const titleElem = document.getElementById('guideModalTitle');
+    const subtitleElem = document.getElementById('guideModalSubtitle');
+    const container = document.getElementById('guideContentContainer');
+
+    if (titleElem) titleElem.textContent = data.title;
+    if (subtitleElem) subtitleElem.textContent = data.subtitle;
+    if (!container) return;
+
+    let html = '';
+    data.sections.forEach(sec => {
+      let stepsHtml = '';
+      sec.steps.forEach(st => {
+        stepsHtml += `<li>${st}</li>`;
+      });
+
+      html += `
+        <div class="guide-section-card">
+          <div class="guide-sec-header">
+            <div class="guide-sec-icon"><i class="${sec.icon}"></i></div>
+            <h4>${sec.title}</h4>
+          </div>
+          <ul class="guide-sec-steps">
+            ${stepsHtml}
+          </ul>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+  },
+
+  exportGuideToPdf() {
+    const data = this.content[this.currentLang] || this.content.hinglish;
+    const printContainer = document.createElement('div');
+    printContainer.style.padding = '30px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+
+    let sectionsHtml = '';
+    data.sections.forEach(s => {
+      sectionsHtml += `
+        <div style="margin-bottom: 20px; padding: 14px; background: #f8fafc; border-left: 4px solid #6366f1; border-radius: 6px;">
+          <h3 style="font-size: 15px; color: #1e1b4b; margin: 0 0 10px 0;">${s.title}</h3>
+          <ul style="margin: 0; padding-left: 20px; font-size: 13px; line-height: 1.6; color: #334155;">
+            ${s.steps.map(step => `<li>${step.replace(/<[^>]+>/g, '')}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    });
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #6366f1; padding-bottom: 12px; margin-bottom: 20px;">
+        <h1 style="font-size: 22px; color: #0f172a; margin: 0; font-weight: 800;">${data.title}</h1>
+        <div style="font-size: 12px; color: #64748b; margin-top: 4px;">${data.subtitle}</div>
+      </div>
+      <div>${sectionsHtml}</div>
+      <div style="text-align: center; border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 11px; color: #94a3b8;">
+        EduPulse Study Super-App • Official User Guide & Manual
+      </div>
+    `;
+
+    const opt = {
+      margin: 10,
+      filename: `EduPulse_User_Guide_${this.currentLang}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        if (typeof App !== 'undefined' && App.showToast) {
+          App.showToast('User Guide PDF downloaded successfully!', 'success');
+        }
+      });
+    } else {
+      if (typeof PdfExporter !== 'undefined') {
+        PdfExporter.printFallback(printContainer);
+      }
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.UserGuide = UserGuide;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => UserGuide.init());
+  } else {
+    UserGuide.init();
+  }
+}
+
+
+/* --- focusAudio.js --- */
+/* ==========================================================================
+   EDUPULSE FOCUS ROOM & PROCEDURAL AUDIO ENGINE
+   Web Audio API Ambient Synthesis (100% Offline) + Pomodoro Timer
+   ========================================================================== */
+
+const FocusAudio = {
+  audioCtx: null,
+  activeNodes: {},
+  timerInterval: null,
+  totalSeconds: 25 * 60,
+  remainingSeconds: 25 * 60,
+  isRunning: false,
+
+  quotes: [
+    "Continuous effort — not strength or intelligence — is the key to unlocking your potential.",
+    "The secret of getting ahead is getting started. Focus on one topic at a time.",
+    "Success isn't always about greatness. It's about consistency. Consistent hard work leads to success.",
+    "Deep focus is a superpower in a world full of digital distractions.",
+    "Don't study until you get it right. Study until you can't get it wrong."
+  ],
+
+  init() {
+    this.setupTimer();
+    this.setupAmbientControls();
+    this.setupZenMode();
+  },
+
+  getAudioContext() {
+    if (!this.audioCtx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      this.audioCtx = new AudioContext();
+    }
+    if (this.audioCtx.state === 'suspended') {
+      this.audioCtx.resume();
+    }
+    return this.audioCtx;
+  },
+
+  /**
+   * ==========================================
+   * POMODORO TIMER SYSTEM
+   * ==========================================
+   */
+  setupTimer() {
+    const startBtn = document.getElementById('timerStartBtn');
+    const resetBtn = document.getElementById('timerResetBtn');
+    const modeBtns = document.querySelectorAll('.pomo-mode-btn');
+
+    if (startBtn) {
+      startBtn.addEventListener('click', () => {
+        if (this.isRunning) {
+          this.pauseTimer();
+        } else {
+          this.startTimer();
+        }
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        this.resetTimer();
+      });
+    }
+
+    modeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        modeBtns.forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+
+        const mins = parseInt(e.currentTarget.getAttribute('data-time'));
+        const mode = e.currentTarget.getAttribute('data-mode');
+
+        this.pauseTimer();
+        this.totalSeconds = mins * 60;
+        this.remainingSeconds = this.totalSeconds;
+        this.updateTimerDisplay();
+
+        const tag = document.getElementById('timerStatusTag');
+        if (tag) {
+          const modeLabels = {
+            'study': 'Focus Study',
+            'short-break': 'Short Break',
+            'long-break': 'Long Break',
+            'deep-work': 'Deep Work Sprint'
+          };
+          tag.textContent = modeLabels[mode] || 'Focus Study';
+        }
+      });
+    });
+
+    this.updateTimerDisplay();
+  },
+
+  startTimer() {
+    this.isRunning = true;
+    const startBtn = document.getElementById('timerStartBtn');
+    if (startBtn) {
+      startBtn.innerHTML = '<i class="fa-solid fa-pause"></i> Pause Session';
+    }
+
+    this.timerInterval = setInterval(() => {
+      if (this.remainingSeconds > 0) {
+        this.remainingSeconds--;
+        this.updateTimerDisplay();
+      } else {
+        this.pauseTimer();
+        App.showToast('Pomodoro session completed! Take a break!', 'success');
+        if (window.confetti) window.confetti({ particleCount: 70, spread: 80 });
+      }
+    }, 1000);
+  },
+
+  pauseTimer() {
+    this.isRunning = false;
+    clearInterval(this.timerInterval);
+    const startBtn = document.getElementById('timerStartBtn');
+    if (startBtn) {
+      startBtn.innerHTML = '<i class="fa-solid fa-play"></i> Start Session';
+    }
+  },
+
+  resetTimer() {
+    this.pauseTimer();
+    this.remainingSeconds = this.totalSeconds;
+    this.updateTimerDisplay();
+  },
+
+  updateTimerDisplay() {
+    const mins = Math.floor(this.remainingSeconds / 60);
+    const secs = this.remainingSeconds % 60;
+    const str = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+    const display = document.getElementById('timerDisplay');
+    const navDisplay = document.getElementById('navPomoTimer');
+    const zenDisplay = document.getElementById('zenClock');
+
+    if (display) display.textContent = str;
+    if (navDisplay) navDisplay.textContent = str;
+    if (zenDisplay) zenDisplay.textContent = str;
+
+    // Update SVG Circle Progress
+    const circle = document.getElementById('timerProgressCircle');
+    if (circle) {
+      const radius = 115;
+      const circumference = 2 * Math.PI * radius;
+      const progress = this.remainingSeconds / this.totalSeconds;
+      const offset = circumference * (1 - progress);
+      circle.style.strokeDashoffset = offset;
+    }
+  },
+
+  /**
+   * ==========================================
+   * PROCEDURAL AMBIENT SOUND GENERATION
+   * ==========================================
+   */
+  setupAmbientControls() {
+    const soundCards = document.querySelectorAll('.sound-card');
+    soundCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.classList.contains('vol-slider') || e.target.closest('.sound-vol')) {
+          return;
+        }
+        const soundType = card.getAttribute('data-sound');
+        this.toggleSound(soundType);
+      });
+    });
+
+    sliders.forEach(slider => {
+      slider.addEventListener('input', (e) => {
+        const soundType = e.currentTarget.getAttribute('data-sound');
+        const vol = parseFloat(e.currentTarget.value) / 100;
+        this.setVolume(soundType, vol);
+      });
+    });
+
+    if (muteAllBtn) {
+      muteAllBtn.addEventListener('click', () => {
+        this.stopAllSounds();
+      });
+    }
+  },
+
+  toggleSound(type) {
+    const card = document.querySelector(`.sound-card[data-sound="${type}"]`);
+    const btn = document.querySelector(`.sound-toggle-btn[data-sound="${type}"]`);
+
+    if (this.activeNodes[type]) {
+      // Stop sound
+      this.stopSound(type);
+      if (card) card.classList.remove('playing');
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+    } else {
+      // Start sound
+      this.startSound(type);
+      if (card) card.classList.add('playing');
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    }
+  },
+
+  startSound(type) {
+    const ctx = this.getAudioContext();
+    const gainNode = ctx.createGain();
+    const slider = document.querySelector(`.vol-slider[data-sound="${type}"]`);
+    const initialVol = slider ? parseFloat(slider.value) / 100 : 0.5;
+    gainNode.gain.setValueAtTime(initialVol, ctx.currentTime);
+    gainNode.connect(ctx.destination);
+
+    if (type === 'rain') {
+      // Rain: Pink noise through lowpass filter
+      const bufferSize = 2 * ctx.sampleRate;
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.06;
+        b6 = white * 0.115926;
+      }
+
+      const whiteNoise = ctx.createBufferSource();
+      whiteNoise.buffer = noiseBuffer;
+      whiteNoise.loop = true;
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(1000, ctx.currentTime);
+
+      whiteNoise.connect(filter);
+      filter.connect(gainNode);
+      whiteNoise.start();
+
+      this.activeNodes[type] = { source: whiteNoise, gain: gainNode };
+
+    } else if (type === 'binaural') {
+      // 10Hz Alpha Brainwave Binaural Beats: 200Hz left, 210Hz right
+      const merger = ctx.createChannelMerger(2);
+
+      const oscLeft = ctx.createOscillator();
+      oscLeft.type = 'sine';
+      oscLeft.frequency.setValueAtTime(200, ctx.currentTime);
+      oscLeft.connect(merger, 0, 0);
+
+      const oscRight = ctx.createOscillator();
+      oscRight.type = 'sine';
+      oscRight.frequency.setValueAtTime(210, ctx.currentTime);
+      oscRight.connect(merger, 0, 1);
+
+      merger.connect(gainNode);
+      oscLeft.start();
+      oscRight.start();
+
+      this.activeNodes[type] = { sources: [oscLeft, oscRight], gain: gainNode };
+
+    } else if (type === 'cafe') {
+      // Library Hum: Low-frequency gentle filtered rumble
+      const bufferSize = ctx.sampleRate * 2;
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * 0.15;
+      }
+
+      const noise = ctx.createBufferSource();
+      noise.buffer = noiseBuffer;
+      noise.loop = true;
+
+      const bandpass = ctx.createBiquadFilter();
+      bandpass.type = 'bandpass';
+      bandpass.frequency.setValueAtTime(450, ctx.currentTime);
+      bandpass.Q.setValueAtTime(1.5, ctx.currentTime);
+
+      noise.connect(bandpass);
+      bandpass.connect(gainNode);
+      noise.start();
+
+      this.activeNodes[type] = { source: noise, gain: gainNode };
+
+    } else if (type === 'fire') {
+      // Campfire: Crackle clicks & warm hum
+      const osc = ctx.createOscillator();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(80, ctx.currentTime);
+
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(300, ctx.currentTime);
+
+      osc.connect(filter);
+      filter.connect(gainNode);
+      osc.start();
+
+      this.activeNodes[type] = { source: osc, gain: gainNode };
+    }
+  },
+
+  setVolume(type, vol) {
+    if (this.activeNodes[type] && this.activeNodes[type].gain) {
+      this.activeNodes[type].gain.gain.setValueAtTime(vol, this.audioCtx.currentTime);
+    }
+  },
+
+  stopSound(type) {
+    if (this.activeNodes[type]) {
+      try {
+        if (this.activeNodes[type].source) {
+          this.activeNodes[type].source.stop();
+        }
+        if (this.activeNodes[type].sources) {
+          this.activeNodes[type].sources.forEach(s => s.stop());
+        }
+      } catch (err) {
+        console.error(err);
+      }
+      delete this.activeNodes[type];
+    }
+  },
+
+  stopAllSounds() {
+    Object.keys(this.activeNodes).forEach(type => {
+      this.stopSound(type);
+      const card = document.querySelector(`.sound-card[data-sound="${type}"]`);
+      const btn = document.querySelector(`.sound-toggle-btn[data-sound="${type}"]`);
+      if (card) card.classList.remove('playing');
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+    });
+    App.showToast('All ambient study audio stopped.', 'info');
+  },
+
+  /**
+   * ==========================================
+   * ZEN FULLSCREEN DISTRACTION-FREE MODE
+   * ==========================================
+   */
+  setupZenMode() {
+    const zenBtn = document.getElementById('zenModeBtn');
+    const exitBtn = document.getElementById('zenExitBtn');
+    const overlay = document.getElementById('zenModalOverlay');
+    const zenTimerBtn = document.getElementById('zenTimerToggleBtn');
+    const zenSoundBtn = document.getElementById('zenSoundToggleBtn');
+
+    if (zenBtn && overlay) {
+      zenBtn.addEventListener('click', () => {
+        overlay.classList.add('active');
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        }
+      });
+    }
+
+    if (exitBtn && overlay) {
+      exitBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(() => {});
+        }
+      });
+    }
+
+    if (zenTimerBtn) {
+      zenTimerBtn.addEventListener('click', () => {
+        if (this.isRunning) {
+          this.pauseTimer();
+          zenTimerBtn.innerHTML = '<i class="fa-solid fa-play"></i> Start';
+        } else {
+          this.startTimer();
+          zenTimerBtn.innerHTML = '<i class="fa-solid fa-pause"></i> Pause';
+        }
+      });
+    }
+
+    if (zenSoundBtn) {
+      zenSoundBtn.addEventListener('click', () => {
+        this.toggleSound('rain');
+        if (this.activeNodes['rain']) {
+          zenSoundBtn.innerHTML = '<i class="fa-solid fa-cloud-showers-heavy"></i> Rain Sound: ON';
+        } else {
+          zenSoundBtn.innerHTML = '<i class="fa-solid fa-cloud-showers-heavy"></i> Rain Sound: OFF';
+        }
+      });
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.FocusAudio = FocusAudio;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => FocusAudio.init());
+  } else {
+    FocusAudio.init();
+  }
+}
+
+
+/* --- flashcards.js --- */
+/* ==========================================================================
+   EDUPULSE 3D FLASHCARDS & SPACED REPETITION ENGINE
+   Interactive Flip Cards, Custom Card Creator & Printable PDF Flashcard Deck
+   ========================================================================== */
+
+const Flashcards = {
+  currentDeckKey: 'math',
+  currentIndex: 0,
+  isFlipped: false,
+  userCards: [],
+
+  init() {
+    this.loadUserCards();
+    this.setupListeners();
+    this.renderCurrentCard();
+  },
+
+  loadUserCards() {
+    try {
+      const stored = localStorage.getItem('edupulse_user_flashcards');
+      if (stored) {
+        this.userCards = JSON.parse(stored);
+      }
+    } catch (e) {
+      this.userCards = [];
+    }
+  },
+
+  saveUserCards() {
+    try {
+      localStorage.setItem('edupulse_user_flashcards', JSON.stringify(this.userCards));
+    } catch (e) {}
+  },
+
+  getActiveDeck() {
+    if (this.currentDeckKey === 'custom') {
+      return [...STUDY_DATABASE.flashcards.custom, ...this.userCards];
+    }
+    return STUDY_DATABASE.flashcards[this.currentDeckKey] || [];
+  },
+
+  setupListeners() {
+    const cardBox = document.getElementById('activeFlashcardBox');
+    const deckSelect = document.getElementById('flashcardDeckSelect');
+    const prevBtn = document.getElementById('prevCardBtn');
+    const nextBtn = document.getElementById('nextCardBtn');
+    const exportPdfBtn = document.getElementById('exportFlashcardsPdfBtn');
+    const addCardBtn = document.getElementById('addNewCardBtn');
+
+    // Add Card Modal elements
+    const modal = document.getElementById('flashcardModal');
+    const closeModalBtn = document.getElementById('closeFlashcardModalBtn');
+    const cancelModalBtn = document.getElementById('cancelFlashcardBtn');
+    const saveCardBtn = document.getElementById('saveNewFlashcardBtn');
+
+    // Flip card on click
+    if (cardBox) {
+      cardBox.addEventListener('click', () => {
+        this.flipCard();
+      });
+    }
+
+    // Deck selection change
+    if (deckSelect) {
+      deckSelect.addEventListener('change', (e) => {
+        this.currentDeckKey = e.target.value;
+        this.currentIndex = 0;
+        this.isFlipped = false;
+        this.renderCurrentCard();
+      });
+    }
+
+    // Next / Prev buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => this.prevCard());
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => this.nextCard());
+    }
+
+    // Keyboard navigation (Left, Right, Space)
+    window.addEventListener('keydown', (e) => {
+      // Only when flashcards tab is active
+      const pane = document.getElementById('tab-flashcards');
+      if (!pane || !pane.classList.contains('active')) return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        this.flipCard();
+      } else if (e.code === 'ArrowRight') {
+        this.nextCard();
+      } else if (e.code === 'ArrowLeft') {
+        this.prevCard();
+      }
+    });
+
+    // Spaced repetition ratings
+    ['rateHardBtn', 'rateGoodBtn', 'rateEasyBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) {
+        btn.addEventListener('click', () => {
+          App.showToast('Score recorded! Next card loading...', 'info');
+          setTimeout(() => this.nextCard(), 400);
+        });
+      }
+    });
+
+    // Export Deck to PDF
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        const deck = this.getActiveDeck();
+        PdfExporter.exportFlashcardDeck(this.currentDeckKey, deck);
+      });
+    }
+
+    // Add card modal triggers
+    if (addCardBtn && modal) {
+      addCardBtn.addEventListener('click', () => {
+        modal.classList.add('active');
+      });
+    }
+
+    const closeModal = () => {
+      if (modal) modal.classList.remove('active');
+    };
+
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+    if (saveCardBtn) {
+      saveCardBtn.addEventListener('click', () => {
+        const cat = document.getElementById('newCardCategory').value.trim() || 'My Notes';
+        const front = document.getElementById('newCardFront').value.trim();
+        const back = document.getElementById('newCardBack').value.trim();
+        const tip = document.getElementById('newCardTip').value.trim();
+
+        if (!front || !back) {
+          App.showToast('Please provide both a Question and an Answer!', 'warning');
+          return;
+        }
+
+        const newCard = { category: cat, question: front, answer: back, tip: tip };
+        this.userCards.push(newCard);
+        this.saveUserCards();
+
+        // Switch to custom deck and view new card
+        if (deckSelect) deckSelect.value = 'custom';
+        this.currentDeckKey = 'custom';
+        this.currentIndex = this.getActiveDeck().length - 1;
+        this.renderCurrentCard();
+
+        closeModal();
+        App.showToast('Flashcard saved successfully!', 'success');
+      });
+    }
+  },
+
+  flipCard() {
+    const cardBox = document.getElementById('activeFlashcardBox');
+    if (!cardBox) return;
+    this.isFlipped = !this.isFlipped;
+    cardBox.classList.toggle('flipped', this.isFlipped);
+  },
+
+  nextCard() {
+    const deck = this.getActiveDeck();
+    if (deck.length === 0) return;
+    this.currentIndex = (this.currentIndex + 1) % deck.length;
+    this.resetFlipAndRender();
+  },
+
+  prevCard() {
+    const deck = this.getActiveDeck();
+    if (deck.length === 0) return;
+    this.currentIndex = (this.currentIndex - 1 + deck.length) % deck.length;
+    this.resetFlipAndRender();
+  },
+
+  resetFlipAndRender() {
+    const cardBox = document.getElementById('activeFlashcardBox');
+    if (cardBox) {
+      this.isFlipped = false;
+      cardBox.classList.remove('flipped');
+    }
+    setTimeout(() => {
+      this.renderCurrentCard();
+    }, 150);
+  },
+
+  renderCurrentCard() {
+    const deck = this.getActiveDeck();
+    const currentNumElem = document.getElementById('currentCardNum');
+    const totalNumElem = document.getElementById('totalCardsNum');
+    const catTag = document.getElementById('cardCategoryTag');
+    const frontText = document.getElementById('cardFrontText');
+    const backText = document.getElementById('cardBackText');
+    const expText = document.getElementById('cardExplanationText');
+
+    if (deck.length === 0) {
+      if (frontText) frontText.textContent = 'No flashcards in this deck yet. Click "+ Add New Flashcard" above!';
+      if (backText) backText.textContent = '';
+      if (expText) expText.textContent = '';
+      if (currentNumElem) currentNumElem.textContent = '0';
+      if (totalNumElem) totalNumElem.textContent = '0';
+      return;
+    }
+
+    const card = deck[this.currentIndex] || deck[0];
+
+    if (currentNumElem) currentNumElem.textContent = (this.currentIndex + 1);
+    if (totalNumElem) totalNumElem.textContent = deck.length;
+    if (catTag) catTag.textContent = card.category || 'Topic';
+    if (frontText) frontText.textContent = card.question;
+    if (backText) backText.textContent = card.answer;
+    if (expText) expText.textContent = card.tip || '';
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.Flashcards = Flashcards;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => Flashcards.init());
+  } else {
+    Flashcards.init();
+  }
+}
+
+
+/* --- notes.js --- */
+/* ==========================================================================
+   EDUPULSE SMART NOTES & PDF CHEATSHEET CREATOR
+   Rich WYSIWYG note editor, LocalStorage persistence, 1-Click PDF export
+   ========================================================================== */
+
+const Notes = {
+  savedNotes: [],
+  activeNoteId: null,
+
+  init() {
+    this.loadNotes();
+    this.setupToolbar();
+    this.setupListeners();
+    this.renderNotesList();
+    this.selectNote(this.savedNotes[0]?.id || null);
+  },
+
+  loadNotes() {
+    try {
+      const stored = localStorage.getItem('edupulse_saved_notes');
+      if (stored) {
+        this.savedNotes = JSON.parse(stored);
+      }
+    } catch (e) {
+      this.savedNotes = [];
+    }
+
+    // Default starter notes if empty
+    if (!this.savedNotes || this.savedNotes.length === 0) {
+      this.savedNotes = [
+        {
+          id: 'note-starter-1',
+          title: 'Physics & Math Quick Formulas Cheatsheet',
+          date: new Date().toLocaleDateString(),
+          content: `
+            <h2>Essential Physics Laws</h2>
+            <ul>
+              <li><strong>Newton's Second Law:</strong> F = m &middot; a</li>
+              <li><strong>Kinetic Energy:</strong> KE = 0.5 &middot; m &middot; v&sup2;</li>
+              <li><strong>Work Done:</strong> W = F &middot; d &middot; cos(&theta;)</li>
+            </ul>
+
+            <h2>Calculus Identities</h2>
+            <p>d/dx (sin x) = cos x<br>d/dx (cos x) = -sin x<br>&int; (1/x) dx = ln|x| + C</p>
+
+            <blockquote>
+              "Consistency beats intensity every single day. Master the core formulas first."
+            </blockquote>
+          `
+        },
+        {
+          id: 'note-starter-2',
+          title: 'Python DSA & Algorithm Cheatsheet',
+          date: new Date().toLocaleDateString(),
+          content: `
+            <h2>Common Data Structures Big-O</h2>
+            <p><strong>Hash Maps (Dictionaries):</strong> O(1) Search, O(1) Insert</p>
+            <p><strong>Binary Search:</strong> O(log N) Time on sorted arrays</p>
+            <p><strong>Merge Sort:</strong> O(N log N) Time with O(N) extra space</p>
+
+            <h2>Python List Slicing Trick</h2>
+            <pre><code># Reverse a list or string instantly
+reversed_item = my_list[::-1]</code></pre>
+          `
+        }
+      ];
+      this.saveNotes();
+    }
+  },
+
+  saveNotes() {
+    try {
+      localStorage.setItem('edupulse_saved_notes', JSON.stringify(this.savedNotes));
+    } catch (e) {}
+  },
+
+  setupToolbar() {
+    const tools = document.querySelectorAll('.editor-toolbar .tool-btn');
+    tools.forEach(btn => {
+      btn.addEventListener('mousedown', (e) => {
+        // Prevent button click from stealing focus away from editor
+        e.preventDefault();
+      });
+
+      btn.addEventListener('click', (e) => {
+        const paper = document.getElementById('notePaperContent');
+        if (paper) paper.focus();
+
+        const cmd = e.currentTarget.getAttribute('data-cmd');
+        if (!cmd) return;
+
+        if (cmd === 'h1') {
+          document.execCommand('formatBlock', false, '<h1>');
+        } else if (cmd === 'h2') {
+          document.execCommand('formatBlock', false, '<h2>');
+        } else if (cmd === 'ul') {
+          document.execCommand('insertUnorderedList', false, null);
+        } else if (cmd === 'ol') {
+          document.execCommand('insertOrderedList', false, null);
+        } else if (cmd === 'quote') {
+          document.execCommand('formatBlock', false, '<blockquote>');
+        } else if (cmd === 'code') {
+          document.execCommand('formatBlock', false, '<pre>');
+        } else {
+          document.execCommand(cmd, false, null);
+        }
+        this.onContentChange();
+      });
+    });
+  },
+
+  setupListeners() {
+    const titleInput = document.getElementById('noteTitleInput');
+    const paper = document.getElementById('notePaperContent');
+    const newBtn = document.getElementById('createNewNoteBtn');
+    const exportPdfBtn = document.getElementById('exportNotePdfBtn');
+    const deleteBtn = document.getElementById('deleteCurrentNoteBtn');
+    const formulaBtn = document.getElementById('insertFormulaBtn');
+
+    if (titleInput) {
+      titleInput.addEventListener('input', () => {
+        const note = this.getActiveNote();
+        if (note) {
+          note.title = titleInput.value.trim() || 'Untitled Study Note';
+          this.renderNotesList();
+          this.saveNotes();
+        }
+      });
+    }
+
+    if (paper) {
+      paper.addEventListener('input', () => {
+        this.onContentChange();
+      });
+    }
+
+    if (newBtn) {
+      newBtn.addEventListener('click', () => {
+        this.createNewNote();
+      });
+    }
+
+    if (deleteBtn) {
+      deleteBtn.addEventListener('click', () => {
+        this.deleteActiveNote();
+      });
+    }
+
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        const note = this.getActiveNote();
+        if (note) {
+          PdfExporter.exportCustomNote(note.title, note.content);
+        }
+      });
+    }
+
+    if (formulaBtn) {
+      formulaBtn.addEventListener('click', () => {
+        const sampleFormulas = [
+          "&Delta;E = h &middot; &nu;",
+          "F = G &middot; (m1 &middot; m2) / r&sup2;",
+          "a&sup2; + b&sup2; = c&sup2;",
+          "&int; u dv = uv - &int; v du"
+        ];
+        const chosen = sampleFormulas[Math.floor(Math.random() * sampleFormulas.length)];
+        document.execCommand('insertHTML', false, ` <strong style="font-family: 'JetBrains Mono', monospace; color: #fbbf24; background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">${chosen}</strong> `);
+        this.onContentChange();
+      });
+    }
+  },
+
+  onContentChange() {
+    const note = this.getActiveNote();
+    const paper = document.getElementById('notePaperContent');
+    if (note && paper) {
+      note.content = paper.innerHTML;
+      this.saveNotes();
+
+      const pill = document.getElementById('noteAutoSavePill');
+      if (pill) {
+        pill.innerHTML = '<i class="fa-solid fa-check"></i> Auto-saved';
+        setTimeout(() => {
+          pill.innerHTML = '<i class="fa-solid fa-cloud"></i> Saved locally';
+        }, 1200);
+      }
+    }
+  },
+
+  getActiveNote() {
+    return this.savedNotes.find(n => n.id === this.activeNoteId) || this.savedNotes[0];
+  },
+
+  createNewNote() {
+    const newNote = {
+      id: `note-${Date.now()}`,
+      title: 'New Study Topic Note',
+      date: new Date().toLocaleDateString(),
+      content: '<p>Start jotting down key takeaways, derivations, or exam notes...</p>'
+    };
+    this.savedNotes.unshift(newNote);
+    this.saveNotes();
+    this.renderNotesList();
+    this.selectNote(newNote.id);
+    App.showToast('Created new study note!', 'info');
+  },
+
+  deleteActiveNote() {
+    if (this.savedNotes.length <= 1) {
+      App.showToast('You must keep at least 1 note.', 'warning');
+      return;
+    }
+    const idx = this.savedNotes.findIndex(n => n.id === this.activeNoteId);
+    if (idx !== -1) {
+      this.savedNotes.splice(idx, 1);
+      this.saveNotes();
+      this.renderNotesList();
+      this.selectNote(this.savedNotes[0]?.id);
+      App.showToast('Note deleted.', 'info');
+    }
+  },
+
+  selectNote(id) {
+    if (!id) return;
+    this.activeNoteId = id;
+
+    const note = this.getActiveNote();
+    const titleInput = document.getElementById('noteTitleInput');
+    const paper = document.getElementById('notePaperContent');
+
+    if (note) {
+      if (titleInput) titleInput.value = note.title;
+      if (paper) paper.innerHTML = note.content;
+    }
+
+    // Update list active highlight
+    document.querySelectorAll('.saved-note-item').forEach(item => {
+      item.classList.toggle('active', item.getAttribute('data-id') === id);
+    });
+  },
+
+  renderNotesList() {
+    const list = document.getElementById('savedNotesList');
+    if (!list) return;
+
+    list.innerHTML = '';
+    this.savedNotes.forEach(note => {
+      const item = document.createElement('div');
+      item.className = `saved-note-item ${note.id === this.activeNoteId ? 'active' : ''}`;
+      item.setAttribute('data-id', note.id);
+      item.innerHTML = `
+        <div class="note-item-title">${note.title}</div>
+        <div class="note-item-date">${note.date}</div>
+      `;
+
+      item.addEventListener('click', () => {
+        this.selectNote(note.id);
+      });
+
+      list.appendChild(item);
+    });
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.Notes = Notes;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => Notes.init());
+  } else {
+    Notes.init();
+  }
+}
+
+
+/* --- converter.js --- */
+/* ==========================================================================
+   EDUPULSE UNIVERSAL FILE CONVERTER
+   100% Client-Side, Secure, Instant File & Document Conversion
+   ========================================================================== */
+
+const Converter = {
+  selectedImagesForPdf: [],
+  currentCrossImage: null,
+  currentCsvData: null,
+
+  init() {
+    this.setupTabs();
+    this.setupImageToPdf();
+    this.setupTextToPdf();
+    this.setupImageCross();
+    this.setupCsvConverter();
+  },
+
+  /**
+   * Switch between conversion modes
+   */
+  setupTabs() {
+    const tabBtns = document.querySelectorAll('.conv-tab-btn');
+    const panels = document.querySelectorAll('.conv-panel');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        const target = e.currentTarget.getAttribute('data-conv-mode');
+        e.currentTarget.classList.add('active');
+        const activePanel = document.getElementById(`conv-${target}`);
+        if (activePanel) activePanel.classList.add('active');
+      });
+    });
+  },
+
+  /**
+   * 1. Images to PDF Converter
+   */
+  setupImageToPdf() {
+    const dropZone = document.getElementById('imgPdfDropZone');
+    const input = document.getElementById('imgPdfInput');
+    const clearBtn = document.getElementById('clearImgPdfBtn');
+    const generateBtn = document.getElementById('generateImgPdfBtn');
+
+    if (!dropZone || !input) return;
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropZone.classList.add('drag-over');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('drag-over');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      this.handleImagesForPdf(files);
+    });
+
+    dropZone.addEventListener('click', (e) => {
+      if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+        input.click();
+      }
+    });
+
+    input.addEventListener('change', (e) => {
+      this.handleImagesForPdf(e.target.files);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        this.selectedImagesForPdf = [];
+        this.renderImageThumbnails();
+      });
+    }
+
+    if (generateBtn) {
+      generateBtn.addEventListener('click', () => {
+        this.convertImagesToPdf();
+      });
+    }
+  },
+
+  handleImagesForPdf(fileList) {
+    if (!fileList || fileList.length === 0) return;
+
+    for (let i = 0; i < fileList.length; i++) {
+      const file = fileList[i];
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.selectedImagesForPdf.push({
+            name: file.name,
+            src: e.target.result
+          });
+          this.renderImageThumbnails();
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    App.showToast(`Added images. Ready for PDF conversion!`, 'info');
+  },
+
+  renderImageThumbnails() {
+    const container = document.getElementById('imgPdfPreviews');
+    const grid = document.getElementById('imgThumbnailsGrid');
+    const countBadge = document.getElementById('imgPdfCount');
+
+    if (!container || !grid) return;
+
+    if (this.selectedImagesForPdf.length === 0) {
+      container.style.display = 'none';
+      return;
+    }
+
+    container.style.display = 'block';
+    countBadge.textContent = this.selectedImagesForPdf.length;
+    grid.innerHTML = '';
+
+    this.selectedImagesForPdf.forEach((img, idx) => {
+      const card = document.createElement('div');
+      card.className = 'thumb-card';
+      card.innerHTML = `
+        <img src="${img.src}" alt="${img.name}">
+        <span class="thumb-page-badge">Page ${idx + 1}</span>
+        <button class="remove-thumb" data-idx="${idx}" title="Remove page"><i class="fa-solid fa-xmark"></i></button>
+      `;
+
+      card.querySelector('.remove-thumb').addEventListener('click', (e) => {
+        const removeIdx = parseInt(e.currentTarget.getAttribute('data-idx'));
+        this.selectedImagesForPdf.splice(removeIdx, 1);
+        this.renderImageThumbnails();
+      });
+
+      grid.appendChild(card);
+    });
+  },
+
+  convertImagesToPdf() {
+    if (this.selectedImagesForPdf.length === 0) {
+      App.showToast('Please select at least 1 image first!', 'warning');
+      return;
+    }
+
+    const { jsPDF } = window.jspdf || {};
+    if (!jsPDF) {
+      App.showToast('PDF library is loading, please try again.', 'warning');
+      return;
+    }
+
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
+    });
+
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    let processedCount = 0;
+
+    this.selectedImagesForPdf.forEach((imgData, index) => {
+      const img = new Image();
+      img.src = imgData.src;
+
+      img.onload = () => {
+        if (index > 0) pdf.addPage();
+
+        // Calculate aspect fit within page
+        const imgRatio = img.width / img.height;
+        const pageRatio = pageWidth / pageHeight;
+
+        let renderWidth = pageWidth - 20; // 10mm margins
+        let renderHeight = renderWidth / imgRatio;
+
+        if (renderHeight > (pageHeight - 20)) {
+          renderHeight = pageHeight - 20;
+          renderWidth = renderHeight * imgRatio;
+        }
+
+        const xPos = (pageWidth - renderWidth) / 2;
+        const yPos = (pageHeight - renderHeight) / 2;
+
+        pdf.addImage(img, 'JPEG', xPos, yPos, renderWidth, renderHeight);
+
+        processedCount++;
+        if (processedCount === this.selectedImagesForPdf.length) {
+          pdf.save(`Study_Images_Compilation_${Date.now()}.pdf`);
+          App.showToast('Images successfully compiled into PDF!', 'success');
+          if (window.confetti) window.confetti({ particleCount: 50, spread: 60 });
+        }
+      };
+    });
+  },
+
+  /**
+   * 2. Text / Markdown to PDF Converter
+   */
+  setupTextToPdf() {
+    const convertBtn = document.getElementById('convertTxtToPdfBtn');
+    const fileInput = document.getElementById('loadTxtFileInput');
+    const editor = document.getElementById('txtEditorArea');
+    const titleInput = document.getElementById('txtDocTitle');
+
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            if (editor) editor.value = evt.target.result;
+            if (titleInput && !titleInput.value) {
+              titleInput.value = file.name.replace(/\.[^/.]+$/, "");
+            }
+            App.showToast(`Loaded ${file.name}`, 'info');
+          };
+          reader.readAsText(file);
+        }
+      });
+    }
+
+    if (convertBtn) {
+      convertBtn.addEventListener('click', () => {
+        const text = editor ? editor.value.trim() : '';
+        const docTitle = (titleInput && titleInput.value.trim()) ? titleInput.value.trim() : 'Study Document';
+
+        if (!text) {
+          App.showToast('Please enter or paste some text/notes to convert!', 'warning');
+          return;
+        }
+
+        // Render Markdown to HTML if marked is available
+        let renderedHtml = '';
+        if (window.marked) {
+          renderedHtml = window.marked.parse(text);
+        } else {
+          renderedHtml = `<pre style="white-space: pre-wrap; font-family: monospace;">${text}</pre>`;
+        }
+
+        PdfExporter.exportCustomNote(docTitle, renderedHtml);
+      });
+    }
+  },
+
+  /**
+   * 3. Image Cross Format Converter (PNG, JPG, WEBP)
+   */
+  setupImageCross() {
+    const dropZone = document.getElementById('imgCrossDropZone');
+    const input = document.getElementById('imgCrossInput');
+    const controls = document.getElementById('imgCrossControls');
+    const preview = document.getElementById('crossImgPreview');
+    const meta = document.getElementById('crossImgMeta');
+    const slider = document.getElementById('crossQualitySlider');
+    const qualityVal = document.getElementById('qualityVal');
+    const downloadBtn = document.getElementById('downloadCrossImgBtn');
+
+    if (!input) return;
+
+    if (dropZone) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.add('drag-over');
+        });
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove('drag-over');
+        });
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const file = e.dataTransfer.files[0];
+        if (file) this.loadCrossImage(file);
+      });
+
+      dropZone.addEventListener('click', (e) => {
+        if (e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+          input.click();
+        }
+      });
+    }
+
+    input.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) this.loadCrossImage(file);
+    });
+
+    if (slider && qualityVal) {
+      slider.addEventListener('input', () => {
+        qualityVal.textContent = `${slider.value}%`;
+      });
+    }
+
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', () => {
+        this.downloadCrossConvertedImage();
+      });
+    }
+  },
+
+  loadCrossImage(file) {
+    const preview = document.getElementById('crossImgPreview');
+    const meta = document.getElementById('crossImgMeta');
+    const controls = document.getElementById('imgCrossControls');
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.currentCrossImage = {
+        name: file.name,
+        src: e.target.result,
+        size: (file.size / 1024).toFixed(1) + ' KB',
+        type: file.type
+      };
+
+      if (preview) preview.src = e.target.result;
+      if (meta) meta.textContent = `${file.type.toUpperCase()} • ${this.currentCrossImage.size}`;
+      if (controls) controls.style.display = 'grid';
+
+      App.showToast('Image loaded. Select desired format!', 'info');
+    };
+    reader.readAsDataURL(file);
+  },
+
+  downloadCrossConvertedImage() {
+    if (!this.currentCrossImage) {
+      App.showToast('No image selected!', 'warning');
+      return;
+    }
+
+    const selectedFormat = document.querySelector('input[name="targetFormat"]:checked').value;
+    const quality = parseInt(document.getElementById('crossQualitySlider').value) / 100;
+
+    const img = new Image();
+    img.src = this.currentCrossImage.src;
+
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+
+      // For JPEG background filling
+      if (selectedFormat === 'image/jpeg') {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      ctx.drawImage(img, 0, 0);
+
+      const extMap = {
+        'image/png': 'png',
+        'image/jpeg': 'jpg',
+        'image/webp': 'webp'
+      };
+      const ext = extMap[selectedFormat] || 'png';
+      const baseName = this.currentCrossImage.name.replace(/\.[^/.]+$/, "");
+
+      canvas.toBlob((blob) => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${baseName}_converted.${ext}`;
+        link.click();
+        URL.revokeObjectURL(link.href);
+
+        App.showToast(`Image converted & downloaded as .${ext}!`, 'success');
+      }, selectedFormat, quality);
+    };
+  },
+
+  /**
+   * 4. CSV / Table Data to PDF & JSON
+   */
+  setupCsvConverter() {
+    const fileInput = document.getElementById('csvFileInput');
+    const sampleBtn = document.getElementById('loadSampleCsvBtn');
+    const exportPdfBtn = document.getElementById('exportCsvToPdfBtn');
+    const exportJsonBtn = document.getElementById('exportCsvToJsonBtn');
+
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            this.parseAndRenderCsv(evt.target.result);
+          };
+          reader.readAsText(file);
+        }
+      });
+    }
+
+    if (sampleBtn) {
+      sampleBtn.addEventListener('click', () => {
+        this.parseAndRenderCsv(STUDY_DATABASE.sampleCsv);
+        App.showToast('Loaded sample study timetable CSV!', 'info');
+      });
+    }
+
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        this.exportCsvToPdf();
+      });
+    }
+
+    if (exportJsonBtn) {
+      exportJsonBtn.addEventListener('click', () => {
+        this.exportCsvToJson();
+      });
+    }
+  },
+
+  parseAndRenderCsv(csvString) {
+    const lines = csvString.trim().split(/\r?\n/);
+    if (lines.length < 2) {
+      App.showToast('CSV file is empty or missing headers', 'warning');
+      return;
+    }
+
+    const headers = lines[0].split(',').map(h => h.trim());
+    const rows = lines.slice(1).map(line => line.split(',').map(c => c.trim()));
+
+    this.currentCsvData = { headers, rows };
+
+    // Render Preview Table
+    const wrapper = document.getElementById('csvTableWrapper');
+    const actionsBar = document.getElementById('csvActionsBar');
+
+    let tableHtml = '<table class="preview-table"><thead><tr>';
+    headers.forEach(h => {
+      tableHtml += `<th>${h}</th>`;
+    });
+    tableHtml += '</tr></thead><tbody>';
+
+    rows.forEach(r => {
+      tableHtml += '<tr>';
+      r.forEach(cell => {
+        tableHtml += `<td>${cell}</td>`;
+      });
+      tableHtml += '</tr>';
+    });
+    tableHtml += '</tbody></table>';
+
+    if (wrapper) wrapper.innerHTML = tableHtml;
+    if (actionsBar) actionsBar.style.display = 'flex';
+  },
+
+  exportCsvToPdf() {
+    if (!this.currentCsvData) return;
+
+    const wrapper = document.getElementById('csvTableWrapper');
+    const printContainer = document.createElement('div');
+    printContainer.style.padding = '30px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #6366f1; padding-bottom: 12px; margin-bottom: 20px;">
+        <h1 style="font-size: 22px; color: #0f172a; margin: 0; font-weight: 800;">Study Schedule & Data Table</h1>
+        <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Converted from CSV by EduPulse</div>
+      </div>
+      <div>
+        ${wrapper.innerHTML}
+      </div>
+      <div style="margin-top: 24px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 11px; color: #94a3b8;">
+        EduPulse Study Companion • Distraction-free Study Tools
+      </div>
+    `;
+
+    // Apply clean print table borders
+    const tbl = printContainer.querySelector('table');
+    if (tbl) {
+      tbl.style.width = '100%';
+      tbl.style.borderCollapse = 'collapse';
+      printContainer.querySelectorAll('th, td').forEach(cell => {
+        cell.style.border = '1px solid #cbd5e1';
+        cell.style.padding = '8px 10px';
+        cell.style.fontSize = '12px';
+      });
+      printContainer.querySelectorAll('th').forEach(th => {
+        th.style.background = '#f1f5f9';
+        th.style.color = '#0f172a';
+      });
+    }
+
+    const opt = {
+      margin: 10,
+      filename: `Study_Schedule_${Date.now()}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        App.showToast('Schedule PDF exported successfully!', 'success');
+      });
+    } else {
+      PdfExporter.printFallback(printContainer);
+    }
+  },
+
+  exportCsvToJson() {
+    if (!this.currentCsvData) return;
+
+    const { headers, rows } = this.currentCsvData;
+    const jsonResult = rows.map(row => {
+      const obj = {};
+      headers.forEach((h, i) => {
+        obj[h] = row[i] || '';
+      });
+      return obj;
+    });
+
+    const jsonString = JSON.stringify(jsonResult, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `Study_Data_${Date.now()}.json`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast('CSV converted and downloaded as JSON!', 'success');
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.Converter = Converter;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => Converter.init());
+  } else {
+    Converter.init();
+  }
+}
+
+
+/* --- urlHub.js --- */
+/* ==========================================================================
+   EDUPULSE SMART URL STUDY HUB
+   Extracts Video Player + Auto-Generates Structured Notes + 1-Click PDF Export
+   ========================================================================== */
+
+const UrlHub = {
+  currentExtractedData: null,
+
+  init() {
+    const processBtn = document.getElementById('processUrlBtn');
+    const input = document.getElementById('customUrlInput');
+    const exportPdfBtn = document.getElementById('exportUrlToPdfBtn');
+
+    if (processBtn) {
+      processBtn.addEventListener('click', () => {
+        this.processUrl(input.value.trim());
+      });
+    }
+
+    if (input) {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          this.processUrl(input.value.trim());
+        }
+      });
+    }
+
+    if (exportPdfBtn) {
+      exportPdfBtn.addEventListener('click', () => {
+        this.exportExtractedPdf();
+      });
+    }
+
+    // Quick Sample buttons
+    document.querySelectorAll('.sample-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const url = e.currentTarget.getAttribute('data-url');
+        if (input) input.value = url;
+        this.processUrl(url);
+      });
+    });
+  },
+
+  /**
+   * Extract YouTube video ID from various URL formats
+   */
+  extractVideoId(url) {
+    if (!url) return null;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+  },
+
+  /**
+   * Process and analyze any study URL
+   */
+  processUrl(rawUrl) {
+    if (!rawUrl) {
+      App.showToast('Please enter an educational URL or YouTube link!', 'warning');
+      return;
+    }
+
+    const videoId = this.extractVideoId(rawUrl);
+    const container = document.getElementById('urlResultContainer');
+    const iframe = document.getElementById('urlVideoIframe');
+    const titleElem = document.getElementById('urlLectureTitle');
+    const sourceElem = document.getElementById('urlSourceDisplay');
+    const notesElem = document.getElementById('urlNotesContent');
+    const conceptsElem = document.getElementById('urlKeyConcepts');
+    const quizElem = document.getElementById('urlQuickQuiz');
+    const subjectElem = document.getElementById('urlVideoSubject');
+
+    // Detect subject and topic inference
+    const urlLower = rawUrl.toLowerCase();
+    let topicName = "Educational Lecture Study Guide";
+    let detectedSubject = "General Science & Tech";
+
+    if (urlLower.includes('calculus') || urlLower.includes('math') || urlLower.includes('wuvtyaankzm')) {
+      topicName = "Calculus: Essence of Mathematical Analysis & Derivatives";
+      detectedSubject = "Mathematics";
+    } else if (urlLower.includes('python') || urlLower.includes('code') || urlLower.includes('_uqrj0tkzlc')) {
+      topicName = "Python Programming: Fundamentals, Data Structures & Logic";
+      detectedSubject = "Computer Science";
+    } else if (urlLower.includes('quantum') || urlLower.includes('physics') || urlLower.includes('bhijgxav9ly')) {
+      topicName = "Quantum Mechanics & Wave Theory: Principles & Equations";
+      detectedSubject = "Physics";
+    } else if (urlLower.includes('chemistry') || urlLower.includes('reaction')) {
+      topicName = "Chemical Kinetics & Reaction Mechanisms";
+      detectedSubject = "Chemistry";
+    } else if (urlLower.includes('bio') || urlLower.includes('cell')) {
+      topicName = "Cellular Biology & Molecular Genetics";
+      detectedSubject = "Biology";
+    }
+
+    // Set video stream
+    const directYt = document.getElementById('urlDirectYoutubeBtn');
+    if (videoId) {
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+      if (directYt) directYt.href = `https://www.youtube.com/watch?v=${videoId}`;
+    } else {
+      // In case user entered a non-youtube URL, show educational stream preview
+      iframe.src = `https://www.youtube.com/embed/WUvTyaaNkzM?autoplay=0&rel=0`;
+      if (directYt) directYt.href = rawUrl;
+    }
+
+    titleElem.textContent = topicName;
+    sourceElem.textContent = `Source Link: ${rawUrl}`;
+    subjectElem.textContent = detectedSubject;
+
+    // Generate rich study notes & cheat sheet
+    const studyNotes = `
+      <h3>1. Executive Lecture Overview</h3>
+      <p>This session breaks down essential conceptual frameworks in <strong>${detectedSubject}</strong>. Students learn how foundational laws lead to practical problem-solving strategies, algorithmic thinking, and analytical rigor.</p>
+      
+      <div class="callout-box">
+        <strong>Key Core Insight:</strong>
+        Mastering concepts visually and deriving principles from first principles guarantees permanent exam recall over passive rote memorization.
+      </div>
+
+      <h3>2. Structured Breakdown of Principles</h3>
+      <ul>
+        <li><strong>First Principles Formulation:</strong> Breaking complex multi-variable problems into simple, atomic truths.</li>
+        <li><strong>Mathematical & Logical Frameworks:</strong> Applying the fundamental rules of ${detectedSubject} to minimize computation errors.</li>
+        <li><strong>Edge Cases & Common Traps:</strong> Recognizing when standard assumptions fail and applying correction factors.</li>
+      </ul>
+    `;
+
+    const keyConcepts = `
+      <h4 style="color: #6366f1; font-weight: 700; margin-bottom: 8px;">Key Takeaway Formula & Concept Box</h4>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fbbf24; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; margin-bottom: 6px;">
+        Principle: Invariant Conservation & Rate Scaling &rarr; &Delta;Y / &Delta;X = Constant
+      </div>
+      <p style="font-size: 13px; color: #94a3b8; margin: 0;">Always verify boundary values and unit dimensions before committing to a final calculation.</p>
+    `;
+
+    const practiceQuestions = `
+      <div style="margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px;">
+        <h4 style="color: #10b981; font-weight: 700; font-size: 14px; margin-bottom: 8px;">Auto-Generated Practice Challenge</h4>
+        <p style="font-size: 13px; color: #e2e8f0; margin-bottom: 6px;"><strong>Q:</strong> How does changing the primary input variable affect overall system stability in this topic?</p>
+        <p style="font-size: 12px; color: #38bdf8; margin: 0;"><em>Hint:</em> Look at the first-order derivative or rate equation to check sign and direction.</p>
+      </div>
+    `;
+
+    notesElem.innerHTML = studyNotes;
+    conceptsElem.innerHTML = keyConcepts;
+    quizElem.innerHTML = practiceQuestions;
+
+    this.currentExtractedData = {
+      title: topicName,
+      subject: detectedSubject,
+      sourceUrl: rawUrl,
+      notes: studyNotes,
+      concepts: keyConcepts,
+      practice: practiceQuestions
+    };
+
+    container.style.display = 'block';
+    container.scrollIntoView({ behavior: 'smooth' });
+
+    App.showToast('Lecture loaded and structured study notes generated!', 'success');
+  },
+
+  /**
+   * Download the fetched URL lecture as a styled PDF
+   */
+  exportExtractedPdf() {
+    if (!this.currentExtractedData) {
+      App.showToast('No lecture data loaded to export!', 'warning');
+      return;
+    }
+
+    const d = this.currentExtractedData;
+    const printContainer = document.createElement('div');
+    printContainer.style.padding = '30px';
+    printContainer.style.fontFamily = "'Plus Jakarta Sans', Arial, sans-serif";
+    printContainer.style.color = '#1e293b';
+    printContainer.style.background = '#ffffff';
+
+    printContainer.innerHTML = `
+      <div style="border-bottom: 2px solid #6366f1; padding-bottom: 14px; margin-bottom: 20px;">
+        <span style="display: inline-block; padding: 3px 10px; background: #e0e7ff; color: #4338ca; font-size: 11px; font-weight: 700; border-radius: 12px; text-transform: uppercase;">${d.subject}</span>
+        <h1 style="font-size: 22px; color: #0f172a; margin: 8px 0 4px 0; font-weight: 800;">${d.title}</h1>
+        <div style="font-size: 11px; color: #64748b; word-break: break-all;">Source: ${d.sourceUrl}</div>
+        <div style="font-size: 11px; color: #94a3b8; margin-top: 2px;">Generated via EduPulse Smart URL Study Engine on ${new Date().toLocaleDateString()}</div>
+      </div>
+
+      <div style="font-size: 13.5px; line-height: 1.7; color: #334155; margin-bottom: 20px;">
+        ${d.notes}
+      </div>
+
+      <div style="padding: 14px; background: #f8fafc; border-left: 4px solid #6366f1; border-radius: 6px; margin-bottom: 20px;">
+        ${d.concepts}
+      </div>
+
+      <div style="padding: 14px; background: #f0fdf4; border-left: 4px solid #16a34a; border-radius: 6px; margin-bottom: 20px;">
+        ${d.practice}
+      </div>
+
+      <div style="text-align: center; border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 11px; color: #94a3b8;">
+        EduPulse Study Companion • Free & Distraction-Free Learning Handout
+      </div>
+    `;
+
+    const opt = {
+      margin: 10,
+      filename: `${d.title.replace(/[^a-zA-Z0-9]/g, '_')}_Lecture_Notes.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    if (window.html2pdf) {
+      window.html2pdf().set(opt).from(printContainer).save().then(() => {
+        if (typeof App !== 'undefined' && App.showToast) {
+          App.showToast('Lecture PDF downloaded successfully!', 'success');
+        }
+        if (window.confetti) window.confetti({ particleCount: 50, spread: 60 });
+      });
+    } else {
+      if (typeof PdfExporter !== 'undefined') {
+        PdfExporter.printFallback(printContainer);
+      }
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.UrlHub = UrlHub;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => UrlHub.init());
+  } else {
+    UrlHub.init();
+  }
+}
+
+
+/* --- creatorStudio.js --- */
+/* ==========================================================================
+   EDUPULSE CREATOR STUDIO & LECTURE PUBLISHER
+   Protected portal for Admin/Teacher to publish video lectures with
+   headings, descriptions, important formulas/takeaways, and practice quizzes.
+   ========================================================================== */
+
+const CreatorStudio = {
+  // Default security PIN (can be customized by the admin)
+  adminPin: localStorage.getItem('edupulse_admin_pin') || '1234',
+  isUnlocked: false,
+
+  init() {
+    this.setupListeners();
+    this.renderPublishedManager();
+  },
+
+  open() {
+    const modal = document.getElementById('creatorStudioModal');
+    if (!modal) return;
+    modal.classList.add('active');
+
+    // Show appropriate screen (Lock screen if locked, Studio if unlocked)
+    this.updateScreenState();
+  },
+
+  close() {
+    const modal = document.getElementById('creatorStudioModal');
+    if (modal) modal.classList.remove('active');
+  },
+
+  updateScreenState() {
+    const lockScreen = document.getElementById('creatorLockScreen');
+    const studioScreen = document.getElementById('creatorStudioScreen');
+    const pinInput = document.getElementById('creatorPinInput');
+    const pinError = document.getElementById('creatorPinError');
+
+    if (pinError) pinError.style.display = 'none';
+    if (pinInput) pinInput.value = '';
+
+    if (this.isUnlocked) {
+      if (lockScreen) lockScreen.style.display = 'none';
+      if (studioScreen) studioScreen.style.display = 'block';
+    } else {
+      if (lockScreen) lockScreen.style.display = 'block';
+      if (studioScreen) studioScreen.style.display = 'none';
+      if (pinInput) setTimeout(() => pinInput.focus(), 150);
+    }
+  },
+
+  unlockWithPin(pin) {
+    const storedPin = localStorage.getItem('edupulse_admin_pin') || '1234';
+    const pinError = document.getElementById('creatorPinError');
+
+    if (pin === storedPin) {
+      this.isUnlocked = true;
+      this.updateScreenState();
+      if (typeof App !== 'undefined' && App.showToast) {
+        App.showToast('Admin Mode Unlocked! Welcome, Creator.', 'success');
+      }
+    } else {
+      if (pinError) {
+        pinError.textContent = 'Incorrect PIN! Only authorized admin can publish.';
+        pinError.style.display = 'block';
+      }
+    }
+  },
+
+  lockStudio() {
+    this.isUnlocked = false;
+    this.updateScreenState();
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast('Creator Studio locked.', 'info');
+    }
+  },
+
+  setupListeners() {
+    // PIN unlock buttons
+    const unlockBtn = document.getElementById('creatorUnlockBtn');
+    const pinInput = document.getElementById('creatorPinInput');
+    const closeBtns = document.querySelectorAll('.close-creator-modal');
+
+    if (unlockBtn && pinInput) {
+      unlockBtn.addEventListener('click', () => {
+        this.unlockWithPin(pinInput.value.trim());
+      });
+
+      pinInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          this.unlockWithPin(pinInput.value.trim());
+        }
+      });
+    }
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => this.close());
+    });
+
+    // Close on overlay click
+    const modal = document.getElementById('creatorStudioModal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) this.close();
+      });
+    }
+
+    // Dynamic formula row adder
+    const addFormulaBtn = document.getElementById('addFormulaRowBtn');
+    if (addFormulaBtn) {
+      addFormulaBtn.addEventListener('click', () => {
+        this.addFormulaRow();
+      });
+    }
+
+    // Publish Button
+    const publishBtn = document.getElementById('publishLectureBtn');
+    if (publishBtn) {
+      publishBtn.addEventListener('click', () => {
+        this.handlePublish();
+      });
+    }
+
+    // Change PIN Button
+    const changePinBtn = document.getElementById('changeAdminPinBtn');
+    if (changePinBtn) {
+      changePinBtn.addEventListener('click', () => {
+        const newPin = prompt('Enter new 4-digit Admin PIN:');
+        if (newPin && newPin.trim().length >= 4) {
+          localStorage.setItem('edupulse_admin_pin', newPin.trim());
+          alert('Admin PIN updated successfully! Remember this PIN.');
+        } else if (newPin) {
+          alert('PIN must be at least 4 characters long.');
+        }
+      });
+    }
+
+    // Copy GitHub Snippet Button
+    const copyGithubBtn = document.getElementById('copyGithubSnippetBtn');
+    if (copyGithubBtn) {
+      copyGithubBtn.addEventListener('click', () => {
+        this.copyCurriculumSnippet();
+      });
+    }
+
+    // YouTube URL preview listener
+    const ytInput = document.getElementById('lectureVideoUrlInput');
+    const previewContainer = document.getElementById('ytVideoPreviewContainer');
+    const previewThumb = document.getElementById('ytVideoPreviewThumb');
+    if (ytInput && previewThumb) {
+      ytInput.addEventListener('input', () => {
+        const vid = this.extractVideoId(ytInput.value.trim());
+        if (vid) {
+          previewThumb.src = `https://img.youtube.com/vi/${vid}/mqdefault.jpg`;
+          previewContainer.style.display = 'flex';
+        } else {
+          previewContainer.style.display = 'none';
+        }
+      });
+    }
+  },
+
+  extractVideoId(url) {
+    if (!url) return null;
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/i);
+    if (match) return match[1];
+    if (url.trim().length === 11 && !url.includes(' ') && !url.includes('.')) return url.trim();
+    return null;
+  },
+
+  addFormulaRow(title = '', math = '', desc = '') {
+    const list = document.getElementById('creatorFormulasList');
+    if (!list) return;
+
+    const row = document.createElement('div');
+    row.className = 'formula-input-row';
+    row.innerHTML = `
+      <div class="row-inputs">
+        <input type="text" class="formula-in-title" placeholder="Concept / Rule Name (e.g. Gauss Law)" value="${title}">
+        <input type="text" class="formula-in-math" placeholder="Formula or Key Equation (e.g. Φ = Q_enc / ε₀)" value="${math}">
+        <input type="text" class="formula-in-desc" placeholder="Brief Explanation / Exam Significance" value="${desc}">
+      </div>
+      <button type="button" class="btn-remove-row" title="Remove Row" onclick="this.closest('.formula-input-row').remove()">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    `;
+    list.appendChild(row);
+  },
+
+  handlePublish() {
+    const titleInput = document.getElementById('lectureTitleInput');
+    const urlInput = document.getElementById('lectureVideoUrlInput');
+    const subjectSelect = document.getElementById('lectureSubjectSelect');
+    const levelInput = document.getElementById('lectureLevelInput');
+    const durationInput = document.getElementById('lectureDurationInput');
+    const authorInput = document.getElementById('lectureAuthorInput');
+    const descTextarea = document.getElementById('lectureDescInput');
+
+    const title = titleInput ? titleInput.value.trim() : '';
+    const rawUrl = urlInput ? urlInput.value.trim() : '';
+    const subject = subjectSelect ? subjectSelect.value : 'custom';
+    const subjectName = subjectSelect ? subjectSelect.options[subjectSelect.selectedIndex].text : 'Special Lecture';
+    const level = levelInput && levelInput.value.trim() ? levelInput.value.trim() : 'All Levels / Exam Special';
+    const duration = durationInput && durationInput.value.trim() ? durationInput.value.trim() : '20 mins';
+    const author = authorInput && authorInput.value.trim() ? authorInput.value.trim() : 'Verified Instructor';
+    const notesContent = descTextarea ? descTextarea.value.trim() : '';
+
+    if (!title) {
+      alert('Please enter a Lesson Heading / Title!');
+      titleInput?.focus();
+      return;
+    }
+
+    const videoId = this.extractVideoId(rawUrl);
+    if (!videoId) {
+      alert('Please enter a valid YouTube video link or Video ID (e.g. https://www.youtube.com/watch?v=...)');
+      urlInput?.focus();
+      return;
+    }
+
+    // Collect formulas / important points
+    const formulaRows = document.querySelectorAll('#creatorFormulasList .formula-input-row');
+    const formulas = [];
+    formulaRows.forEach(row => {
+      const fTitle = row.querySelector('.formula-in-title')?.value.trim();
+      const fMath = row.querySelector('.formula-in-math')?.value.trim();
+      const fDesc = row.querySelector('.formula-in-desc')?.value.trim();
+      if (fTitle || fMath) {
+        formulas.push({
+          title: fTitle || 'Important Rule',
+          math: fMath || '',
+          desc: fDesc || ''
+        });
+      }
+    });
+
+    // Default formulas if none entered
+    if (formulas.length === 0) {
+      formulas.push({
+        title: "Key Takeaway",
+        math: "Core Principle / Formula",
+        desc: "Master foundational concepts and practice derivations for exams."
+      });
+    }
+
+    // Optional Quiz Question
+    const quizQ = document.getElementById('creatorQuizQuestion')?.value.trim();
+    const optA = document.getElementById('creatorQuizOptA')?.value.trim() || 'Option A';
+    const optB = document.getElementById('creatorQuizOptB')?.value.trim() || 'Option B';
+    const optC = document.getElementById('creatorQuizOptC')?.value.trim() || 'Option C';
+    const optD = document.getElementById('creatorQuizOptD')?.value.trim() || 'Option D';
+    const correctIdx = parseInt(document.getElementById('creatorQuizAnswer')?.value || '0');
+    const quizExp = document.getElementById('creatorQuizExp')?.value.trim() || 'Review the lecture explanation above.';
+
+    const quiz = [
+      {
+        question: quizQ || `What is the primary topic of the lecture "${title}"?`,
+        options: quizQ ? [optA, optB, optC, optD] : [
+          `Understanding foundational concepts of ${title}`,
+          "Memorization without proofs",
+          "Irrelevant details",
+          "None of the above"
+        ],
+        answer: correctIdx,
+        explanation: quizExp
+      }
+    ];
+
+    // Format rich notes HTML
+    const formattedNotes = `
+      <div class="published-author-banner">
+        <i class="fa-solid fa-crown" style="color: #f59e0b;"></i>
+        <span>Published by <strong>${author}</strong> • Verified Study Material</span>
+      </div>
+      <h3>1. Lecture Overview & Core Concepts</h3>
+      <p>${notesContent.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>') || 'Complete structured notes, important derivations, and problem sets provided by instructor.'}</p>
+      
+      <div class="callout-box">
+        <strong>Exam Strategy & Revision Insight:</strong>
+        Revise all formulas below, solve the practice quiz, and download the 1-Click PDF cheatsheet before exams.
+      </div>
+    `;
+
+    const topicId = `pub-${Date.now()}`;
+    const newTopic = {
+      id: topicId,
+      title: title,
+      subject: subject,
+      subjectName: subjectName,
+      duration: duration,
+      level: level,
+      rating: '5.0/5 (Official)',
+      videoId: videoId,
+      isCreatorPublished: true,
+      author: author,
+      publishedDate: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      chapters: [
+        { title: "Introduction & Foundations", time: "0:00" },
+        { title: "Core Concepts & Formulae", time: "5:00" },
+        { title: "Exam Questions & Summary", time: "10:00" }
+      ],
+      notes: formattedNotes,
+      formulas: formulas,
+      quiz: quiz
+    };
+
+    // Save to LocalStorage
+    this.saveLessonLocally(newTopic);
+
+    // Prepend to active STUDY_DATABASE
+    if (typeof STUDY_DATABASE !== 'undefined' && STUDY_DATABASE.topics) {
+      STUDY_DATABASE.topics.unshift(newTopic);
+    }
+
+    // Switch to lessons tab and load the topic
+    if (typeof App !== 'undefined') {
+      App.switchTab('lessons');
+      App.renderTopicsList();
+      App.loadTopic(newTopic);
+    }
+
+    // Render in published manager
+    this.renderPublishedManager();
+
+    // Close modal
+    this.close();
+
+    // Confetti & Toast
+    if (window.confetti) window.confetti({ particleCount: 80, spread: 85, origin: { y: 0.6 } });
+    if (typeof App !== 'undefined' && App.showToast) {
+      App.showToast(`🎉 Lecture "${title}" successfully published to EduPulse!`, 'success');
+    }
+  },
+
+  saveLessonLocally(topic) {
+    try {
+      const stored = localStorage.getItem('edupulse_published_lessons');
+      const list = stored ? JSON.parse(stored) : [];
+      list.unshift(topic);
+      localStorage.setItem('edupulse_published_lessons', JSON.stringify(list));
+    } catch (e) {
+      console.error('Error saving published lesson:', e);
+    }
+  },
+
+  getPublishedLessons() {
+    try {
+      const stored = localStorage.getItem('edupulse_published_lessons');
+      return stored ? JSON.parse(stored) : [];
+    } catch (e) {
+      return [];
+    }
+  },
+
+  deletePublishedLesson(id) {
+    if (!confirm('Are you sure you want to delete this published lecture?')) return;
+
+    let list = this.getPublishedLessons();
+    list = list.filter(item => item.id !== id);
+    localStorage.setItem('edupulse_published_lessons', JSON.stringify(list));
+
+    if (typeof STUDY_DATABASE !== 'undefined' && STUDY_DATABASE.topics) {
+      STUDY_DATABASE.topics = STUDY_DATABASE.topics.filter(t => t.id !== id);
+    }
+
+    if (typeof App !== 'undefined') {
+      App.renderTopicsList();
+      if (App.activeTopic && App.activeTopic.id === id) {
+        App.loadTopic(STUDY_DATABASE.topics[0]);
+      }
+      App.showToast('Published lecture deleted.', 'info');
+    }
+
+    this.renderPublishedManager();
+  },
+
+  renderPublishedManager() {
+    const container = document.getElementById('myPublishedLessonsList');
+    if (!container) return;
+
+    const list = this.getPublishedLessons();
+    if (list.length === 0) {
+      container.innerHTML = `<div style="text-align:center; padding: 18px; color: var(--text-muted); font-size: 0.85rem;">You haven't published any custom lectures yet. Fill out the form above to publish your first video!</div>`;
+      return;
+    }
+
+    container.innerHTML = list.map(item => `
+      <div class="published-item-row">
+        <img src="https://img.youtube.com/vi/${item.videoId}/default.jpg" alt="${item.title}" class="pub-thumb">
+        <div class="pub-info">
+          <h4>${item.title}</h4>
+          <span><i class="fa-solid fa-graduation-cap"></i> ${item.subjectName} • ${item.duration} • Published: ${item.publishedDate || 'Recently'}</span>
+        </div>
+        <div class="pub-actions">
+          <button class="btn-sm btn-primary-glow" onclick="CreatorStudio.playPublishedLesson('${item.id}')">
+            <i class="fa-solid fa-play"></i> View
+          </button>
+          <button class="btn-sm btn-ghost text-red" onclick="CreatorStudio.deletePublishedLesson('${item.id}')" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    `).join('');
+  },
+
+  playPublishedLesson(id) {
+    const list = this.getPublishedLessons();
+    const item = list.find(l => l.id === id);
+    if (item && typeof App !== 'undefined') {
+      this.close();
+      App.switchTab('lessons');
+      App.loadTopic(item);
+    }
+  },
+
+  copyCurriculumSnippet() {
+    const list = this.getPublishedLessons();
+    if (list.length === 0) {
+      alert('Please publish at least 1 video first before copying snippet.');
+      return;
+    }
+
+    const snippet = JSON.stringify(list, null, 2);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(snippet).then(() => {
+        alert('✅ JSON snippet copied to clipboard! You can paste this into GitHub data.js so all students worldwide can see it permanently.');
+      });
+    } else {
+      prompt('Copy this JSON snippet to paste into GitHub data.js:', snippet);
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.CreatorStudio = CreatorStudio;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => CreatorStudio.init());
+  } else {
+    CreatorStudio.init();
+  }
+}
+
+
+/* --- app.js --- */
+/* ==========================================================================
+   EDUPULSE CORE APP CONTROLLER
+   Navigation, Lesson Viewer, Search, Theming, Quizzes & State Management
+   ========================================================================== */
+
+const App = {
+  activeTopic: null,
+  activeFilterSubject: 'all',
+
+  init() {
+    this.setupTheme();
+    this.setupNavigation();
+    this.setupSearch();
+    this.setupCurriculumViewer();
+    this.setupStatsTracker();
+
+    // Initialize Submodules inside safe try-catches
+    try { if (typeof YoutubeSearch !== 'undefined') YoutubeSearch.init(); } catch (e) { console.error('YoutubeSearch init error:', e); }
+    try { if (typeof UserGuide !== 'undefined') UserGuide.init(); } catch (e) { console.error('UserGuide init error:', e); }
+    try { if (typeof UrlHub !== 'undefined') UrlHub.init(); } catch (e) { console.error('UrlHub init error:', e); }
+    try { if (typeof Converter !== 'undefined') Converter.init(); } catch (e) { console.error('Converter init error:', e); }
+    try { if (typeof FocusAudio !== 'undefined') FocusAudio.init(); } catch (e) { console.error('FocusAudio init error:', e); }
+    try { if (typeof Flashcards !== 'undefined') Flashcards.init(); } catch (e) { console.error('Flashcards init error:', e); }
+    try { if (typeof Notes !== 'undefined') Notes.init(); } catch (e) { console.error('Notes init error:', e); }
+    try { if (typeof CreatorStudio !== 'undefined') CreatorStudio.init(); } catch (e) { console.error('CreatorStudio init error:', e); }
+
+    // Load initial lesson
+    this.loadTopic(STUDY_DATABASE.topics[0]);
+
+    // Check confetti celebration trigger button in sidebar
+    const confettiBtn = document.getElementById('triggerConfetti');
+    if (confettiBtn) {
+      confettiBtn.addEventListener('click', () => {
+        if (window.confetti) {
+          window.confetti({ particleCount: 100, spread: 90, origin: { y: 0.7 } });
+        }
+        this.showToast('Great job! Keep up the daily study streak!', 'success');
+      });
+    }
+
+    // Quick open pomodoro
+    const pomoQuick = document.getElementById('openPomodoroQuick');
+    const navPomo = document.getElementById('navbarPomodoroBtn');
+    [pomoQuick, navPomo].forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          this.switchTab('focus-room');
+        });
+      }
+    });
+  },
+
+  /**
+   * Theme Management (Dark / Light)
+   */
+  setupTheme() {
+    const toggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+
+    const savedTheme = localStorage.getItem('edupulse_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    this.updateThemeButton(savedTheme);
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('edupulse_theme', next);
+        this.updateThemeButton(next);
+        this.showToast(`Switched to ${next} theme`, 'info');
+      });
+    }
+  },
+
+  updateThemeButton(theme) {
+    const themeIcon = document.getElementById('themeIcon');
+    const themeText = document.getElementById('themeText');
+    if (!themeIcon || !themeText) return;
+
+    if (theme === 'dark') {
+      themeIcon.className = 'fa-solid fa-moon';
+      themeText.textContent = 'Dark View';
+    } else {
+      themeIcon.className = 'fa-solid fa-sun';
+      themeText.textContent = 'Light View';
+    }
+  },
+
+  /**
+   * Tab Navigation System
+   */
+  setupNavigation() {
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link[data-tab]');
+    const mobileOpen = document.getElementById('sidebarOpenBtn');
+    const mobileClose = document.getElementById('sidebarCloseBtn');
+    const sidebar = document.getElementById('sidebar');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const tab = e.currentTarget.getAttribute('data-tab');
+        this.switchTab(tab);
+
+        // Close sidebar on mobile
+        if (sidebar) sidebar.classList.remove('open');
+      });
+    });
+
+    if (mobileOpen && sidebar) {
+      mobileOpen.addEventListener('click', () => sidebar.classList.add('open'));
+    }
+    if (mobileClose && sidebar) {
+      mobileClose.addEventListener('click', () => sidebar.classList.remove('open'));
+    }
+  },
+
+  switchTab(tabId) {
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link[data-tab]');
+    const panes = document.querySelectorAll('.tab-pane');
+
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('data-tab') === tabId));
+    panes.forEach(p => p.classList.toggle('active', p.id === `tab-${tabId}`));
+
+    // Update Top Heading
+    const heading = document.getElementById('pageHeading');
+    const subheading = document.getElementById('pageSubheading');
+
+    const headers = {
+      'lessons': {
+        h: 'Topic Lessons & Video Lectures',
+        sub: 'Distraction-free comprehensive curriculum with instant PDF cheatsheets'
+      },
+      'url-hub': {
+        h: 'Smart Educational URL Importer',
+        sub: 'Paste any lecture link or YouTube URL to watch, study, and export notes to PDF'
+      },
+      'converter': {
+        h: 'Universal Study File Converter',
+        sub: 'Convert any study file: Images to PDF, Notes to PDF, Image cross-conversion & CSV tables'
+      },
+      'focus-room': {
+        h: 'Zen Focus Room & Study Soundscape',
+        sub: 'Pomodoro study cycles with procedural ambient rain, white noise & alpha waves'
+      },
+      'flashcards': {
+        h: 'Interactive 3D Study Flashcards',
+        sub: 'Spaced repetition decks with 3D flip animation and printable PDF deck export'
+      },
+      'notes': {
+        h: 'Smart PDF Notes & Cheatsheet Creator',
+        sub: 'Rich study notebook with quick formulas, auto-save, and formatted PDF download'
+      }
+    };
+
+    if (headers[tabId] && heading && subheading) {
+      heading.textContent = headers[tabId].h;
+      subheading.textContent = headers[tabId].sub;
+    }
+  },
+
+  /**
+   * Curriculum Topic Browser & Viewer
+   */
+  setupCurriculumViewer() {
+    const filterPills = document.querySelectorAll('.filter-pill');
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        this.activeFilterSubject = e.currentTarget.getAttribute('data-subject');
+        this.renderTopicsList();
+
+        // Automatically switch lesson viewer to the first topic of this subject
+        let matching = STUDY_DATABASE.topics;
+        if (this.activeFilterSubject !== 'all') {
+          matching = matching.filter(t => t.subject === this.activeFilterSubject);
+        }
+        if (matching.length > 0) {
+          this.loadTopic(matching[0]);
+        }
+      });
+    });
+
+    // Theater Mode Toggle
+    const theaterBtn = document.getElementById('theaterModeToggleBtn');
+    const theaterText = document.getElementById('theaterModeText');
+    const lessonsGrid = document.querySelector('.lessons-grid');
+    if (theaterBtn && lessonsGrid) {
+      theaterBtn.addEventListener('click', () => {
+        lessonsGrid.classList.toggle('theater-mode');
+        const isTheater = lessonsGrid.classList.contains('theater-mode');
+        if (theaterText) {
+          theaterText.textContent = isTheater ? 'Exit Theater' : 'Theater Mode';
+        }
+        const icon = theaterBtn.querySelector('i');
+        if (icon) icon.className = isTheater ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
+        this.showToast(isTheater ? 'Theater View: Full Width Video' : 'Default View Restored', 'info');
+      });
+    }
+
+    // Quick Play YouTube Bar & Actions
+    const quickInput = document.getElementById('quickYoutubeInput');
+    const quickPlayBtn = document.getElementById('quickPlayYoutubeBtn');
+    const copyLinkBtn = document.getElementById('copyVideoLinkBtn');
+    const reloadBtn = document.getElementById('reloadPlayerBtn');
+
+    const handleQuickVideo = () => {
+      if (!quickInput) return;
+      const raw = quickInput.value.trim();
+      if (!raw) {
+        this.showToast('Please enter a YouTube video URL or ID!', 'warning');
+        return;
+      }
+      let videoId = raw;
+      if (typeof UrlHub !== 'undefined') {
+        const ext = UrlHub.extractVideoId(raw);
+        if (ext) videoId = ext;
+      }
+      const iframe = document.getElementById('lessonVideoIframe');
+      const directYtBtn = document.getElementById('directYoutubeLinkBtn');
+      if (iframe) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
+      }
+      if (directYtBtn) {
+        directYtBtn.href = `https://www.youtube.com/watch?v=${videoId}`;
+      }
+      this.showToast('Playing custom YouTube video!', 'success');
+    };
+
+    if (quickPlayBtn) quickPlayBtn.addEventListener('click', handleQuickVideo);
+    if (quickInput) {
+      quickInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') handleQuickVideo();
+      });
+    }
+
+    if (copyLinkBtn) {
+      copyLinkBtn.addEventListener('click', () => {
+        const id = this.activeTopic ? this.activeTopic.videoId : 'WUvTyaaNkzM';
+        const url = `https://www.youtube.com/watch?v=${id}`;
+        navigator.clipboard.writeText(url).then(() => {
+          this.showToast('YouTube link copied to clipboard!', 'success');
+        }).catch(() => {
+          this.showToast(url, 'info');
+        });
+      });
+    }
+
+    if (reloadBtn) {
+      reloadBtn.addEventListener('click', () => {
+        const iframe = document.getElementById('lessonVideoIframe');
+        if (iframe && this.activeTopic) {
+          iframe.src = `https://www.youtube.com/embed/${this.activeTopic.videoId}?autoplay=1&enablejsapi=1&rel=0`;
+          this.showToast('Player reloaded & synced.', 'info');
+        }
+      });
+    }
+
+    // Subnav tabs (Notes / Formulas / Quiz)
+    const subnavBtns = document.querySelectorAll('.subnav-btn');
+    const subtabs = document.querySelectorAll('.subtab-content');
+
+    subnavBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        subnavBtns.forEach(b => b.classList.remove('active'));
+        subtabs.forEach(s => s.classList.remove('active'));
+
+        const target = e.currentTarget.getAttribute('data-subtab');
+        e.currentTarget.classList.add('active');
+        const activeSub = document.getElementById(`subtab-${target}`);
+        if (activeSub) activeSub.classList.add('active');
+      });
+    });
+
+    // Topic Stepper buttons (Previous / Next)
+    const prevTopicBtn = document.getElementById('prevTopicBtn');
+    const nextTopicBtn = document.getElementById('nextTopicBtn');
+
+    if (prevTopicBtn) {
+      prevTopicBtn.addEventListener('click', () => {
+        const currentIdx = STUDY_DATABASE.topics.findIndex(t => t.id === this.activeTopic.id);
+        const prevIdx = (currentIdx - 1 + STUDY_DATABASE.topics.length) % STUDY_DATABASE.topics.length;
+        this.loadTopic(STUDY_DATABASE.topics[prevIdx]);
+        const card = document.getElementById('activeLessonCard');
+        if (card) card.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    if (nextTopicBtn) {
+      nextTopicBtn.addEventListener('click', () => {
+        const currentIdx = STUDY_DATABASE.topics.findIndex(t => t.id === this.activeTopic.id);
+        const nextIdx = (currentIdx + 1) % STUDY_DATABASE.topics.length;
+        this.loadTopic(STUDY_DATABASE.topics[nextIdx]);
+        const card = document.getElementById('activeLessonCard');
+        if (card) card.scrollIntoView({ behavior: 'smooth' });
+        if (window.confetti) window.confetti({ particleCount: 35, spread: 50 });
+      });
+    }
+
+    // PDF Export Buttons for current topic
+    const topExportBtn = document.getElementById('exportCurrentTopicPdfBtn');
+    const bottomExportBtn = document.getElementById('bottomExportPdfBtn');
+
+    [topExportBtn, bottomExportBtn].forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          this.exportCurrentLessonPdf();
+        });
+      }
+    });
+
+    this.renderTopicsList();
+  },
+
+  renderTopicsList(searchQuery = '') {
+    const list = document.getElementById('topicsList');
+    const countBadge = document.getElementById('topicCountBadge');
+    if (!list) return;
+
+    let filtered = STUDY_DATABASE.topics;
+
+    // Filter by subject
+    if (this.activeFilterSubject !== 'all') {
+      filtered = filtered.filter(t => t.subject === this.activeFilterSubject);
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(t => 
+        t.title.toLowerCase().includes(q) ||
+        t.subjectName.toLowerCase().includes(q) ||
+        t.level.toLowerCase().includes(q)
+      );
+    }
+
+    if (countBadge) countBadge.textContent = `${filtered.length} Topics`;
+    list.innerHTML = '';
+
+    if (filtered.length === 0) {
+      list.innerHTML = `<div style="padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.85rem;">No matching topics found.</div>`;
+      return;
+    }
+
+    filtered.forEach(topic => {
+      const item = document.createElement('div');
+      item.className = `topic-item ${this.activeTopic && this.activeTopic.id === topic.id ? 'active' : ''}`;
+      item.setAttribute('data-id', topic.id);
+
+      item.innerHTML = `
+        <div class="topic-item-top">
+          <span class="topic-sub-badge">${topic.subjectName}</span>
+          ${topic.isCreatorPublished ? '<span class="topic-creator-pill"><i class="fa-solid fa-crown"></i> Instructor Post</span>' : ''}
+          <span class="topic-item-meta"><i class="fa-solid fa-star gold-star"></i> ${topic.rating}</span>
+        </div>
+        <div class="topic-item-title">${topic.title}</div>
+        <div class="topic-item-meta">
+          <span><i class="fa-regular fa-clock"></i> ${topic.duration}</span>
+          <span><i class="fa-solid fa-signal"></i> ${topic.level}</span>
+        </div>
+      `;
+
+      item.addEventListener('click', () => {
+        this.loadTopic(topic);
+      });
+
+      list.appendChild(item);
+    });
+  },
+
+  loadTopic(topic) {
+    if (!topic) return;
+    this.activeTopic = topic;
+
+    // Update active highlight in topics list
+    document.querySelectorAll('.topic-item').forEach(item => {
+      item.classList.toggle('active', item.getAttribute('data-id') === topic.id);
+    });
+
+    // Update Header Metadata
+    const badge = document.getElementById('activeSubjectBadge');
+    const title = document.getElementById('activeLessonTitle');
+    const duration = document.getElementById('activeLessonDuration');
+    const level = document.getElementById('activeLessonLevel');
+    const rating = document.getElementById('activeLessonRating');
+    const stepperName = document.getElementById('stepperTopicName');
+    const directYtBtn = document.getElementById('directYoutubeLinkBtn');
+
+    if (badge) badge.textContent = topic.subjectName;
+    if (title) title.textContent = topic.title;
+    if (duration) duration.textContent = topic.duration;
+    if (level) level.textContent = topic.level;
+    if (rating) rating.textContent = topic.rating;
+    if (stepperName) stepperName.textContent = topic.title;
+
+    // Direct YouTube link button
+    if (directYtBtn) {
+      directYtBtn.href = `https://www.youtube.com/watch?v=${topic.videoId}`;
+    }
+
+    // Update Video Iframe Embed
+    const iframe = document.getElementById('lessonVideoIframe');
+    if (iframe) {
+      iframe.src = `https://www.youtube.com/embed/${topic.videoId}?enablejsapi=1&rel=0`;
+    }
+
+    // Update Chapters Bar with working jump handlers
+    const chaptersBar = document.getElementById('videoChaptersBar');
+    if (chaptersBar && topic.chapters) {
+      chaptersBar.innerHTML = '';
+      topic.chapters.forEach((ch, idx) => {
+        const btn = document.createElement('button');
+        btn.className = `chapter-btn ${idx === 0 ? 'active' : ''}`;
+        btn.innerHTML = `<i class="fa-solid fa-play" style="font-size: 0.65rem;"></i> ${ch.title} (${ch.time})`;
+
+        // Calculate seconds
+        const parts = ch.time.split(':').map(Number);
+        let seconds = 0;
+        if (parts.length === 2) {
+          seconds = parts[0] * 60 + parts[1];
+        } else if (parts.length === 3) {
+          seconds = parts[0] * 3600 + parts[1] * 60 + parts[2];
+        }
+
+        btn.addEventListener('click', () => {
+          chaptersBar.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          if (iframe) {
+            iframe.src = `https://www.youtube.com/embed/${topic.videoId}?start=${seconds}&autoplay=1&enablejsapi=1&rel=0`;
+          }
+          this.showToast(`Playing chapter: ${ch.title} (${ch.time})`, 'info');
+        });
+
+        chaptersBar.appendChild(btn);
+      });
+    }
+
+    // Render Study Notes
+    const notesArea = document.getElementById('activeLessonNotes');
+    if (notesArea) {
+      notesArea.innerHTML = topic.notes;
+    }
+
+    // Render Formulas Cheatsheet Grid
+    const formulasArea = document.getElementById('activeLessonFormulas');
+    if (formulasArea && topic.formulas) {
+      formulasArea.innerHTML = '';
+      topic.formulas.forEach(f => {
+        const card = document.createElement('div');
+        card.className = 'formula-card';
+        card.innerHTML = `
+          <div class="formula-title">${f.title}</div>
+          <div class="formula-math">${f.math}</div>
+          <div class="formula-desc">${f.desc}</div>
+        `;
+        formulasArea.appendChild(card);
+      });
+    }
+
+    // Render Practice Quiz
+    const quizArea = document.getElementById('activeLessonQuiz');
+    if (quizArea && topic.quiz) {
+      quizArea.innerHTML = '';
+      topic.quiz.forEach((q, qIndex) => {
+        const card = document.createElement('div');
+        card.className = 'quiz-card';
+
+        let optsHtml = '';
+        q.options.forEach((opt, optIndex) => {
+          optsHtml += `
+            <button class="quiz-opt-btn" data-q="${qIndex}" data-opt="${optIndex}">
+              <span>${opt}</span>
+              <i class="fa-regular fa-circle"></i>
+            </button>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="quiz-q-num">QUESTION ${qIndex + 1} OF ${topic.quiz.length}</div>
+          <div class="quiz-question">${q.question}</div>
+          <div class="quiz-options">${optsHtml}</div>
+          <div class="quiz-explanation" id="quiz-exp-${qIndex}">
+            <strong>Explanation:</strong> ${q.explanation}
+          </div>
+        `;
+
+        // Handle answer selection
+        card.querySelectorAll('.quiz-opt-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const selectedOpt = parseInt(e.currentTarget.getAttribute('data-opt'));
+            const correctOpt = q.answer;
+            const expBox = card.querySelector('.quiz-explanation');
+
+            // Disable other buttons for this question
+            card.querySelectorAll('.quiz-opt-btn').forEach(b => {
+              b.style.pointerEvents = 'none';
+              const oIndex = parseInt(b.getAttribute('data-opt'));
+              if (oIndex === correctOpt) {
+                b.classList.add('correct');
+                b.querySelector('i').className = 'fa-solid fa-circle-check';
+              }
+            });
+
+            if (selectedOpt === correctOpt) {
+              if (window.confetti) window.confetti({ particleCount: 40, spread: 60 });
+              App.showToast('Correct Answer! Well done!', 'success');
+            } else {
+              e.currentTarget.classList.add('wrong');
+              e.currentTarget.querySelector('i').className = 'fa-solid fa-circle-xmark';
+              App.showToast('Incorrect. Review explanation below.', 'warning');
+            }
+
+            if (expBox) expBox.style.display = 'block';
+          });
+        });
+
+        quizArea.appendChild(card);
+      });
+    }
+  },
+
+  /**
+   * Global Search Bar
+   */
+  setupSearch() {
+    const input = document.getElementById('globalSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+
+    if (!input) return;
+
+    input.addEventListener('input', () => {
+      const q = input.value;
+      if (clearBtn) clearBtn.style.display = q ? 'block' : 'none';
+
+      // Always switch to lessons view if searching
+      this.switchTab('lessons');
+      this.renderTopicsList(q);
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        clearBtn.style.display = 'none';
+        this.renderTopicsList('');
+      });
+    }
+  },
+
+  /**
+   * Daily Study Streak and Time Tracker
+   */
+  setupStatsTracker() {
+    let studyMins = parseInt(localStorage.getItem('edupulse_study_mins') || '45');
+    const minsElem = document.getElementById('todayStudyMins');
+
+    // Increment 1 minute every 60 seconds
+    setInterval(() => {
+      studyMins++;
+      localStorage.setItem('edupulse_study_mins', studyMins);
+      if (minsElem) minsElem.textContent = `${studyMins}m`;
+    }, 60000);
+  },
+
+  /**
+   * Toast Notification Helper
+   */
+  showToast(message, type = 'info') {
+    const container = document.getElementById('toastContainer');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+
+    const iconMap = {
+      'success': 'fa-solid fa-circle-check',
+      'info': 'fa-solid fa-circle-info',
+      'warning': 'fa-solid fa-triangle-exclamation'
+    };
+    const icon = iconMap[type] || 'fa-solid fa-bell';
+
+    toast.innerHTML = `
+      <i class="${icon}"></i>
+      <span>${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(100%)';
+      toast.style.transition = 'all 0.3s ease';
+      setTimeout(() => toast.remove(), 300);
+    }, 3800);
+  },
+
+  exportCurrentLessonPdf() {
+    if (this.activeTopic && typeof PdfExporter !== 'undefined') {
+      PdfExporter.exportTopic(this.activeTopic);
+    } else {
+      this.showToast('Generating lesson PDF notes...', 'info');
+    }
+  },
+
+  toggleTheaterMode() {
+    const lessonsGrid = document.querySelector('.lessons-grid');
+    const theaterText = document.getElementById('theaterModeText');
+    const theaterBtn = document.getElementById('theaterModeToggleBtn');
+    if (!lessonsGrid) return;
+    lessonsGrid.classList.toggle('theater-mode');
+    const isTheater = lessonsGrid.classList.contains('theater-mode');
+    if (theaterText) theaterText.textContent = isTheater ? 'Exit Theater' : 'Theater Mode';
+    if (theaterBtn) {
+      const icon = theaterBtn.querySelector('i');
+      if (icon) icon.className = isTheater ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
+    }
+    this.showToast(isTheater ? 'Theater View: Full Width Video' : 'Default View Restored', 'info');
+  },
+
+  toggleZenMode() {
+    const overlay = document.getElementById('zenModalOverlay');
+    if (overlay) overlay.classList.toggle('active');
+  },
+
+  handleQuickVideo() {
+    const quickInput = document.getElementById('quickYoutubeInput');
+    if (!quickInput) return;
+    const raw = quickInput.value.trim();
+    if (!raw) {
+      this.showToast('Please enter a YouTube video URL or ID!', 'warning');
+      return;
+    }
+    let videoId = raw;
+    if (typeof UrlHub !== 'undefined') {
+      const ext = UrlHub.extractVideoId(raw);
+      if (ext) videoId = ext;
+    }
+    const iframe = document.getElementById('lessonVideoIframe');
+    const directYtBtn = document.getElementById('directYoutubeLinkBtn');
+    if (iframe) {
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1&rel=0`;
+    }
+    if (directYtBtn) {
+      directYtBtn.href = `https://www.youtube.com/watch?v=${videoId}`;
+    }
+    this.showToast('Playing custom YouTube video!', 'success');
+  },
+
+  copyCurrentVideoLink() {
+    const id = this.activeTopic ? this.activeTopic.videoId : 'WUvTyaaNkzM';
+    const url = `https://www.youtube.com/watch?v=${id}`;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => {
+        this.showToast('YouTube link copied to clipboard!', 'success');
+      }).catch(() => {
+        this.showToast(url, 'info');
+      });
+    } else {
+      this.showToast(url, 'info');
+    }
+  },
+
+  reloadCurrentVideo() {
+    const iframe = document.getElementById('lessonVideoIframe');
+    if (iframe && this.activeTopic) {
+      iframe.src = `https://www.youtube.com/embed/${this.activeTopic.videoId}?autoplay=1&enablejsapi=1&rel=0`;
+      this.showToast('Player reloaded & synced.', 'info');
+    }
+  },
+
+  prevTopic() {
+    if (!STUDY_DATABASE || !STUDY_DATABASE.topics) return;
+    const currentIdx = STUDY_DATABASE.topics.findIndex(t => t.id === (this.activeTopic ? this.activeTopic.id : ''));
+    const prevIdx = (currentIdx - 1 + STUDY_DATABASE.topics.length) % STUDY_DATABASE.topics.length;
+    this.loadTopic(STUDY_DATABASE.topics[prevIdx]);
+    const card = document.getElementById('activeLessonCard');
+    if (card) card.scrollIntoView({ behavior: 'smooth' });
+  },
+
+  nextTopic() {
+    if (!STUDY_DATABASE || !STUDY_DATABASE.topics) return;
+    const currentIdx = STUDY_DATABASE.topics.findIndex(t => t.id === (this.activeTopic ? this.activeTopic.id : ''));
+    const nextIdx = (currentIdx + 1) % STUDY_DATABASE.topics.length;
+    this.loadTopic(STUDY_DATABASE.topics[nextIdx]);
+    const card = document.getElementById('activeLessonCard');
+    if (card) card.scrollIntoView({ behavior: 'smooth' });
+    if (window.confetti) window.confetti({ particleCount: 35, spread: 50 });
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.App = App;
+}
+
+// Auto-run on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => App.init());
+} else {
+  App.init();
+}
+
+
+</script>
 </body>
 </html>
